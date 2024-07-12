@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_header" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@class='header']" position="before">
+            <div class="header">
+                <img src="custom_invoice_header/static/src/img/your_image.png" alt="Header Image"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

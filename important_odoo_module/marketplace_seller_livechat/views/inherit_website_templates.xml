@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<!-- License URL : https://store.webkul.com/license.html/ -->
+<odoo>
+    
+    <template id="message_view">
+        <div t-if="message" t-attf-class="o_thread_message o_mail_discussion #{'right-message' if request.env.user.partner_id.id == message.author_id.id else 'left-message'}">
+            <div class="o_thread_message_core">
+                <div class="o_thread_message_content">
+                    <p>
+                        <t t-raw="message.body" />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="seller_history">
+        <div t-if="replace" class="d-none channel_id_1" t-att-data-channel-id="mail_channel_id.id" />
+        <div id="replace_messages">
+            <div class="o_thread_window outer_header">
+                <div class="o_thread_window_header">
+                    <img src="/marketplace_seller_livechat/static/src/img/icon-chat.png" alt="" class="img-fluid"/>
+                    <h4 class="ml8 my-auto">Seller Buyer Live Chat </h4>
+                    <span style="color: #FFFFFF;" class="o_thread_window_buttons ml-auto">
+                        <i class="fa fa-times" />
+                    </span>
+                </div>
+            </div>
+            <div class="o_thread_window o_in_home_menu" t-att-data-thread-id="mail_channel_id.id">
+                <input type="hidden" name="mail_channel_uid" t-att-value="mail_channel_id.uuid" />
+                <div class="o_thread_window_header d-flex justify-content-end">
+                    <button class="go_back mr-2 btn">
+                        <i class="fa fa-angle-left" />
+                    </button>
+                    <span style="color: #FFFFFF;" class="o_thread_window_buttons">
+                        <i class="fa fa-times" />
+                    </span>
+                </div>
+                <div class="o_mail_thread">
+                    <div t-if="product_msg_id" class="product_card position-absolute">
+                        <div class="card-body">
+                            <button class="btn reply_btn pull-right" title="Reply with product info">
+                                <img src="/marketplace_seller_livechat/static/src/img/reply.png" class="img" alt="Reply"/>
+                            </button>
+                            <button class="btn close_btn pull-right d-none" title="Remove product info">
+                                <img src="/marketplace_seller_livechat/static/src/img/close.png" class="img" alt="Close"/>
+                            </button>
+                            <div class="card-title">
+                               Product:- <t t-esc="product_msg_id.name" />
+                            </div>
+                            <div class="card-text">
+                                Price:-<t t-esc="product_msg_id._get_combination_info_variant(pricelist=request.env['website'].get_current_pricelist()).get('price','currently unavailable')" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o_mail_thread_content channel_id" t-att-data-channel-id="mail_channel_id.id">
+                        <t t-foreach="message_content" t-as="message">
+                            <div t-attf-class="o_thread_message o_mail_discussion #{'right-message' if request.env.user.partner_id.id == message.author_id.id else 'left-message'}">
+                                <div class="o_thread_message_core">
+                                    <div class="o_thread_message_content">
+                                        <t t-if="message.attachment_ids">
+                                            <t t-foreach="message.attachment_ids" t-as="attachment">
+                                                <div class="o_attachment" t-att-title="attachment.name">
+                                                    <div class="o_attachment_wrap">
+                                                        <div class="o_image_box">
+                                                            <div class="o_attachment_image" t-attf-style="background-image:url('/web/image/#{attachment.id}/160x160/?crop=true')" />
+                                                            <div t-attf-class="o_image_overlay o_attachment_view" t-att-data-id="attachment.id">
+                                                                <span class="o_attachment_title">
+                                                                    <t t-esc="attachment.name" />
+                                                                </span>
+                                                                <a class="o_attachment_download" t-attf-href='/web/content/#{attachment.id}?download=true'>
+                                                                    <i t-attf-class="fa fa-download" t-att-title="'Download ' + attachment.name" role="img" aria-label="Download"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </t>
+                                        </t>
+                                        <p>
+                                            <t t-if="not replace" t-raw="message.body" />
+                                        </p>
+                                    </div>
+                                    <t t-set="msg_date" t-value="message.get_usr_chattime(message.date)"/>
+                                    <small t-if="not replace" class="o_mail_timestamp" t-att-title="msg_date" t-esc="msg_date"></small>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+                <div class="o_thread_composer o_chat_mini_composer d-flex align-items-center">
+                    <input type="text" class="o_composer_text_field wk_mini_composer" placeholder="Write Something....." value="" />
+                    <div class="o_chatter_composer_tools">
+                        <button tabindex="4" class="btn fa fa-smile-o o_composer_button_emoji" type="button" data-toggle="popover" title="Emojis" aria-label="Emojis" />
+                    </div>
+                    <a class="btn btn-sm compose_btn" title="Send">
+                        <img src="/marketplace_seller_livechat/static/src/img/arrow_btn.png" alt="Send" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="public_chat_box_form">
+        <div class="o_thread_window outer_header">
+            <div class="o_thread_window_header">
+                <span class="o_thread_window_title">
+                    <img src="/marketplace_seller_livechat/static/src/img/message.png" class="img mr-2" alt="Messages" />
+                    <span style="color:white;">Seller Buyer Live Chat</span>
+                </span>
+                <span class="o_thread_window_buttons">
+                    <i class="fa fa-times" />
+                </span>
+            </div>
+        </div>
+        <div class="o_thread_window o_in_home_menu">
+            <div class="o_thread_window_header">
+                <span class="o_thread_window_title">
+                    <img src="/marketplace_seller_livechat/static/src/img/message.png" class="img mr-2" alt="Messages" />
+                    <span style="color:white;">Seller Buyer Live Chat</span>
+                </span>
+                <span class="o_thread_window_buttons">
+                    <i class="fa fa-times" />
+                </span>
+            </div>
+            <div class="o_mail_thread">
+                <div class="o_mail_thread_content channel_id">
+                    <div class="public">
+                        <img src="/marketplace_seller_livechat/static/src/img/login.png" class="img mr-2" alt="Login" />
+                    </div>
+                    <div class="text-information text-center mt-3">
+                        <span>To start a conversation you need to login.</span>
+                    </div>
+                    <div class="nav_btn d-flex align-items-center">
+                        <a class="chat_bot_login" href="/web/login?redirect=shop">Login</a>
+                        <strong>/</strong>
+                        <a class="chat_bot_login" href="/web/signup?redirect=shop">Signup</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <template id="mp_sold_by_detail_in_product_inherited" inherit_id="odoo_marketplace.mp_sold_by_detail_in_product">
+        <xpath expr="//div[@id='selle_pic_name_add']/div[hasclass('col-md-9')]//div[hasclass('mt4')]" position="inside">
+            <div class="text-info chat_now_span" style="font-size:16px;">
+                <i class="fa fa-weixin mt-2 mr-2" />
+                <a href="#" role="button" class="o_new_message chat_now_btn" t-att-data-marketplace-seller="product.marketplace_seller_id.id">Chat Now</a>
+            </div>
+        </xpath>
+    </template>
+
+    <template id="mp_seller_profile_inherited" inherit_id="odoo_marketplace.mp_seller_profile">
+        <xpath expr="//t[@t-if='website.sudo().get_group_mp_shop_allow()']" position="after">
+            <span class="text-info chat_now_span" style="font-size:16px;">
+                <i class="fa fa-weixin ml-1 mr-2" />
+                <a href="#" role="button" class="o_new_message chat_now_btn" t-att-data-marketplace-seller="seller.id">Chat Now</a>
+            </span>
+         </xpath>
+    </template>
+
+    <template  id="livechat_popup_template" inherit_id="website.layout" name="Show whatsapp Popup" customize_show="True">
+        <xpath expr="//footer" position="before">
+            <t t-set="channel_ids" t-value="request.env['mail.channel'].sudo().search([('portal_user_id','=',request.env.user.id)])" />
+            <div  class="user-seller-content" style="display:block;" id="seller-detail" t-att-data-marketplace-seller="(product and product.marketplace_seller_id.id) or (seller and seller.id) or (False)">
+                <div t-if="not request.env.user._is_public() and(channel_ids or seller or product)" id="sellers_history" style="display:none;">
+                    <h6 class="title">
+                        Seller Buyer Live Chat
+                    </h6>
+                    <div class="sellers_list">
+                        <div t-if="channel_ids" class="form-group has-search m-0 p-0">
+                            <input id="seller_searchbox" placeholder="Search Seller" class="form-control" type="text" />
+                        </div>
+                        <t t-if="channel_ids">
+                            <t t-foreach="channel_ids" t-as="channel_id">
+                                <a href="#" t-attf-class="seller_div border-top border-bottom #{'active' if (product and product.marketplace_seller_id and channel_id.marketplace_seller_id.id == product.marketplace_seller_id.id) 
+                                or (seller and seller.id == channel_id.marketplace_seller_id.id ) else ''}" t-att-data-channel-id="channel_id.id" t-att-data-marketplace-seller="channel_id.marketplace_seller_id.id" t-att-marketplace-seller-name="channel_id.marketplace_seller_id.name">
+                                    <div class="o_thread_message_sidebar_image" t-if="channel_id.marketplace_seller_id.image_128" t-field="channel_id.marketplace_seller_id.image_128" t-options="{'widget':'image','class':'rounded-circle'}" />
+                                    <div class="seller-name">
+                                        <span t-esc="channel_id.marketplace_seller_id.name" class="mb4"/>
+                                        <span itemprop="name" class="livechat-view-prof text-muted" t-attf-onclick="window.open('/seller/profile/#{channel_id.marketplace_seller_id.sudo().url_handler if channel_id.marketplace_seller_id.sudo().url_handler else channel_id.marketplace_seller_id.sudo().id}')">View Profile</span>
+                                    </div>
+                                    <button class="action_unfollow btn">
+                                        <img src="/marketplace_seller_livechat/static/src/img/vector.png" title="Remove chat" class="img" alt="vector" />
+                                    </button>
+                                </a>
+                            </t>
+                        </t>
+
+                        <a t-if="product and product.marketplace_seller_id" href="#" t-attf-class="copied_seller_div border-top border-bottom mb-2 active copied_seller d-none" t-att-data-marketplace-seller="product.marketplace_seller_id.id">
+                            <div class="o_thread_message_sidebar_image" t-if="product.sudo().marketplace_seller_id.image_128" t-field="product.sudo().marketplace_seller_id.image_128" t-options="{'widget':'image','class':'rounded-circle'}" />
+                            <div class="seller-name">
+                                <t t-esc="product.marketplace_seller_id.name" />
+                                <span itemprop="name" class="livechat-view-prof text-muted" t-attf-onclick="window.open('/seller/profile/#{product.marketplace_seller_id.sudo().url_handler if product.marketplace_seller_id.sudo().url_handler else product.marketplace_seller_id.sudo().id}')">View Profile</span>
+                            </div>
+                            <button class="action_unfollow btn">
+                                <img src="/marketplace_seller_livechat/static/src/img/vector.png" title="Remove chat" class="img" alt="vector" />
+                            </button>
+                        </a>
+                        <a t-if="seller" href="#" t-attf-class="copied_seller_div border-top border-bottom mb-2 active copied_seller d-none" t-att-data-marketplace-seller="seller.id">
+                            <div class="o_thread_message_sidebar_image" t-if="seller.image_128" t-field="seller.image_128" t-options="{'widget':'image','class':'rounded-circle'}" />
+                            <div class="seller-name">
+                                <t t-esc="seller.name" />
+                                <span itemprop="name" class="livechat-view-prof text-muted" t-attf-onclick="window.open('/seller/profile/#{seller.sudo().url_handler if seller.sudo().url_handler else seller.sudo().id}')">View Profile</span>
+                            </div>
+                            <button class="action_unfollow btn">
+                                <img src="/marketplace_seller_livechat/static/src/img/vector.png" title="Remove chat" class="img" alt="vector" />
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div id="replace_messages" >
+                    <div  t-att-data-marketplace-seller="(product and product.marketplace_seller_id.id) or (seller and seller.id) or False" id="chat_now_btn" class="o_thread_window outer_header set_position">
+                        <div class="o_thread_window_header">
+                            <img src="/marketplace_seller_livechat/static/src/img/icon-chat.png" alt="" class="img-fluid"/>
+                            <h4 class="ml8 my-auto">Seller Buyer Live Chat</h4>
+                            <span style="color: #FFFFFF;" class="o_thread_window_buttons ml-auto">
+                                <i class="fa fa-times"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="o_thread_window o_in_home_menu" style="display:none;">
+                        <input type="hidden" name="mail_channel_uid" />
+                        <div class="o_thread_window_header d-flex justify-content-end">
+                            <button class="go_back mr-2 btn">
+                                <i class="fa fa-angle-left" />
+                            </button>
+                            <span style="color: #FFFFFF;" class="o_thread_window_buttons">
+                                <i class="fa fa-times" />
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>

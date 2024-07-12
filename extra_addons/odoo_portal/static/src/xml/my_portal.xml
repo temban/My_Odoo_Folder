@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="portal_my_home" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry">
+                <t t-set="url">/my_portal</t>
+                <t t-set="title">User Portal</t>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_page" name="Main Page" >
+
+        <t name="Main Page" t-name="odoo_portal.portal_page" inherit_id="web.assets_backend">
+
+        <xpath expr="." position="inside">
+      <link rel="stylesheet" type="text/css" href="/odoo_portal/static/src/css/bootstrap.min.css"/>
+    </xpath>
+
+         <xpath expr="." position="inside">
+      <script type="text/javascript" src="/odoo_portal/static/src/js/bootstrap.min.js"></script>
+         </xpath>
+  <xpath expr="." position="inside">
+    <link rel="stylesheet" href="/odoo_portal/static/src/css/styles.css"/>
+  </xpath>
+  <t t-call="website.layout">
+      <div class="oe_structure first_section">
+        <section class="s_title o_colored_level s_parallax_no_overflow_hidden pb0 pt0 oe_img_bg o_bg_img_center"
+            data-vcss="001" data-snippet="s_title" data-name="Title"
+            style="position: relative;height: 250px; background-image: url(https://images.unsplash.com/photo-1664719186742-061af4706e74?ixlib=rb-4.0.3);"
+            data-scroll-background-ratio="0">
+            <div class="s_allow_columns container">
+                <div class="row">
+                    <div class="col-lg-4 profile_img">
+                        <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3"
+                            class="padding-large img-fluid rounded shadow myclass img-thumbnail" data-original-id="859"
+                            data-original-src="/theme_beauty/static/src/img/snippets/s_picture.jpg"
+                            data-mimetype="image/jpeg" data-original-title="" title="" aria-describedby="tooltip980711"
+                            loading="lazy"
+                            style="transform: scaleX(0.89) scaleY(0.82); padding: 10px !important; width: 100% !important;" />
+
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="container my_container">
+            <div class="row">
+                <div class="col-lg-4 second_col">
+                    <button type="button"
+                            class="btn btn-primary rounded-pill fa-regular fa-location-dot ">Products</button>
+                        <button type="button" class="btn btn-secondary rounded-pill">Sales</button>
+                        <p>Lorem Ipsum is simply dummy text of </p>
+                        <button type="button" class="btn btn-success">Contact Seller</button>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="align">
+                        <h2>Xavier Tyga</h2>
+                    </div>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                </div>
+                <div class="col-lg-4 last_col">
+                   <a href="#">Contact Us about Hubkilo</a>
+                </div>
+            </div>
+        </section>
+        <section class="container section_3">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Nouveau Voyage</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Mes Voyages</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper urna id nulla lacinia aliquet. Proin aliquet velit ac arcu molestie finibus. Nullam pellentesque odio vitae massa imperdiet rhoncus. Nullam posuere diam nec dui euismod, nec finibus arcu imperdiet. Nunc id congue nunc. Mauris porta molestie ligula id feugiat. Donec urna velit, rhoncus eget massa quis, aliquet malesuada neque. Quisque in eleifend tellus, eu auctor enim. Ut at sagittis diam. Curabitur id metus ac mi pharetra venenatis sed tempus eros. Duis vel purus enim. Mauris consectetur, tortor nec viverra tempor, sem magna commodo diam, vel accumsan nunc mi in ipsum.
+                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper urna id nulla lacinia aliquet. Proin aliquet velit ac arcu molestie finibus. Nullam pellentesque odio vitae massa imperdiet rhoncus. Nullam posuere diam nec dui euismod, nec finibus arcu imperdiet. Nunc id congue nunc. Mauris porta molestie ligula id feugiat. Donec urna velit, rhoncus eget massa quis, aliquet malesuada neque. Quisque in eleifend tellus, eu auctor enim. Ut at sagittis diam. Curabitur id metus ac mi pharetra venenatis sed tempus eros. Duis vel purus enim. Mauris consectetur, tortor nec viverra tempor, sem magna commodo diam, vel accumsan nunc mi in ipsum.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper urna id nulla lacinia aliquet. Proin aliquet velit ac arcu molestie finibus. Nullam pellentesque odio vitae massa imperdiet rhoncus. Nullam posuere diam nec dui euismod, nec finibus arcu imperdiet. Nunc id congue nunc. Mauris porta molestie ligula id feugiat. Donec urna velit, rhoncus eget massa quis, aliquet malesuada neque. Quisque in eleifend tellus, eu auctor enim. Ut at sagittis diam. Curabitur id metus ac mi pharetra venenatis sed tempus eros. Duis vel purus enim. Mauris consectetur, tortor nec viverra tempor, sem magna commodo diam, vel accumsan nunc mi in ipsum.
+                    </p>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse semper urna id nulla lacinia aliquet. Proin aliquet velit ac arcu molestie finibus. Nullam pellentesque odio vitae massa imperdiet rhoncus. Nullam posuere diam nec dui euismod, nec finibus arcu imperdiet. Nunc id congue nunc. Mauris porta molestie ligula id feugiat. Donec urna velit, rhoncus eget massa quis, aliquet malesuada neque. Quisque in eleifend tellus, eu auctor enim. Ut at sagittis diam. Curabitur id metus ac mi pharetra venenatis sed tempus eros. Duis vel purus enim. Mauris consectetur, tortor nec viverra tempor, sem magna commodo diam, vel accumsan nunc mi in ipsum.
+                </p></div>
+              </div>
+        </section>
+
+
+    </div>
+
+  </t>
+</t>
+
+    </template>
+</odoo>

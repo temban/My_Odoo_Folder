@@ -1,0 +1,309 @@
+.banner{
+  margin:1rem 4rem
+  }
+  @media screen and (max-width:500px){
+  .banner{
+  margin: 0 1rem
+  }
+
+}
+    /* Style the modal */
+  .modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .selected {
+    border: 2px solid green;
+  }
+
+
+  .loader{
+        pointer-events: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color:#fff;
+        animation: an1 1s ease infinite;
+      }
+      @keyframes an1 {
+        0% {
+          transform:rotate(0turn);
+        }
+        100%{
+          transform: rotate(1turn);
+        }
+      }
+
+
+.m-d.expand-list{
+        margin: 0;
+        padding: 0;
+    }
+    .m-d.expand-list > li{
+        list-style-type: none;
+        padding: 15px 0;
+        position: relative;
+/*         max-width: 80%; */
+    }
+    .m-d label[class^="tab"]:hover{
+        cursor: pointer;
+    }
+    .m-d input{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+    .m-d input[class^="tab"]{
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+		.m-d input[class^="tab"]:hover{
+			cursor: pointer;
+		}
+    .m-d label[class^="tab"]{
+        font-weight: bold;
+    }
+    .m-d .content{
+        height: auto;
+        max-height: 0;
+        max-width: 300px;
+/*        background: yellow;*/
+        overflow: hidden;
+        transform: translateY(20px);
+        transition: all 180ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="100"] input[class^="tab"]:checked ~ .content{
+        max-height: 100px;
+        transition: all 150ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="200"] input[class^="tab"]:checked ~ .content{
+        max-height: 200px;
+        transition: all 200ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="300"] input[class^="tab"]:checked ~ .content{
+        max-height: 300px;
+        transition: all 250ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="400"] input[class^="tab"]:checked ~ .content{
+        max-height: 400px;
+        transition: all 250ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="500"] input[class^="tab"]:checked ~ .content{
+        max-height: 500px;
+        transition: all 250ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="600"] input[class^="tab"]:checked ~ .content{
+        max-height: 600px;
+        transition: all 250ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="700"] input[class^="tab"]:checked ~ .content{
+        max-height: 700px;
+        transition: all 300ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="800"] input[class^="tab"]:checked ~ .content{
+        max-height: 800px;
+        transition: all 300ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="900"] input[class^="tab"]:checked ~ .content{
+        max-height: 900px;
+        transition: all 300ms ease-in-out 0ms;
+    }
+    .m-d li[data-md-content="1000"] input[class^="tab"]:checked ~ .content{
+        max-height: 1000px;
+        transition: all 350ms ease-in-out 0ms;
+    }
+		.m-d li[data-md-content=""] input[class^="tab"]:checked ~ .content{
+        max-height: 1000px;
+        transition: all 250ms ease-in-out 0ms;
+    }
+    .m-d input[class^="tab"]:checked ~ .content{
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+*{
+	line-height: 1.4;
+	font-family: "harmonia sans", roboto, arial;
+}
+
+	.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-wizard {
+  max-width: 500px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section {
+  display: none;
+}
+
+.section:first-child {
+  display: block;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.wizard-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.wizard-step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.wizard-step.active {
+  background-color: #217aff;
+}
+
+
+
+/* autocomplete */
+
+
+/*the container must be positioned relative:*/
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+}
+
+input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+/*when hovering an item:*/
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+
+.luggage_image_div{
+margin-top:10px;
+display:flex;
+justify-content:space-between
+}
+
+.confirm_image_colis{
+width: 170px;
+height: 150px;
+}
+
+.travel_info_state{
+display:flex;
+flex-direction:column;
+}
+
+
+@media screen and (max-width: 600px) {
+
+.confirm_image_colis{
+width: 70px;
+height: 70px;
+
+}
+
+
+
+}

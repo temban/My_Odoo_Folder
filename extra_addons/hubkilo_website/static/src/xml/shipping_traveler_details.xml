@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="shipping_traveler_details" name="Shipping Details">
+        <t name="Shipping Details" t-name="hubkilo_website.shipping_traveler_details" inherit_id="web.assets_backend">
+            <!--            styles-->
+            <xpath expr="." position="inside">
+
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+        <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend-plugin.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend.css?v=1.0.0"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/remixicon/fonts/remixicon.css"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/shipping_details.css?v=11630"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                                  <!-- Backend Bundle JavaScript -->
+<!--    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/backend-bundle.min.js"></script>-->
+
+    <!-- Table Treeview JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/table-treeview.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/customizer.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/chart-custom.js"></script>
+
+    <!-- app JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/app.js"></script>
+
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/bootstrap.min.js"></script>
+
+<!--        &lt;!&ndash; Template Javascript &ndash;&gt;-->
+<!--    <script type="text/javascript" src="/hubkilo_website/static/src/js/travel_details.js?v=1158449945560009904"></script>-->
+
+        <!-- Template Javascript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/shipping_traveler_details.js?v=23998800"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+
+</xpath>
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+            <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+
+    </style>
+            <style>
+
+   .main-content {
+      padding-top: 0;
+      padding-bottom: 100px;
+   }
+
+   .modal1 {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.573);
+      z-index: 5000;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+   }
+
+   .modal1.active {
+      display: flex;
+      opacity: 1;
+   }
+
+   .modal1-content {
+      max-width: 90%;
+      max-height: 90%;
+      width: auto;
+      height: auto;
+      overflow: hidden;
+      z-index: 5000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .zoomed-img {
+      max-width: 80%;
+      max-height: 80%;
+      width: auto;
+      height: auto;
+      z-index: 5000;
+      object-fit: cover;
+   }
+
+   /* Additional responsive styles */
+   @media (max-width: 767px) {
+      .user-info__img img {
+         height: 40px;
+         width: 40px;
+      }
+
+      .modal1-content {
+         max-width: 90%;
+         max-height: 90%;
+      }
+
+   }
+</style>
+
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+
+                        <div class="oe_structure">
+                               <div class="container-xxl bg-white p-0">
+
+
+
+                                     <div class="wrapper">
+
+      <div class="row d-flex justify-content-center py-4" style="gap:30px">
+
+         <div class="col-md-10 py-2 px-2" style="box-shadow: 0px 10px 30px rgba(120, 121, 121, 0.482);">
+            <div class="row py-2 px-4">
+               <div class="col-md-6 d-flex " style="gap:20px">
+                   <div onclick="goToTravelDetails()">
+                    <i class="fa fa-arrow-circle-left" style="font-size:40px;color:#237bff"></i>
+                   </div>
+                    <h2 id="shipping_title_name">SHIP/2023/000000</h2>
+               </div>
+               <div id="shipping_action_button" class="col-md-6 d-flex justify-content-md-end">
+
+               </div>
+            </div>
+
+         </div>
+         <div class="col-md-10 overflow-hidden" style="box-shadow: 0px 10px 30px rgba(120, 121, 121, 0.482);">
+
+
+            <div id="shipping_info_state" class="container_badge" style="position: absolute;top: -15px;right: -5px; width: 250px">
+
+                </div>
+
+            <div class="p-4">
+
+               <div class="row">
+                  <div class="col-12">
+                     <h5 style="color:#217aff">General Informations</h5>
+                  </div>
+                  <div class="col-md-6 mt-4">
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Code</p>
+                        <p id="shipping_info_name" class="col-6" ></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Shipping creation date</p>
+                        <p id="shipping_info_date" class="col-6" ></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Sender</p>
+                        <p id="shipping_info_sender" class="col-6" ></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Average total weight</p>
+                        <p id="shipping_info_weight" class="col-6"></p>
+
+                     </div>
+                  </div>
+                  <div class="col-md-6 mt-4 "  style="border-left: 1px solid rgba(158, 156, 156, 0.553);">
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Travel booking</p>
+                        <p id="shipping_info_travel_code" class="col-6"></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Travel type</p>
+                        <p id="shipping_info_travel_type" class="col-6"></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Geo Latitude</p>
+                        <p id="shipping_info_lat" class="col-6"></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Geo Longitude</p>
+                        <p id="shipping_info_long" class="col-6"></p>
+                     </div>
+                  </div>
+               </div>
+
+
+            </div>
+
+            <div class="p-4">
+
+               <div class="row">
+                  <div class="col-12">
+                     <h5 style="color:#217aff">Receiver And Cost Infos</h5>
+                  </div>
+                  <div class="col-md-6 mt-4" style="border-right: 1px solid rgba(158, 156, 156, 0.553);">
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Receiver</p>
+                        <p id="shipping_info_receiver_name" class="col-6"></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Receiver Email</p>
+                        <p id="shipping_info_receiver_email" class="col-6"></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Receiver Phone</p>
+                        <p id="shipping_info_receiver_phone" class="col-6"></p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Receiver Address</p>
+                        <p id="shipping_info_receiver_address" class="col-6"></p>
+                     </div>
+                  </div>
+                  <div class="col-md-6 mt-4" >
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Shipping price</p>
+                        <p id="shipping_info_shipping_price" class="col-6">0.00 €</p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Luggage Cost</p>
+                        <p id="shipping_info_luggage_cost" class="col-6">0.00 €</p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Fees cost</p>
+                        <p id="shipping_info_fees_cost" class="col-6">0.00 €</p>
+                     </div>
+                     <div class="row">
+                        <p class="col-6" style="font-weight: 800;">Transaction Cost</p>
+                        <p id="shipping_info_transaction_cost" class="col-6">0.00 €</p>
+                     </div>
+                  </div>
+               </div>
+
+
+            </div>
+
+
+            <div class="p-4">
+
+               <div class="row">
+                  <div class="col-12">
+                     <h5 style="color:#217aff">Luggages</h5>
+                  </div>
+                  <div id="shipping_info_luggage_image" class="row mt-4">
+
+                  </div>
+
+               </div>
+
+
+            </div>
+
+            <!-- Modal for zoomed image -->
+            <div class="modal1" id="image-modal">
+               <div class="modal1-content">
+                  <img src="" alt="Zoomed Attachment" class="zoomed-img" />
+               </div>
+            </div>
+
+
+         </div>
+      </div>
+
+
+   </div>
+
+
+
+                                        <!--Error Modal Start-->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class='fas fa-exclamation-triangle' style='font-size:28px;color:red;margin-right:10px'></i>Alert</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_error_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+                                  <!--Error Modal End-->
+
+
+
+
+
+
+    </div>
+                        </div>
+
+
+
+        </t>
+
+        </t>
+
+
+    </template>
+</odoo>

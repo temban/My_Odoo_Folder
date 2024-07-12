@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	
+	<menuitem id="menu_m0st_hk_root" name="HUBKILO" sequence="2"
+	          web_icon="m0st_hk_base,static/img/hubkilologo.png"  
+	          groups="m0st_hk_base.group_hkbase_employee,m0st_hk_base.group_hkbase_shipper,m0st_hk_base.group_hkbase_traveler" />
+	
+			<!--My Interface-->
+			<menuitem id="menu_m0st_hk_root_userinterface" parent="menu_m0st_hk_root" name="My interface" sequence="1" groups="m0st_hk_base.group_hkbase_shipper,m0st_hk_base.group_hkbase_traveler" /> <!--web_icon="m0st_hk_base,static/img/icon_user_time.png"-->
+	
+				<menuitem id="menu_m0st_hk_root_userinterface_my"  name="My HUBKILO profile" parent="menu_m0st_hk_root_userinterface" sequence="1" action="m0st_hk_base.action_hkbase_partner_myprofile" />
+		
+							<!--Management-->
+		<menuitem id="menu_m0st_hk_root_employee" parent="menu_m0st_hk_root"
+		          	name="Management" sequence="2" groups="m0st_hk_base.group_hkbase_employee" />
+		
+		
+			<!--Admnistration-->
+			<menuitem id="menu_m0st_hk_root_config" parent="menu_m0st_hk_root"
+		          		name="Admnistration HUBKILO" sequence="100" 
+			          groups="m0st_hk_base.group_hkbase_employee,m0st_hk_base.group_hkbase_root" /> <!--web_icon="m0st_hk_base,static/img/config.png" -->
+	
+				<menuitem id="menu_m0st_hk_root_config_partner" name="Manage Partners" 
+		          		  parent="menu_m0st_hk_root_config" sequence="1" />
+		
+					<menuitem id="menu_m0st_hk_root_config_partner_traveler"  name="Travelers" 
+			          		  parent="menu_m0st_hk_root_config_partner" sequence="1" action="m0st_hk_base.action_hkbase_partner_traveler" />
+			
+					<menuitem id="menu_m0st_hk_root_config_partner_shipper"  name="Shippers" 
+			          		  parent="menu_m0st_hk_root_config_partner" sequence="2" action="m0st_hk_base.action_hkbase_partner_shipper" />
+			
+					<menuitem id="menu_m0st_hk_root_config_partner_beneficiary"  name="Beneficiairies" 
+			          		  parent="menu_m0st_hk_root_config_partner" sequence="3" action="m0st_hk_base.action_hkbase_partner_receiver" />
+	
+					<menuitem id="menu_m0st_hk_root_config_partner_all_partner" name="All partners" 
+			          		  parent="menu_m0st_hk_root_config_partner" sequence="4" action="base.action_partner_form" />
+
+				<menuitem id="menu_m0st_hk_root_config_localisation" name="Manage Localisation" 
+		          		  parent="menu_m0st_hk_root_config" sequence="2" />
+	
+					<menuitem id="menu_m0st_hk_root_config_localisation_city" name="Cities" 
+		          		  	parent="menu_m0st_hk_root_config_localisation" sequence="1" action="op_res_city.action_city" />
+							
+	
+				<menuitem id="menu_m0st_hk_root_config_misc" name="Manage Travels and Shippments" 
+		          		  parent="menu_m0st_hk_root_config" sequence="3" />
+	
+					<menuitem id="menu_m0st_hk_root_config_misc_luggage_type" name="Road Luggages Type"
+		          		  	parent="menu_m0st_hk_root_config_misc" sequence="1" action="m0st_hk_base.action_view_m0sthk_luggage_type_tree" />
+					
+					<menuitem id="menu_m0st_hk_root_config_misc_luggage" name="Road Luggages Model"
+		          		  	parent="menu_m0st_hk_root_config_misc" sequence="2" action="m0st_hk_base.action_view_m0sthk_luggage_model_tree" />
+							
+</odoo>

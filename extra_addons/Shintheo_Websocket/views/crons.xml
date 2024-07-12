@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--         Define the cron job to run the WebSocket script every minute -->
+        <record id="cron_run_websocket_script" model="ir.cron">
+            <field name="name">Run WebSocket Script</field>
+            <field name="model_id" ref="model_websocket_server_control"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field> <!-- Run indefinitely -->
+            <field name="code">model.start_websocket_server()</field>
+        </record>
+
+<!--        <record id="res_partners_websocket" model="ir.cron">-->
+<!--            <field name="name">Send Res Partners In REAL-TIME</field>-->
+<!--            <field name="model_id" ref="model_res_partner"/>-->
+<!--            <field name="interval_number">1</field>-->
+<!--            <field name="interval_type">minutes</field>-->
+<!--            <field name="numbercall">-1</field> &lt;!&ndash; Run indefinitely &ndash;&gt;-->
+<!--            <field name="code">model.get_local_partner_info_dict()</field>-->
+<!--        </record>-->
+
+        <record id="cron_update_websocket_status" model="ir.cron">
+            <field name="name">Update WebSocket Status</field>
+            <field name="model_id" ref="model_res_config_settings"/>
+            <field name="state">code</field>
+            <field name="code">model.update_websocket_status()</field>
+            <field name="interval_number">1</field> <!-- Adjust the interval as needed (in minutes) -->
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+        </record>
+
+<!--        <record id="cron_run_websocket_script" model="ir.cron">-->
+<!--            <field name="name">Run Shintheo WebSocket Script</field>-->
+<!--            <field name="model_id" ref="model_tba_websocket"/>-->
+<!--            <field name="interval_number">1</field>-->
+<!--            <field name="interval_type">minutes</field>-->
+<!--            <field name="numbercall">-1</field> &lt;!&ndash; Run indefinitely &ndash;&gt;-->
+<!--            <field name="code">model.run_server_websocket_script()</field>-->
+<!--        </record>-->
+
+<!--        <record id="res_partners_websocket" model="ir.cron">-->
+<!--            <field name="name">Send Res Partners In REAL-TIME</field>-->
+<!--            <field name="model_id" ref="model_res_partner"/>-->
+<!--            <field name="interval_number">10</field>-->
+<!--            <field name="interval_type">minutes</field>-->
+<!--            <field name="numbercall">-1</field> &lt;!&ndash; Run indefinitely &ndash;&gt;-->
+<!--            <field name="code">model.get_server_partner_info_dict()</field>-->
+<!--        </record>-->
+    </data>
+</odoo>

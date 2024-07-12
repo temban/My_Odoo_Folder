@@ -1,0 +1,61 @@
+/* addons/custom_pos/static/src/css/pos_interface.css */
+
+/* Custom styling for the POS interface of a barbing salon */
+
+/* Product Categories */
+.product-categories {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.product-category {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.product-category:hover {
+    background-color: #e0e0e0;
+}
+
+/* Customer Information */
+.customer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.customer-name {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.customer-search input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+
+.customer-list {
+    /* Additional styling for customer search results */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Appointment Scheduling */
+.appointment-schedule {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.appointment-time {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}

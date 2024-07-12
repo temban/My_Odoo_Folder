@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}

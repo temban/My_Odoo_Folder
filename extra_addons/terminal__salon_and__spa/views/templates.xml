@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+<template id="point_of_sale_assets" name="Point of Sale assets" inherit_id="point_of_sale.assets">
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/terminal__salon_and__spa/static/src/js/pos_interface_override.js"></script>
+    </xpath>
+
+    <div t-name="CustomOrderScreenWidget">
+        <div class="product-categories">
+            <button class="product-category" data-id="1">Haircuts</button>
+            <button class="product-category" data-id="2">Shaving</button>
+            <button class="product-category" data-id="3">Beard Trimming</button>
+            <button class="product-category" data-id="4">Styling Products</button>
+        </div>
+        <div class="customer-info">
+            <div class="customer-name">Customer: Guest</div>
+            <div class="customer-search">
+                <input type="text" class="search-customer" placeholder="Search Customer"/>
+            </div>
+            <div class="customer-list">
+                <!-- Customer search results will be displayed here -->
+            </div>
+        </div>
+        <div class="appointment-schedule">
+            <input type="text" class="appointment-time" placeholder="Appointment Time"/>
+        </div>
+        <div class="orderlines">
+            <!-- Orderlines will be displayed here -->
+        </div>
+        <div class="summary">
+            <!-- Order summary will be displayed here -->
+        </div>
+        <div class="order-actions">
+            <!-- Order action buttons will be displayed here -->
+        </div>
+    </div>
+</template>
+    </data>
+</odoo>

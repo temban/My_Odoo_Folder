@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="shipping_details_test" name="Shipping Details">
+        <templates xml:space="preserve">
+        <t name="Shipping Details" t-name="hubkilo_website.shipping_details_test"  inherit_id="web.assets_frontend" owl="1">
+            <!--            styles-->
+            <xpath expr="." position="inside">
+       <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+    <!-- Libraries Stylesheet -->
+    <link href="/hubkilo_website/static/src/lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/shipping_details.css?v=95530"/>
+    <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/ajouter_voyage.css" />
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/wizard2.css?v=384669848889944993003"/>
+
+
+                      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend-plugin.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend.css?v=1.0.0"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/remixicon/fonts/remixicon.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/wow/wow.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/easing/easing.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/counterup/counterup.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+<!--    <script type="text/javascript" src="/hubkilo_website/static/src/js/shipping_details_test.js?v=530125437999629"></script>-->
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+            <script  src="/hubkilo_website/static/src/js/autocompleteShippingDetails.js?v=188889958889900999998888869988999999909999999988779894"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="/hubkilo_website/static/src/js/App/owl.iife.js"></script>
+
+         </xpath>
+
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+            <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+  .selected {
+    border: 2px solid #4fbf65;
+  }
+    </style>
+
+
+<!--  LOADER START              -->
+<!--     <div class="loader_container">-->
+<!--        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>-->
+<!--    </div>-->
+<!--  LOADER END             -->
+
+
+                        <div class="oe_structure">
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header p-0 " style="background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+            <div class="container-fluid page-header-inner py-5"  style="display: flex;justify-content:center;align-items: center;flex-direction: column;">
+<!--                <h1 class="display-3 text-white mb-3 animated slideInDown">Shipping details</h1>-->
+                <div class="row container" id="travel_info">
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+                               <div class="container-xxl bg-white p-0">
+
+        <!-- Room Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">My Shipping Details</h6>
+                </div>
+                <div id="all_results" class="row g-4"  style="display: flex;justify-content: center;">
+
+                    <div id="beans">
+                        <div class="btn btn-primary custom-hello-button" onclick="fuck()">Click me</div>
+                    </div>
+
+
+
+<!--                    <div style="display:flex;justify-content:center;align-item:center">-->
+<!--                                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">-->
+<!--  <span class="visually-hidden">Loading...</span>-->
+<!--</div>-->
+<!--                    </div>-->
+
+                </div>
+                <div id="traveler_info">
+
+                </div>
+
+                <div id="search_row" class="row g-4">
+
+                </div>
+            </div>
+        </div>
+        <!-- Room End -->
+
+
+
+
+
+    </div>
+                        </div>
+
+
+                            <!--Error Modal Start-->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel"><i class='fas fa-exclamation-triangle' style='color:red;margin-right:10px'></i>Alert</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_error_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+                                  <!--Error Modal End-->
+
+
+
+                                        <!--Success Modal Start-->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel"><i class='fa fa-check-circle' style='color:#4fbf65;margin-right:10px'></i>Alert</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_success_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+                                  <!--Success Modal End-->
+
+        </t>
+
+        </t>
+
+        </templates>
+
+
+
+    </template>
+</odoo>

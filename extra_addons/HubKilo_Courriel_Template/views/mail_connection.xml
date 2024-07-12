@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+<!-- Allow updating on noupdate=True records -->
+<function name="write" model="ir.model.data">
+    <function name="search" model="ir.model.data">
+        <value
+            eval="[('module', '=', 'auth_signup'), ('name', '=', 'set_password_email')]" />
+    </function>
+    <value eval="{'noupdate': False}" />
+</function>
+
+                  <!-- Email template for new users -->
+        <record id="auth_signup.set_password_email" model="mail.template">
+            <field name="name">Auth Signup: Odoo Connection</field>
+            <field name="model_id" ref="base.model_res_users"/>
+            <field name="subject">{{ object.create_uid.name }} from {{ object.company_id.name }} invites you to connect to HubKilo</field>
+            <field name="email_from">"{{ object.company_id.name }}" &lt;{{ (object.company_id.email or user.email) }}&gt;</field>
+            <field name="email_to">{{ object.email_formatted }}</field>
+            <field name="body_html" type="html">
+
+
+
+                 <html>
+
+                <body style="font-family: 'Roboto', sans-serif; background-color: #e2e2e2; margin: 0; padding: 0;">
+                    <div class="email-wrapper" style="max-width: 600px; margin: 20px auto; padding: 10px 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1); z-index: 4;">
+                        <div class="header" style="text-align: center; padding: 20px 0; background-color: #007BFF; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <img class="logo" src="https://drive.google.com/uc?export=view&amp;id=11quXHiWTQ8mIYBSlX9byZKlfRJmLpoZy" alt="Your App Logo" style="max-width: 110px;"/>
+                            <h2 style="margin: 10px 0; font-size: 32px; color: #ffffff;">HubKilo Connection.</h2>
+                        </div>
+                        <div class="content" style="padding: 20px 0;">
+  <!-- CONTENT -->
+    <tr>
+        <td align="center" style="min-width: 590px;">
+                <tr><td valign="top" style="font-size: 13px;">
+                    <div>
+                        Dear <t t-out="object.name or ''">Marc Demo</t>,<br /><br />
+                        You have been invited by <t t-out="object.create_uid.name or ''">OdooBot</t> of <t t-out="object.company_id.name or ''">YourCompany</t> to connect on Odoo.
+                        <div style="margin: 16px 0px 16px 0px;">
+                            <a t-att-href="object.signup_url"
+                                style="background-color: #007BFF; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                                Accept invitation
+                            </a>
+                        </div>
+                        <t t-set="website_url" t-value="object.get_base_url()"></t>
+                        Your Odoo domain is: <b><a t-att-href='website_url' t-out="website_url or ''">http://yourcompany.odoo.com</a></b><br />
+                        Your sign in email is: <b><a t-attf-href="/web/login?login={{ object.email }}" target="_blank" t-out="object.email or ''">mark.brown23@example.com</a></b><br /><br />
+                        Never heard of Odoo? It’s an all-in-one business software loved by 7+ million users. It will considerably improve your experience at work and increase your productivity.
+                        <br /><br />
+                        Have a look at the <a href="https://www.odoo.com/page/tour?utm_source=db&amp;utm_medium=auth" style="color: #875A7B;">Odoo Tour</a> to discover the tool.
+                        <br /><br />
+                        Enjoy Odoo!<br />
+                        --<br/>The <t t-out="object.company_id.name or ''">YourCompany</t> Team
+                    </div>
+                </td></tr>
+                <tr><td style="text-align:center;">
+                  <hr width="100%" style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;"/>
+                </td></tr>
+        </td>
+    </tr>
+                        </div>
+                        <div class="footer" style="padding: 20px 0; text-align: center; color: #888888; font-size: 14px; background-color: #f2f2f2; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+    <!-- FOOTER -->
+    <tr>
+        <td align="center" style="min-width: 590px;">
+                <tr><td valign="middle" align="left">
+                    <t t-out="object.company_id.name or ''">YourCompany</t>
+                </td></tr>
+                <tr><td valign="middle" align="left" style="opacity: 0.7;">
+                    <t t-out="object.company_id.phone or ''">+1 650-123-4567</t>
+                    <t t-if="object.company_id.email">
+                        | <a t-att-href="'mailto:%s' % object.company_id.email" style="text-decoration:none; color: #454748;" t-out="object.company_id.email or ''">info@yourcompany.com</a>
+                    </t>
+                    <t t-if="object.company_id.website">
+                        | <a t-att-href="'%s' % object.company_id.website" style="text-decoration:none; color: #454748;" t-out="object.company_id.website or ''">http://www.example.com</a>
+                    </t>
+                </td></tr>
+        </td>
+    </tr>
+
+                        </div>
+                    </div>
+                </body>
+                </html>
+            </field>
+            <field name="lang">{{ object.lang }}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+
+<function name="write" model="ir.model.data">
+    <function name="search" model="ir.model.data">
+        <value
+            eval="[('module', '=', 'auth_signup'), ('name', '=', 'set_password_email')]" />
+    </function>
+    <value eval="{'noupdate': True}" />
+</function>
+
+    </data>
+</odoo>

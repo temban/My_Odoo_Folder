@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+		<!--IR.CRON-->
+		<record id="data_m2st_rpn_negative_account_balance" model="ir.cron">
+			<field name="name">RPN Negative Account Balance Reminder</field>
+			<field name="model_id" ref="m1sh_rpn_associations.model_rpn_association_member"/>
+			<field name="state">code</field>
+			<field name="code">model.check_account_balance_and_send_email()</field>
+			<field name='interval_number'>1</field>
+			<field name='interval_type'>days</field>
+			<field name="numbercall">-1</field>
+		</record>
+
+		<record id="data_m2st_rpn_account_dis_activation" model="ir.cron">
+			<field name="name">RPN Departure Date Account Dis-Activation</field>
+			<field name="model_id" ref="m1sh_rpn_associations.model_rpn_association_member"/>
+			<field name="state">code</field>
+			<field name="code">model.account_dis_activated()</field>
+			<field name='interval_number'>1</field>
+			<field name='interval_type'>days</field>
+			<field name="numbercall">-1</field>
+		</record>
+    </data>
+</odoo>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		
+		<!-- Inherit res.partner -->
+		<record model="ir.ui.view" id="view_m2sthk_inherit_res_partner_form">
+            <field name="name">view_m2sthk_inherit_res_partner_form</field>
+        	<field name="model">res.partner</field>
+			<field name="inherit_id" ref="m0st_hk_base.view_hkbase_inherit_res_partner_form"/>
+        	<field name="arch" type="xml">
+        		<notebook position="inside">
+        			<page string="Air Travels" groups="m0st_hk_base.group_hkbase_traveler">
+        				<group colspan="4">
+							<field name="air_travelbooking_ids" nolabel="1" readonly="True" mode="tree" >
+								<tree string="Air Travels infos" colspan="4"
+									decoration-info="state=='pending'" decoration-success="state=='completed'"
+									decoration-warning="state=='accepted'"
+									decoration-danger="state=='rejected'">
+									
+<!--									<field name="name" />-->
+									<field name="code" />
+									<field name="booking_date" />
+									<field name="partner_id" />
+									<field name="booking_type"/>
+									<field name="local_currency_id" />
+									<field name="state" />
+								</tree>
+							</field>
+						</group>
+        			</page>
+        		
+        			<page string="Air Shippings" groups="m0st_hk_base.group_hkbase_shipper">
+        				<group colspan="4">
+							<field name="air_shipping_ids" nolabel="1" readonly="True" mode="tree">
+								<tree string="Air Shippings infos" colspan="4"
+									decoration-info="state=='pending'" 
+								      decoration-success="state=='accepted'"
+									decoration-danger="state=='rejected'">
+									
+									<field name="name" />
+									<field name="partner_id" />
+									<field name="shipping_price"/>
+									<field name="travelbooking_id" />
+									<field name="booking_type"/>
+									<field name="disable"/>
+									<field name="state" />
+								</tree>
+							</field>
+						</group>
+        			</page>
+
+
+					<page string="Air Directory Book" groups="m0st_hk_base.group_hkbase_shipper">
+        				<group colspan="4">
+							<field name="air_receiver_partner_ids" nolabel="1"
+								   readonly="True" mode="tree">
+								<tree string="Air Directory Book" colspan="4">
+
+									<field name="name" />
+									<field name="email" />
+									<field name="mobile"/>
+									<field name="street" />
+
+								</tree>
+							</field>
+						</group>
+        			</page>
+        		
+        			
+        		</notebook>
+        		
+			</field>
+        </record>
+		
+	</data>
+</odoo>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	
+			<menuitem id="menu_m2st_hk_userinterface_my"  name="My Air Entities"
+  			parent="m0st_hk_base.menu_m0st_hk_root_userinterface" sequence="5"
+			groups="m0st_hk_base.group_hkbase_traveler"/>
+
+	<menuitem id="menu_m2st_hk_userinterface_my_travel"  name="Travels"
+  			parent="menu_m2st_hk_userinterface_my" sequence="4"
+	          action="m2st_hk_airshipping.action_view_m2st_hk_airshipping_travelbooking_kanban_my"
+			groups="m0st_hk_base.group_hkbase_traveler"/>
+
+	
+	<menuitem id="menu_m2st_hk_userinterface_my_shipping"  name="Shippings"
+  			parent="menu_m2st_hk_userinterface_my" sequence="4"
+	          action="m2st_hk_airshipping.action_view_m2st_hk_airshipping_shipping_kanban_my"
+			groups="m0st_hk_base.group_hkbase_shipper"/>
+
+
+				
+	<!--EMPLOYEE MENU-->
+	<menuitem id="menu_m2st_hk_root_employee_air" parent="m0st_hk_base.menu_m0st_hk_root_employee"
+		          	name="Air Entities" sequence="4"/>
+
+		<menuitem id="menu_m2st_hk_root_employee_travel" parent="menu_m2st_hk_root_employee_air"
+		          	name="Travels" sequence="1"
+		          	action="m2st_hk_airshipping.action_view_m2st_hk_airshipping_travelbooking_kanban" />
+
+		<menuitem id="menu_m2st_hk_root_employee_shipping" parent="menu_m2st_hk_root_employee_air"
+		          	name="Shippings" sequence="2"
+		          	action="m2st_hk_airshipping.action_view_m2st_hk_airshipping_shipping_kanban" />
+
+<menuitem id="menu_m0st_hk_air_ratings"  name="Ratings"
+			          		  parent="m2st_hk_airshipping.menu_m2st_hk_root_employee_air" sequence="3" action="hubkilo_air_action_partner_rating" />
+
+
+        	<menuitem id="menu_m0st_hk_air_notif"  name="Notifications"
+			          		  parent="m2st_hk_airshipping.menu_m2st_hk_root_employee_air" sequence="4" action="m2st_hk_airshipping.hubkilo_air_action_partner_notifications" />
+
+	
+</odoo>

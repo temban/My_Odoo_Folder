@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="terminal__salon_and__spa.list">
+      <field name="name">Terminal_Salon_and_SPA list</field>
+      <field name="model">terminal__salon_and__spa.terminal__salon_and__spa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="terminal__salon_and__spa.action_window">
+      <field name="name">Terminal_Salon_and_SPA window</field>
+      <field name="res_model">terminal__salon_and__spa.terminal__salon_and__spa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="terminal__salon_and__spa.action_server">
+      <field name="name">Terminal_Salon_and_SPA server</field>
+      <field name="model_id" ref="model_terminal__salon_and__spa_terminal__salon_and__spa"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Terminal_Salon_and_SPA" id="terminal__salon_and__spa.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="terminal__salon_and__spa.menu_1" parent="terminal__salon_and__spa.menu_root"/>
+    <menuitem name="Menu 2" id="terminal__salon_and__spa.menu_2" parent="terminal__salon_and__spa.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="terminal__salon_and__spa.menu_1_list" parent="terminal__salon_and__spa.menu_1"
+              action="terminal__salon_and__spa.action_window"/>
+    <menuitem name="Server to list" id="terminal__salon_and__spa" parent="terminal__salon_and__spa.menu_2"
+              action="terminal__salon_and__spa.action_server"/>
+-->
+  </data>
+</odoo>

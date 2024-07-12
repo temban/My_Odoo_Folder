@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Extend the existing res.config.settings view -->
+<record id="ssl_file_upload_page" model="ir.ui.view">
+    <field name="name">res.config.settings.inherit</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//div[hasclass('settings')]" position="inside">
+            <div class="scrolling-banner">
+                <marquee behavior="scroll" direction="left" style="color: #fff; background-color: #336699; padding: 5px; font-size:16px">
+                    Welcome to Shintheo Websocket setting panel. Here, make sure you set the port to your desired port, by default it is set to 9090. Also, you have to upload your ssl certification and private key pem files. After all these set, Shintheo Websocket will be open to your sever ip address or host name and your desired port. Happy consumption.
+                </marquee>
+            </div>
+            <div class="app_settings_block" data-string="SSL Files Upload" string="SSL Files Upload" data-key="Shintheo_Websocket" name="Shintheo_Websocket">
+                <h2 style="color: #336699; font-size: 20px; margin-bottom: 10px; text-align: center;">Shintheo Websocket SSL Files Upload</h2>
+                <div class="o_setting_right_pane" style="margin: 1rem 0 0 6rem;">
+                    <form string="My Module Settings">
+                        <group>
+
+                           <group>
+                            <field name="uploaded_files" style="width:100%; background-color: #f0f0f0; padding: 10px; border: 1px solid #ccc;"/>
+                           </group>
+                            <group>
+                               <field name="websocket_status" widget="radio"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="file1_name" style="background-color: #f9f9f9; padding: 5px; border: 1px solid #ddd; margin-bottom: 1rem;"/>
+                                <field name="file1_data" filename="file1_name" style="width:100%; height: 3rem"/>
+                            </group>
+                            <group>
+                                <field name="port" style="background-color: #f9f9f9; padding: 5px; border: 1px solid #ddd;"/>
+                            </group>
+                        </group>
+                    </form>
+                </div>
+            </div>
+            <!-- Add the scrolling banner here -->
+
+        </xpath>
+    </field>
+</record>
+        <!-- Extend the existing res.config.settings action -->
+        <record id="res_config_settings_ssl_file_upload_page" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module': 'Shintheo_Websocket'}</field>
+        </record>
+    </data>
+</odoo>

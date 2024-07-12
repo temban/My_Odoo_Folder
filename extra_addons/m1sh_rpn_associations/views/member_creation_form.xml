@@ -1,0 +1,93 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="action_rpn_base_partner_diseased_member">
+            <field name="name">Deceased Members</field>
+            <field name="view_id" ref="base.res_partner_kanban_view"/>
+            <field name="domain">[('is_member', '=', True), ('state', '=', 'is_death')]</field>
+            <field name="context">{'default_is_member': True}</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="m0sh_rpn_base.view_m0sh_rpn_base_inherit_res_partner_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <h2>Deceased Members</h2>
+                </p>
+            </field>
+        </record>
+
+        <record id="member_form_view" model="ir.ui.view">
+            <field name="name">association.member.form</field>
+            <field name="model">rpn.association.member</field>
+            <field name="arch" type="xml">
+                <form string="Association Member Form">
+                    <sheet>
+                        <group colspan="4" col="4" string="My Personal Information">
+                            <group colspan="2" col="2" string="My Details">
+                                <field name="partner_id" invisible="1"/>
+                                <field name="birth_date"/>
+                                <field name="birth_city_id"/>
+                                <field name="manager_id"/>
+                                <field name="nationality_id"/>
+                                <!--<field name="active" invisible="1"/>-->
+                            </group>
+                            <group colspan="2" col="2" string="My Residence Address">
+                                <field name="street"/>
+                                <field name="street2"/>
+                                <field name="city_id"/>
+                                <field name="state_id"/>
+                                <field name="zip"/>
+                                <field name="country_id"/>
+                                <!--<field name="active"/>-->
+                            </group>
+                        </group>
+
+                        <group colspan="4" col="4" string="My Status in Canada">
+                            <group colspan="2" col="2">
+                                <field name="status"/>
+                            </group>
+                            <group colspan="2" col="2">
+                                <field name="departure_date" attrs="{'invisible': [('status', '!=', 'visitor')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="manager_form_view" model="ir.ui.view">
+            <field name="name">association.manager.form</field>
+            <field name="model">association.manager</field>
+            <field name="arch" type="xml">
+                <form string="Association Manager Form">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="partner_id" invisible="1"/>
+                                <field name="members" invisible="1"/>
+                                <field name="member_partner_id"/>
+                            </group>
+                            <group>
+                                <field name="status"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                    <!--                        <notebook>-->
+                    <!--                            <page string="Members">-->
+                    <!--                                <field name="member_ids">-->
+                    <!--                                    <tree>-->
+                    <!--                                        <field name="partner_id"/>-->
+                    <!--                                        <field name="is_member"/>-->
+                    <!--                                        <field name="is_manager"/>-->
+                    <!--                                        <field name="manager_id"/>-->
+                    <!--                                    </tree>-->
+                    <!--                                </field>-->
+                    <!--                            </page>-->
+                    <!--                        </notebook>-->
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="receiver" name="Beneficiary">
+        <t name="Beneficiary" t-name="hubkilo_website.receiver" inherit_id="web.assets_backend">
+            <!--            styles-->
+            <xpath expr="." position="inside">
+       <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+    <!-- Libraries Stylesheet -->
+    <link href="/hubkilo_website/static/src/lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+<!--      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/receiver.css?v=98823"/>-->
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <script src="/hubkilo_website/static/src/lib/wow/wow.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/easing/easing.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/counterup/counterup.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/receiver.js?v=6003399"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+
+         </xpath>
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+
+            <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+
+    </style>
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+                        <div class="oe_structure">
+
+            <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-position:bottom;background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown" style="font-weight:700">My Parcels</h1>
+
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+                               <div class="container-xxl bg-white p-0">
+
+        <!-- Room Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">My Parcels</h6>
+                </div>
+                <div id="my_parcels" class="row g-4" style="margin-bottom:300px">
+
+                        <h1 style="text-align:center;margin-top:100px">No Parcels</h1>
+
+                </div>
+
+                <div id="search_row" class="row g-4">
+
+                </div>
+            </div>
+        </div>
+        <!-- Room End -->
+
+
+
+
+
+    </div>
+                        </div>
+
+
+
+        </t>
+
+        </t>
+
+
+    </template>
+</odoo>

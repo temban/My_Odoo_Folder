@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Inherit res.partner -->
+        <record model="ir.ui.view" id="view_m0sh_rpn_base_inherit_res_partner_form">
+            <field name="name">view_m0sh_rpn_base_inherit_res_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="city" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+
+                <notebook position="inside">
+                    <page string="Member Extra-infos">
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2" string="Partner Type">
+                                <field name="is_member"/>
+                                <field name="is_manager"/>
+                                <field name="is_internal_user" invisible="1"/>
+                                <field name="current_date" invisible="1"/>
+                                <field name="related_user_id"
+                                       options="{'no_open': True, 'no_create': True, 'no_create_edit': True}"/>
+                            </group>
+
+                            <group colspan="2" col="2" string="Extra">
+                                <field name="gender"/>
+                                <field name="sex" invisible="1"/>
+                            </group>
+
+                        </group>
+                    </page>
+
+                    <page string="Attachments"
+                          groups="m0sh_rpn_base.group_m0sh_rpn_base_member,m0sh_rpn_base.group_m0sh_rpn_base_manager">
+                        <group colspan="4">
+                            <field name="partner_attachment_ids" nolabel="1" mode="tree">
+                                <tree string="Attachments" colspan="4" editable="bottom">
+                                    <field name="id"/>
+                                    <field name="attach_custom_type"/>
+                                    <field name="name"/>
+                                    <field name="reference"/>
+                                    <field name="date_start"/>
+                                    <field name="date_end"/>
+                                    <field name="duration"/>
+                                    <field name="duration_rest"/>
+                                    <field name="validity"/>
+                                    <field name="datas"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+
+                <!--				<notebook position="inside">-->
+                <!--        			<page string="Emergency Contacts">-->
+                <!--        				<group colspan="4" col="4">-->
+                <!--							<group colspan="2" col="2" string="Emergency Contacts">-->
+                <!--								<field name="emergency_contact_ids" />-->
+                <!--							</group>-->
+                <!--						</group>-->
+                <!--        			</page>-->
+                <!--        		</notebook>-->
+
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="view_rpn_base_inherit_res_partner_tree">
+            <field name="name">view_rpn_base_inherit_res_partner_tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <field name="is_member" invisible="1"/>
+                    <field name="is_manager" invisible="1"/>
+                    <field name="gender" invisible="1"/>
+                    <field name="birthdate" invisible="1"/>
+                    <field name="current_date" invisible="1"/>
+                    <field name="related_user_id" invisible="1"/>
+
+                    <field name="birth_city_id" invisible="1"/>
+                    <field name="residence_city_id" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_m0sh_rpn_base_inherit_res_partner_filter">
+            <field name="name">view_rpn_base_inherit_res_partner_filter</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="is_member" invisible="1"/>
+                    <field name="is_manager" invisible="1"/>
+                    <field name="gender" invisible="1"/>
+                    <field name="birthdate" invisible="1"/>
+
+                    <field name="birth_city_id" invisible="1"/>
+                    <field name="residence_city_id" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="action_rpn_base_partner_member">
+            <field name="name">Members</field>
+            <field name="view_id" ref="base.res_partner_kanban_view"/>
+            <field name="domain">[('is_member', '=', True), ('member_diseased', '=', False)]</field>
+            <field name="context">{'default_is_member': True}</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_m0sh_rpn_base_inherit_res_partner_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <h2>Members</h2>
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_rpn_base_partner_manager">
+            <field name="name">Managers</field>
+            <field name="view_id" ref="base.res_partner_kanban_view"/>
+            <field name="domain">[('is_manager', '=', True), ('member_diseased', '=', False)]</field>
+            <field name="context">{'default_is_manager': True}</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_m0sh_rpn_base_inherit_res_partner_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <h2>Managers</h2>
+                </p>
+            </field>
+        </record>
+
+
+        <record id="action_rpn_base_partner_staff" model="ir.actions.act_window">
+            <field name="name">Staff</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('is_member', '=', True), ('is_internal_user', '=', True)]</field>
+            <field name="context">{'default_is_member': True, 'default_is_internal_user': True}</field>
+            <field name="view_id" ref="base.res_partner_kanban_view"/>
+            <field name="search_view_id" ref="view_m0sh_rpn_base_inherit_res_partner_filter"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <h2>
+                        Staff
+                    </h2>
+
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

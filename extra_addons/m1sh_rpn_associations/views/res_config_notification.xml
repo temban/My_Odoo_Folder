@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record id="rpn_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.m1sh_rpn_associations_pits_fcm_notifications</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="RPN FCM SETTINGS"
+                         string="RPN FCM SETTINGS"
+                         data-key="m1sh_rpn_associations" name="m1sh_rpn_associations">
+                        <!--groups="m0st_hk_base.group_hkbase_root"-->
+
+                        <h2>RPN FCM SETTINGS Options</h2>
+                        <div class="row mt16 o_settings_container">
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="new_member_staff_notif_title">
+                                    <label for="new_member_staff_notif_title"/>
+                                    <div class="text-muted">
+                                        New Membership Activated Title Sent to Staff
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="new_member_staff_notif_title" class="o_light_label"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="new_member_staff_notif_body">
+                                    <label for="new_member_staff_notif_body"/>
+                                    <div class="text-muted">
+                                        New Membership Activated Message Sent to Staff
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="new_member_staff_notif_body" class="o_light_label"
+                                                   style="width:600px"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="member_activation_notif_title">
+                                    <label for="member_activation_notif_title"/>
+                                    <div class="text-muted">
+                                        Account Activation Title Sent to Member
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="member_activation_notif_title"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="member_activation_notif_body">
+                                    <label for="member_activation_notif_body"/>
+                                    <div class="text-muted">
+                                        Account Activation Message Sent to Member
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="member_activation_notif_body" style="width:600px"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="confirm_payment_recharge_title">
+                                    <label for="confirm_payment_recharge_title"/>
+                                    <div class="text-muted">
+                                        New Recharge Title
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="confirm_payment_recharge_title"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="confirm_payment_recharge_body">
+                                    <label for="confirm_payment_recharge_body"/>
+                                    <div class="text-muted">
+                                        New Recharge Message
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="confirm_payment_recharge_body" style="width:600px"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="dn_debit_member_title">
+                                    <label for="dn_debit_member_title"/>
+                                    <div class="text-muted">
+                                        New DN Contribution Title
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="dn_debit_member_title"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="dn_debit_member_body">
+                                    <label for="dn_debit_member_body"/>
+                                    <div class="text-muted">
+                                        New DN Contribution Message
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="dn_debit_member_body" style="width:600px"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="member_selected_as_manager_title">
+                                    <label for="member_selected_as_manager_title"/>
+                                    <div class="text-muted">
+                                        RPN Manager Selection Title
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="member_selected_as_manager_title"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="member_selected_as_manager_body">
+                                    <label for="member_selected_as_manager_body"/>
+                                    <div class="text-muted">
+                                        RPN Manager Selection Message
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="member_selected_as_manager_body" style="width:600px"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_m1sh_rpn_associations_action" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'm1sh_rpn_associations'}</field>
+        </record>
+    </data>
+</odoo>

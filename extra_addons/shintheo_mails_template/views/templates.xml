@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="mail_template_account_create" model="mail.template">
+            <field name="name">Shintheo Notification</field>
+            <field name="model_id" ref="shintheo_mails_template.model_res_users"/>
+            <field name="email_from">{{object.company_id.email}}</field>
+             <field name="email_to">{{object.login}}</field>
+            <field name="auto_delete" eval="False"/>
+            <field name="subject">Account Creation</field>
+            <field name="body_html">
+    <html>
+        <head>
+            <meta charset="UTF-8"/>
+            <title>Welcome</title>
+            </head>
+                <body style="font-family: 'Roboto', sans-serif; background-color: #e2e2e2; margin: 0; padding: 0;">
+                    <div class="email-wrapper" style="max-width: 600px; margin: 20px auto; padding: 10px 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1); z-index: 4;">
+                        <div class="header" style="text-align: center; padding: 20px 0; background-color: #007BFF; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <img class="logo" src="" alt="Your App Logo" style="max-width: 110px;"/>
+                            <h2 style="margin: 10px 0; font-size: 32px; color: #ffffff;">Welcome</h2>
+                        </div>
+                        <div class="content" style="padding: 20px 0;">
+                            <p>Hello <strong><t t-out="object.name or ''">Brandon Freeman</t></strong>,</p>
+                             <p>You are Welcome!</p>
+                            <p>Thank you for creating an account with us.</p>
+                        </div>
+                        <div class="footer" style="padding: 20px 0; text-align: center; color: #888888; font-size: 14px; background-color: #f2f2f2; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;">
+                            <p>If you have any questions or need assistance, please contact us at <br/><t t-out="object.company_id.email or ''">admin@gmail.com</t>.</p>
+                            <p>Best regards,<br/>Your App Team</p>
+                        </div>
+                    </div>
+                </body>
+                </html>
+            </field>
+        </record>
+    </data>
+</odoo>

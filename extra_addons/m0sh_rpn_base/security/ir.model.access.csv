@@ -1,0 +1,16 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_m0sh_rpn_base_res_partner_root","m0sh_rpn_base_res_partner_root","base.model_res_partner","m0sh_rpn_base.group_m0sh_rpn_base_root",1,1,1,1
+"access_m0sh_rpn_base_res_partner_member","m0sh_rpn_base_res_partner_member","base.model_res_partner","m0sh_rpn_base.group_m0sh_rpn_base_member",1,1,0,0
+"access_m0sh_rpn_base_res_partner_manager","m0sh_rpn_base_res_partner_manager","base.model_res_partner","m0sh_rpn_base.group_m0sh_rpn_base_manager",1,1,0,0
+"access_m0sh_rpn_base_res_city_root","m0sh_rpn_base_res_city_root","op_res_city.model_res_city","m0sh_rpn_base.group_m0sh_rpn_base_root",1,1,1,1
+"access_m0sh_rpn_base_res_city_member","m0sh_rpn_base_res_city_member","op_res_city.model_res_city","m0sh_rpn_base.group_m0sh_rpn_base_member",1,0,0,0
+"access_m0sh_rpn_base_res_city_manager","m0sh_rpn_base_res_city_manager","op_res_city.model_res_city","m0sh_rpn_base.group_m0sh_rpn_base_manager",1,0,0,0
+"access_m0sh_rpn_base_res_users_root","m0sh_rpn_base_res_users_root","base.model_res_users","m0sh_rpn_base.group_m0sh_rpn_base_root",1,1,0,0
+"access_m0sh_rpn_base_res_users_member","m0sh_rpn_base_res_users_member","base.model_res_users","m0sh_rpn_base.group_m0sh_rpn_base_member",1,1,0,0
+"access_m0sh_rpn_base_res_users_manager","m0sh_rpn_base_res_users_manager","base.model_res_users","m0sh_rpn_base.group_m0sh_rpn_base_manager",1,1,0,0
+"access_m0sh_rpn_base_m0shrpn_base_root","m0sh_rpn_base_m0shrpn_base_root","model_m0shrpn_base","m0sh_rpn_base.group_m0sh_rpn_base_root",1,1,0,0
+"access_m0sh_rpn_base_m0shrpn_base_member","m0sh_rpn_base_m0shrpn_base_member","model_m0shrpn_base","m0sh_rpn_base.group_m0sh_rpn_base_member",1,1,0,0
+"access_m0sh_rpn_base_m0shrpn_base_manager","m0sh_rpn_base_m0shrpn_base_manager","model_m0shrpn_base","m0sh_rpn_base.group_m0sh_rpn_base_manager",1,1,0,0
+"access_m0sh_rpn_base_ir_attachment_root","m0sh_rpn_base_ir_attachment_root","base.model_ir_attachment","m0sh_rpn_base.group_m0sh_rpn_base_root",1,1,1,1
+"access_m0sh_rpn_base_ir_attachment_member","m0sh_rpn_base_ir_attachment_member","base.model_ir_attachment","m0sh_rpn_base.group_m0sh_rpn_base_member",1,1,1,1
+"access_m0sh_rpn_base_ir_attachment_manager","m0sh_rpn_base_ir_attachment_manager","base.model_ir_attachment","m0sh_rpn_base.group_m0sh_rpn_base_manager",1,1,1,1

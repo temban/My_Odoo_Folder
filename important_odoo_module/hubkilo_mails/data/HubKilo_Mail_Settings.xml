@@ -1,0 +1,322 @@
+<odoo>
+    <data>
+        <record id="view_res_config_settings_mails_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="HUBKILO Mails Settings" string="HUBKILO Mails Settings"
+                         data-key="hubkilo_mails" name="hubkilo_mails" >
+                        <h2>HUBKILO Mails Configuration</h2>
+                        <div style="margin:2rem;">
+                            <!-- New published Traveler Section -->
+                            <div class="row" style="height: 10rem;">
+                                <div class="col-md-12">
+                                    <h2 style="text-align: center; color: blue;">Le voyage est créé et publié avec succès.</h2>
+                                </div>
+                                <div class="col-md-12">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_published_travels_email" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Le voyage est créé avec succès</label>
+                                        <field name="enable_published_travels_email" id="enable_published_travels_email" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="published_travels_email_template_id" style="width: 500px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- New Shipping Order Section -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">L’expéditeur créé un ordre d’expédition</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_email_traveler" id="enable_shipping_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_email_sender" id="enable_shipping_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- rejected Shippings Section -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">. L’expédition est rejetée</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_rejected_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_rejected_email_traveler" id="enable_shipping_rejected_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_rejected_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_rejected_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_rejected_email_sender" id="enable_shipping_rejected_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_rejected_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <!-- Cancelled Shippings Section -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">. L’expédition est annulé</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_cancelled_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_cancelled_email_traveler" id="enable_shipping_cancelled_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_cancelled_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_cancelled_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_cancelled_email_sender" id="enable_shipping_cancelled_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_cancelled_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                             <!-- Price Proposal of Shippings -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">Le porteur propose un prix</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_price_proposed_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_price_proposed_email_traveler" id="enable_shipping_price_proposed_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_price_proposed_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_price_proposed_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_price_proposed_email_sender" id="enable_shipping_price_proposed_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_price_proposed_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                             <!-- Price Validation by sender of Shippings -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">Prix validé par l’expéditeur </h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_price_validated_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_price_validated_email_traveler" id="enable_shipping_price_validated_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_price_validated_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_price_validated_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_price_validated_email_sender" id="enable_shipping_price_validated_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_price_validated_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Price Validation by traveller of Shippings -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">Confirmation du prix par le porteur  </h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_price_validated_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_traveller_price_validated_email_traveler" id="enable_shipping_traveller_price_validated_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_price_validated_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_price_validated_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_traveller_price_validated_email_sender" id="enable_shipping_traveller_price_validated_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_price_validated_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--  Payment Complete for Shipping's -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">La facture est payée</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_payment_complete_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_payment_complete_email_traveler" id="enable_shipping_payment_complete_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_payment_complete_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_payment_complete_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_payment_complete_email_sender" id="enable_shipping_payment_complete_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_payment_complete_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_delivery_code_email_recipient" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Recipient</label>
+                                        <field name="enable_shipping_delivery_code_email_recipient" id="enable_shipping_delivery_code_email_recipient" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_delivery_code_email_template_id_recipient" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+
+                                 <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_delivery_code_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_delivery_code_email_sender" id="enable_shipping_delivery_code_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_delivery_code_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+  <!-- Traveller Parcel Received for Shippings -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">Le porteur confirme avoir récupéré le colis</h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_parcel_received_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_traveller_parcel_received_email_traveler" id="enable_shipping_traveller_parcel_received_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_parcel_received_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_parcel_received_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_traveller_parcel_received_email_sender" id="enable_shipping_traveller_parcel_received_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_parcel_received_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_parcel_received_email_receipient" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Receipient</label>
+                                        <field name="enable_shipping_traveller_parcel_received_email_receipient" id="enable_shipping_traveller_parcel_received_email_receipient" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_parcel_received_email_template_id_receipient" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+<!--   Traveller Parcel delivered for Shipping's -->
+                            <div class="row my-3">
+                                <div class="col-md-12 mb-4">
+                                    <h2 style="text-align: center; color: blue;">Colis livré </h2>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_parcel_delivered_email_traveler" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Traveler</label>
+                                        <field name="enable_shipping_traveller_parcel_delivered_email_traveler" id="enable_shipping_traveller_parcel_delivered_email_traveler" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_parcel_delivered_email_template_id_traveler" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_parcel_delivered_email_sender" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Sender</label>
+                                        <field name="enable_shipping_traveller_parcel_delivered_email_sender" id="enable_shipping_traveller_parcel_delivered_email_sender" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_parcel_delivered_email_template_id_sender" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div style="display: flex; align-items: center;">
+                                        <label for="enable_shipping_traveller_parcel_delivered_email_recipient" class="o_form_label" style="font-weight: 600; color: black; margin-right:10px">Recipient</label>
+                                        <field name="enable_shipping_traveller_parcel_delivered_email_recipient" id="enable_shipping_traveller_parcel_delivered_email_recipient" style="margin-left: 5px;"/>
+                                    </div>
+                                    <div class="mt-1" style="display: flex; align-items: center;">
+                                        <field name="shipping_traveller_parcel_delivered_email_template_id_recipient" style="height: 80px; width: 400px;"/>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+           <record id="res_config_settings_mails_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'hubkilo_mails'}</field>
+    </record>
+    </data>
+</odoo>

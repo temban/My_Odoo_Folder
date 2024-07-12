@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="m1sh_rpn_death_notice_kanban" parent="m0sh_rpn_base.menu_m0sh_rpn_root"
+              name="Death Notices" sequence="5"
+              action="action_m1sh_rpn_death_notices_kanban_view"/>
+
+       <!--  Diseased Members-->
+    <menuitem id="menu_m0sh_rpn_members" name="Deceased Members" parent="m0sh_rpn_base.menu_m0sh_rpn_root" sequence="6"
+              action="action_rpn_base_partner_diseased_member"/> <!--web_icon="m0sh_rpn_base,static/img/icon_user_time.png"-->
+
+
+    <menuitem id="menu_m0sh_rpn_root_config_partner_member" name="All Death Notices"
+              parent="m0sh_rpn_base.menu_m0sh_rpn_root_config_partner" sequence="5"
+              action="action_all_m1sh_rpn_death_notice_kanban"/>
+
+    <menuitem id="menu_m0sh_rpn_root_config_partner_notif" name="All RPN Notifications"
+              parent="m0sh_rpn_base.menu_m0sh_rpn_root_config_partner" sequence="6"
+              action="rpn_action_partner_notifications"/>
+</odoo>

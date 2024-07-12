@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+		<!--IR.CRON-->
+		<record id="data_m1sthk_ir_cron_check_partner_attachment" model="ir.cron">
+			<field name="name">Hubkilo Cron for checking partner attachments</field>
+			<field name="hk_code">HK_PARTNER_JOB</field>
+			<field name="model_id" ref="m0st_hk_base.model_m0sthk_base"/>
+			<field name="state">code</field>
+			<field name="code">model.computed_partner_attachment()</field>
+			<field name='interval_number'>1</field>
+			<field name='interval_type'>days</field>
+			<field name="numbercall">-1</field>
+		</record>
+
+		<record id="ir_attachment_delete_cron" model="ir.cron">
+            <field name="name">Hubkilo Cron for Delete Invalid Attachments</field>
+			<field name="hk_code">HK_ATTACH_DEL</field>
+			<field name="model_id" ref="model_ir_attachment"/>
+			<field name="state">code</field>
+			<field name="code">model.set_and_delete_invalid_attachments()</field>
+			<field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+		</record>
+
+		<record id="ir_attachment_expiry_cron" model="ir.cron">
+            <field name="name">Hubkilo Cron to Send Attachment Expiry Reminder</field>
+			<field name="hk_code">HK_ATTACH_REMINDER</field>
+			<field name="model_id" ref="model_ir_attachment"/>
+			<field name="state">code</field>
+			<field name="code">model.send_attachment_expiry_notification()</field>
+			<field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+		</record>
+
+
+
+		<!--IR.CRON-->
+		<record id="data_m1sthk_ir_cron_mark_shipping_as_paid" model="ir.cron">
+			<field name="name">Hubkilo Cron for marking shipping as paid</field>
+			<field name="hk_code">HK_INVOICE_CRON</field>
+			<field name="model_id" ref="account.model_account_move"/>
+			<field name="state">code</field>
+			<field name="code">model.mark_shipping_as_paid()</field>
+			<field name='interval_number'>3</field>
+			<field name='interval_type'>minutes</field>
+			<field name="numbercall">-1</field>
+		</record>
+
+
+		<!--PRODUCT-->
+		<!--<record id="data_m1sthk_product_product_hbk_fees" model="product.product">-->
+			<!--<field name="name">HUBKILO FEES</field>-->
+			<!--<field name="detailed_type">service</field>-->
+			<!--<field name="default_mode">HBK-FEES</field>-->
+			<!--<field name="sale_ok" eval="True" />-->
+			<!--<field name='purchase_ok' eval="False" />-->
+		<!--</record>-->
+
+		<!--<record id="data_m1sthk_product_product_hbk_travaler" model="product.product">-->
+			<!--<field name="name">HUBKILO TRAVELER FEES</field>-->
+			<!--<field name="detailed_type">service</field>-->
+			<!--<field name="default_mode">HBK-TRFEES</field>-->
+			<!--<field name="sale_ok" eval="True" />-->
+			<!--<field name='purchase_ok' eval="False" />-->
+		<!--</record>-->
+    </data>
+</odoo>

@@ -1,0 +1,157 @@
+<odoo>
+    <template id="js_script_token">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+            <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>z
+        </xpath>
+        <!-- Your template content here -->
+        <h1>Welcome Js Script</h1>
+
+		<body>
+            <style>
+        /* Custom CSS for card animations and styling */
+        .travel-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .travel-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .card-image {
+            max-height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-body {
+            padding: 20px;
+                margin: 0 0.2rem;
+        }
+
+        .container {
+            padding: 0.5rem;
+        }
+
+        .row {
+            justify-content: space-between;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+    <h1>Real-Time Travel Updates</h1>
+            <div class="container mt-4">
+        <div class="row" id="travel-list">
+            <!-- Travel records will be displayed here as cards -->
+        </div>
+    </div>
+
+    <script>
+        const pusher = new Pusher('a7d67608f236b9565325', {
+		cluster: 'eu',
+		encrypted: true,
+        });
+
+        const channel = pusher.subscribe('travel-channel');
+
+    // Function to create a card for a travel record
+    function createTravelCard(data) {
+        const cardContainer = document.getElementById('travel-list');
+        const cardCol = document.createElement('div');
+        cardCol.classList.add('col-lg-4', 'col-md-6', 'mb-4', 'travel-card');
+        cardCol.dataset.id = data.id; // Set data-id attribute for the card
+        cardCol.innerHTML = `
+            <div class="card">
+                    <img src="https://www.livemint.com/lm-img/img/2023/04/24/600x338/Fresh_bus_1682301595441_1682301595630.PNG" class="card-img-top card-image" alt="Travel Image"/>                <div class="card-body">
+                    <h5 class="card-title">${data.source} to ${data.destination}</h5>
+                    <p class="card-text">Travel ID: ${data.id}</p>
+                </div>
+            </div>
+        `;
+        cardContainer.appendChild(cardCol);
+    }
+
+    // Function to update a travel card with new data
+    function updateTravelCard(data) {
+        const cardContainer = document.getElementById('travel-list');
+        const cardCol = cardContainer.querySelector(`[data-id="${data.id}"]`);
+        if (cardCol) {
+            const card = cardCol.querySelector('.card');
+            card.querySelector('.card-title').textContent = `${data.source} to ${data.destination}`;
+        }
+    }
+
+    // Function to remove a travel card from the list
+    function deleteTravelCard(data) {
+        const cardContainer = document.getElementById('travel-list');
+        const cardCol = cardContainer.querySelector(`[data-id="${data.id}"]`);
+        if (cardCol) {
+            cardCol.remove();
+        }
+    }
+
+    // Function to load and display existing travels
+    async function loadTravels() {
+        try {
+            const response = await fetch('/get_travels');
+            if (response.ok) {
+                const travels = await response.json();
+                for (const data of travels) {
+                    createTravelCard(data);
+                }
+            }
+        } catch (error) {
+            console.error('Error fetching travel data:', error);
+        }
+    }
+
+    // Load and display existing travels when the page loads
+    window.addEventListener('load', loadTravels);
+
+    channel.bind('new-travel', function(data) {
+        console.log('Received a new travel:', data);
+
+        // Add the new travel as a styled card
+        createTravelCard(data);
+    });
+
+    channel.bind('update-travel', function(data) {
+        console.log('Received an updated travel:', data);
+
+        // Update the travel card with new data
+        updateTravelCard(data);
+    });
+
+    channel.bind('delete-travel', function(data) {
+        console.log('Received a deleted travel:', data);
+
+        // Remove the travel card from the list
+        deleteTravelCard(data);
+    });
+</script>
+</body>
+    </template>
+
+</odoo>

@@ -1,0 +1,2 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_m1_shintheo_fc_associated_product_line_bonus_user","m1_shintheo_fc_associated_product_line_bonus_user","model_associated_product_line_bonus","business_appointment.group_ba_user",1,1,1,1

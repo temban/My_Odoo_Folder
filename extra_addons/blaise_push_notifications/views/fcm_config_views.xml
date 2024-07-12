@@ -1,0 +1,176 @@
+<odoo>
+    <data>
+        <!-- Add your existing record definitions here -->
+
+        <record id="view_res_config_settings_mails_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <div class="app_settings_block" data-string="Blaise Push" string="Blaise Push"
+                         data-key="blaise_push_notifications" name="blaise_push_notifications" >
+                        <h2>Blaise Push Notifications</h2>
+                         <div class="o_setting_right_pane" style="margin:1rem 0 0 6rem">
+                                <div class="wrapper" style="display: flex; align-items: center;">
+        <div class="row my-3" style="position: relative; border-left: 1px solid grey;">
+            <div class="col-md-12 mb-1">
+                <span style="font-weight: 600; font-size:14px; color: black; margin-bottom:3px">Configuration</span>
+                <p style="color: grey; font-size:14px;">Set the Firebase Cloud Messaging Server Key</p>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div style="display: flex; align-items: center;">
+                    <span style="color: black; font-size:14px; margin-right:20px; margin-bottom:10px;">Server Key:</span>
+                    <field name="api_key" string="API Key" style="height: 30px; width: 400px;"/>
+                </div>
+            </div>
+             <div class="col-md-12">
+               <button name="%(action_firebase_notification_test_form)d" style="width: 200px;" string="Go to FCM Form" type="action" class="oe_highlight"/>
+             </div>
+        </div>
+    </div>
+    </div>
+
+                        <div style="position:relative; margin:2rem 0 0 0">
+                            <h2>Blaise Websocket</h2>
+                            <div class="o_setting_right_pane" style="margin:1rem 0 0 6rem">
+                    <div class="wrapper" style="display: flex; align-items: center;">
+                        <!-- Add your fields here in the desired order -->
+                        <div class="row my-3" style="position: relative; border-left: 1px solid grey;">
+
+                            <div class="col-md-12">
+                                 <label for="pusher_app_id" class="col-md-12-form-label">Pusher App ID:</label>
+                                <field name="pusher_app_id" class="form-control"/>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="pusher_key" class="col-md-12-form-label">Pusher Key:</label>
+                                <field name="pusher_key" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="row my-3 mx-3">
+                            <div class="col-md-12">
+                                <label for="pusher_secret" class="col-md-12-form-label">Pusher Secret:</label>
+                                <field name="pusher_secret" class="form-control"/>
+                            </div>
+                            <div class="col-md-12">
+                                 <label for="pusher_cluster" class="col-md-12-form-label">Pusher Cluster:</label>
+                                <field name="pusher_cluster" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </div>
+
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="res_config_settings_mails_action" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module' : 'blaise_push_notifications'}</field>
+        </record>
+
+
+        <record id="view_res_config_settings_push_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.custom.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='invite_users']" position="after">
+                     <div id="blaise_push">
+                        <h2>Blaise Push Notifications</h2>
+                         <div class="o_setting_right_pane" style="margin:1rem 0 0 6rem">
+                                <div class="wrapper" style="display: flex; align-items: center;">
+        <div class="row my-3" style="position: relative; border-left: 1px solid grey;">
+            <div class="col-md-12 mb-1">
+                <span style="font-weight: 600; font-size:14px; color: black; margin-bottom:3px">Configuration</span>
+                <p style="color: grey; font-size:14px;">Set the Firebase Cloud Messaging Server Key</p>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div style="display: flex; align-items: center;">
+                    <span style="color: black; font-size:14px; margin-right:20px; margin-bottom:10px;">Server Key:</span>
+                    <field name="api_key" string="API Key" style="height: 30px; width: 400px;"/>
+                </div>
+            </div>
+             <div class="col-md-12">
+               <button name="%(action_firebase_notification_test_form)d" style="width: 200px;" string="Go to FCM Form" type="action" class="oe_highlight"/>
+             </div>
+        </div>
+    </div>
+    </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!-- Extend the General Settings view -->
+<!-- <record id="view_res_config_settings_api_inherit" model="ir.ui.view">-->
+<!--    <field name="name">res.config.settings.custom.view.form.inherit</field>-->
+<!--    <field name="model">res.config.settings</field>-->
+<!--    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>-->
+<!--    <field name="arch" type="xml">-->
+<!--        <xpath expr="//div[@id='invite_users']" position="after">-->
+<!--            &lt;!&ndash; Add a custom section &ndash;&gt;-->
+<!--            <div id="endpoints_key">-->
+<!--                <h2>System API for Frontend</h2>-->
+<!--                <p>APIs.</p>-->
+<!--                <field name="endpoints_api_key"/>-->
+<!--                <field name="endpoints_secret_key"/>-->
+<!--            </div>-->
+<!--        </xpath>-->
+<!--    </field>-->
+<!--</record>-->
+
+
+<!--                <record id="view_res_config_settings_inherit" model="ir.ui.view">-->
+<!--            <field name="name">res.config.settings.view.form.inherit.your.module</field>-->
+<!--            <field name="model">res.config.settings</field>-->
+<!--            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@id='invite_users']" position="inside">-->
+<!--                    &lt;!&ndash; Add your custom section and fields here &ndash;&gt;-->
+<!--                    <div class="row mt16 o_settings_container" name="your_custom_section_container">-->
+<!--                        &lt;!&ndash; Your custom fields go here &ndash;&gt;-->
+<!--                        <div class="col-12 col-lg-6 o_setting_box" id="custom_field_1_setting">-->
+<!--                            <div class="o_setting_right_pane">-->
+<!--                                <field name="api_key" string="Custom Field 1"/>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-12 col-lg-6 o_setting_box" id="custom_field_2_setting">-->
+<!--                            <div class="o_setting_right_pane">-->
+<!--                                <field name="api_key" string="Custom Field 2"/>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="view_res_config_settings_inherit" model="ir.ui.view">-->
+<!--            <field name="name">res.config.settings.view.form.inherit.custom</field>-->
+<!--            <field name="model">res.config.settings</field>-->
+<!--            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@data-key='general_settings']" position="inside">-->
+<!--                    &lt;!&ndash; Add your custom section and fields here &ndash;&gt;-->
+<!--                    &lt;!&ndash; Add your custom section here &ndash;&gt;-->
+<!--                    <div >-->
+<!--                        &lt;!&ndash; Your custom content here &ndash;&gt;-->
+<!--                        <h2>Your Custom Section</h2>-->
+<!--                        <p>This is your custom content.</p>-->
+<!--                    </div>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+
+
+    </data>
+</odoo>

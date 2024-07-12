@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+		<!--Users accounts --> 
+    	
+	    	<!--res_partner_category-->
+	    	<record id="res_partner_category_root" model="res.partner.category">
+	            <field name="name">ROOT</field>
+	            <field name="color" eval="7"/>
+	        </record>
+    	
+	    	<record id="res_partner_category_employee" model="res.partner.category">
+	            <field name="name">EMPLOYEE</field>
+	            <field name="color" eval="2"/>
+	        </record>
+    	
+	    	<record id="res_partner_category_traveler" model="res.partner.category">
+	            <field name="name">TRAVELER</field>
+	            <field name="color" eval="3"/>
+	        </record>
+	    	
+    	
+    		<record id="res_partner_category_shipper" model="res.partner.category">
+	            <field name="name">SHIPPER</field>
+	            <field name="color" eval="5"/>
+	        </record>
+    	
+    	
+    		<record id="res_partner_category_receiver" model="res.partner.category">
+	            <field name="name">RECEIVER</field>
+	            <field name="color" eval="4"/>
+	        </record>
+    	
+
+	    	<!--ROOT-->
+	    	<record id="partner_hkbase_root" model="res.partner">
+	            <field name="name">HK Root</field>
+	    		<field name="category_id" eval="[(6, 0, [ref('res_partner_category_root')])]" />
+	            <field name="ref">HKROOT</field>
+	            <field name="color">1</field>
+	    		<field name="type">contact</field>
+    			<field name="image_1920" type="base64" file="m0st_hk_base/static/img/user_admin.png"/>
+	        </record>
+    	
+			<record id="user_hkbase_root" model="res.users">
+	            <field name="partner_id" ref="m0st_hk_base.partner_hkbase_root"/>
+	            <field name="login">hk.root</field>
+				<field name="password">HK_Root+2023</field>
+	            <field name="company_id">1</field>
+    			<!--field name="groups_id" eval="[(6, 0, [ref('base.group_user'),ref('base.group_system')])]" /-->
+				<field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+
+	        </record>
+    	
+    	
+    		<!--EMPLOYEE-->
+    		<record id="partner_hkbase_employee_1" model="res.partner">
+	            <field name="name">HK Employee A</field>
+	    		<field name="category_id" eval="[(6, 0, [ref('res_partner_category_employee')])]" />
+	            <field name="ref">HKEMPL-A</field>
+	            <field name="color">2</field>
+	    		<field name="type">contact</field>
+    			<field name="employee" eval="True" />
+    			<field name="gender">male</field>
+    			<field name="image_1920" type="base64" file="m0st_hk_base/static/img/user_root.png"/>
+	        </record>
+    	
+    		<record id="user_hkbase_employee_1" model="res.users">
+	            <field name="partner_id" ref="m0st_hk_base.partner_hkbase_employee_1"/>
+	            <field name="login">hk.employee1</field>
+				<field name="password">Employee1-2023</field>
+	            <field name="company_id">1</field>
+    			<field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+	        </record>
+    	
+    		<record id="partner_hkbase_employee_2" model="res.partner">
+	            <field name="name">HK Employee B</field>
+	    		<field name="category_id" eval="[(6, 0, [ref('res_partner_category_root'), ref('res_partner_category_employee')])]" />
+	            <field name="ref">HKEMPL-B</field>
+	            <field name="color">3</field>
+	    		<field name="type">contact</field>
+    			<field name="employee" eval="True" />
+    			<field name="gender">female</field>
+    			<field name="image_1920" type="base64" file="m0st_hk_base/static/img/user.png"/>
+	        </record>
+    	
+    		<record id="user_hkbase_employee_2" model="res.users">
+	            <field name="partner_id" ref="m0st_hk_base.partner_hkbase_employee_2"/>
+	            <field name="login">hk.employee2</field>
+				<field name="password">Employee2-2023</field>
+	            <field name="company_id">1</field>
+    			<field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+	        </record>
+	    	
+    		<!--TRAVELER-->
+    		<record id="partner_hkbase_default_traveler" model="res.partner">
+	            <field name="name">HK Default Traveler</field>
+	    		<field name="category_id" eval="[(6, 0, [ref('res_partner_category_traveler')])]" />
+	            <field name="ref">HKDTRA</field>
+	            <field name="color">4</field>
+	    		<field name="type">contact</field>
+    			<field name="is_traveler" eval="True" />
+    			<field name="gender">male</field>
+    			<field name="birthdate">2045-09-30</field>
+    			<field name="image_1920" type="base64" file="m0st_hk_base/static/img/traveler.png"/>
+	        </record>
+    	
+    		<record id="user_hkbase_default_traveler" model="res.users">
+	            <field name="partner_id" ref="m0st_hk_base.partner_hkbase_default_traveler"/>
+	            <field name="login">hk.traveler</field>
+				<field name="password">Traveler-2023</field>
+	            <field name="company_id">1</field>
+    			<field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+	        </record>
+    	
+    		<!--SHIPPER-->
+    		<record id="partner_hkbase_default_shipper" model="res.partner">
+	            <field name="name">HK Default Shipper</field>
+	    		<field name="category_id" eval="[(6, 0, [ref('res_partner_category_shipper')])]" />
+	            <field name="ref">HKDSHI</field>
+	            <field name="color">5</field>
+	    		<field name="type">contact</field>
+    			<field name="is_shipper" eval="True" />
+    			<field name="gender">female</field>
+    			<field name="birthdate">2045-07-22</field>
+    			<field name="image_1920" type="base64" file="m0st_hk_base/static/img/shipper.png"/>
+	        </record>
+    	
+    		<record id="user_hkbase_default_shipper" model="res.users">
+	            <field name="partner_id" ref="m0st_hk_base.partner_hkbase_default_shipper"/>
+	            <field name="login">hk.shipper</field>
+				<field name="password">Shipper-2023</field>
+	            <field name="company_id">1</field>
+    			<field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+	        </record>
+    	
+    	
+    		<!--RECEIVER-->
+	    	<record id="partner_hkbase_receiver" model="res.partner">
+	            <field name="name">HK Default Receiver</field>
+	    		<field name="category_id" eval="[(6, 0, [ref('res_partner_category_receiver')])]" />
+	            <field name="ref">HKRECEIVER</field>
+	            <field name="color">6</field>
+	    		<field name="type">contact</field>
+	    		<field name="is_receiver" eval="True" />
+    			<field name="image_1920" type="base64" file="m0st_hk_base/static/img/partnership_2.png"/>
+	        </record>
+    	
+			<record id="user_hkbase_receiver" model="res.users">
+	            <field name="partner_id" ref="m0st_hk_base.partner_hkbase_receiver"/>
+	            <field name="login">hk.receiver</field>
+				<field name="password">HK_RECEIVER-2023</field>
+	            <field name="company_id">1</field>
+    			<field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+	        </record>
+	    
+    	
+    	<!--GROUPS-->
+		<!-- HK Root -->
+		<record model="ir.module.category" id="module_category_hkbase_root">
+		    <field name="name">HK ROOT</field>
+			<field name="sequence">70</field>
+			<field name="description">Category for the System Administrators group of all HB modules</field>
+		</record>
+    	
+    	<!-- HK Employee -->
+		<record model="ir.module.category" id="module_category_hkbase_employee">
+		    <field name="name">HK EMPLOYEE</field>
+			<field name="sequence">71</field>
+			<field name="description">Category for the employees group of all HK modules</field>
+		</record>
+    	
+    	<!-- HB Traveler -->
+		<record model="ir.module.category" id="module_category_hkbase_traveler">
+		    <field name="name">HK TRAVELER</field>
+			<field name="sequence">72</field>
+			<field name="description">Category for travelers of all HK modules</field>
+		</record>
+    	
+    	<!-- HK Shipper -->
+		<record model="ir.module.category" id="module_category_hkbase_shipper">
+		    <field name="name">HK SHIPPER</field>
+			<field name="sequence">73</field>
+			<field name="description">Category for shippers of all HK modules</field>
+		</record>
+    	
+    	
+    	<!-- HK Receiver -->
+		<record model="ir.module.category" id="module_category_hkbase_receiver">
+		    <field name="name">HK RECEIVER</field>
+			<field name="sequence">74</field>
+			<field name="description">Category for Beneficiary of all HK modules</field>
+		</record>
+	
+    	
+    	
+    	
+		<!-- SHIPPER -->
+        <record id="group_hkbase_shipper" model="res.groups">
+            <field name="name">Group of Shippers</field>
+            <field name="comment">This group corresponds to users registered as shipper</field>
+            <field name="color">1</field>
+            <field name="category_id" ref="m0st_hk_base.module_category_hkbase_shipper"/>
+			<field name="users" eval="[(4, ref('m0st_hk_base.user_hkbase_default_shipper'))]"/>
+        </record>
+    	
+    	<!-- TRAVELER -->
+        <record id="group_hkbase_traveler" model="res.groups">
+            <field name="name">Group of Travelers</field>
+            <field name="comment">This group corresponds to users registered as Travelers</field>
+            <field name="color">2</field>
+            <field name="category_id" ref="m0st_hk_base.module_category_hkbase_traveler"/>
+			<field name="users" eval="[(4, ref('m0st_hk_base.user_hkbase_default_traveler'))]"/>
+        </record>
+    	
+    	<!-- EMPLOYEE -->
+        <record id="group_hkbase_employee" model="res.groups">
+            <field name="name">Group of Employees</field>
+            <field name="comment">This group corresponds to users registered as Employees</field>
+            <field name="color">3</field>
+            <field name="category_id" ref="m0st_hk_base.module_category_hkbase_employee"/>
+			<field name="users" eval="[(4, ref('m0st_hk_base.user_hkbase_employee_1'))]"/>
+        </record>
+    	
+    	<!-- BENEFICIARY -->
+        <record id="group_hkbase_receiver" model="res.groups">
+            <field name="name">Group of Receiver</field>
+            <field name="comment">This group corresponds to users registered as Receiver</field>
+            <field name="color">3</field>
+            <field name="category_id" ref="m0st_hk_base.module_category_hkbase_receiver"/>
+			<field name="users" eval="[(4, ref('m0st_hk_base.user_hkbase_receiver'))]"/>
+        </record>
+    	
+    	<!-- SUPER ADMIN (ROOT) -->
+        <record id="group_hkbase_root" model="res.groups">
+            <field name="name">System Administrator (HK)</field>
+            <field name="comment">System Administrator (all HK modules)</field>
+            <field name="color">4</field>
+        	<field name="implied_ids" eval="[(6, 0, [ref('m0st_hk_base.group_hkbase_traveler'),ref('m0st_hk_base.group_hkbase_shipper'),ref('m0st_hk_base.group_hkbase_employee'),ref('m0st_hk_base.group_hkbase_receiver')])]"/>
+            <field name="category_id" ref="m0st_hk_base.module_category_hkbase_root"/>
+			<field name="users" eval="[(4, ref('m0st_hk_base.user_hkbase_root'))]"/>
+        </record>
+    	
+    	
+        <!-- FIN -->
+    </data>
+</odoo>

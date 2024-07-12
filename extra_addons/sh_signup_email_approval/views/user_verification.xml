@@ -1,0 +1,68 @@
+<odoo>
+    <data>
+        <!-- Form View for res.partner.rating -->
+        <record id="user_verification_form" model="ir.ui.view">
+            <field name="name">res.user.verification.form</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <form string="User Verification">
+                    <sheet>
+                        <group>
+                            <field name="verification_code"/>
+<!--                            <field name="sh_password"/>-->
+                            <field name="sh_user_from_signup"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for res.partner.rating -->
+        <record id="user_Verification_tree" model="ir.ui.view">
+            <field name="name">res.user.verification.tree</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <tree string="User/Partner Verification">
+                            <field name="verification_code"/>
+<!--                            <field name="sh_password"/>-->
+                            <field name="sh_user_from_signup"/>
+                </tree>
+            </field>
+        </record>
+
+                <!-- Adding the Partner Ratings tab in the Contacts form -->
+<!--<record id="view_partner_form_inherit" model="ir.ui.view">-->
+<!--    <field name="name">res.partner.form.inherit</field>-->
+<!--    <field name="model">res.partner</field>-->
+<!--    <field name="inherit_id" ref="base.view_partner_form"/>-->
+<!--    <field name="arch" type="xml">-->
+<!--        <xpath expr="//form" position="attributes">-->
+<!--            <attribute name="create">false</attribute>-->
+<!--            <attribute name="edit">false</attribute>-->
+<!--        </xpath>-->
+<!--        <xpath expr="//notebook" position="inside">-->
+<!--            <page string="Partner Verification" name="partner_verification_tab">-->
+<!--                <field name="user_id"/>-->
+<!--            </page>-->
+<!--        </xpath>-->
+<!--    </field>-->
+<!--</record>-->
+
+        <record model="ir.ui.view" id="user_verification_inherit">
+    <field name="name">verification_user.inherit</field>
+    <field name="model">res.users</field>
+    <field name="inherit_id" ref="base.view_users_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//group[1]" position="inside">
+            <group string="User Verification">
+                <button name="action_generate_verification_code"  style="margin-bottom: 2rem"
+                  type="object" string="Generate Verification Code" class="oe_highlight"
+                attrs="{'invisible': [('sh_user_from_signup', '=', True)]}"/>
+<!--                <field name="sh_password"/>-->
+                <field name="sh_user_from_signup"/>
+            </group>
+        </xpath>
+    </field>
+</record>
+    </data>
+</odoo>

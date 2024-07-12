@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    /* Style for the card container */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center cards horizontally */
+    }
+
+    /* Style for each card */
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        width: calc(25% - 20px); /* Adjust width for 4 columns with margins */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s ease; /* Add a smooth transition effect */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for a lifted effect */
+        background-color: #fff;
+    }
+
+    /* Style for the card image */
+    .card-image {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    /* Style for data elements */
+
+
+     /* Style for label and data container */
+     .label-data-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Style for label and data group */
+    .label-data-group {
+        display: flex;
+        flex: 1;
+        margin: 5px;
+    }
+
+    /* Style for labels */
+    .label {
+        font-weight: bold;
+    }
+
+    /* Style for data elements */
+    .id-data,
+    .source-data,
+    .destination-data,
+    .disable-data {
+        margin-left: 5px;
+    }
+    .disable-button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    /* Hover effect for cards */
+    .card:hover {
+        transform: scale(1.05); /* Scale up the card on hover */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+    }
+</style>
+
+</head>
+<body>
+    <h1>Travel Information</h1>
+    <div class="card-container" id="card-container"></div>
+    <script>
+const room = "room2"; // Replace with the desired room name
+
+// Establish a WebSocket connection to the server
+const socket = new WebSocket(`ws://localhost:8000/${room}`); // Replace with your server's WebSocket URI
+
+// Event handler for when the connection is established
+socket.addEventListener("open", (event) => {
+  console.log(`Connected to WebSocket server in room ${room}`);
+});
+
+// Event handler for incoming messages from the server
+socket.addEventListener("message", (event) => {
+  const message = JSON.parse(event.data);
+  console.log(`Received message:`, message);
+});
+
+// Event handler for when the connection is closed
+socket.addEventListener("close", (event) => {
+  if (event.wasClean) {
+    console.log(`Connection closed cleanly, code=${event.code}, reason=${event.reason}`);
+  } else {
+    console.error(`Connection abruptly closed`);
+  }
+});
+
+// Event handler for connection errors
+socket.addEventListener("error", (error) => {
+  console.error(`WebSocket error:`, error);
+});
+    </script>
+</body>
+</html>

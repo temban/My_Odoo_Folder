@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ***************** Creating a custom section in the settings view for your shin_rpn_base0 module.**************** -->
+    <data>
+        <!-- Extend the existing res.config.settings view -->
+        <record id="ssl_file_upload_page" model="ir.ui.view">
+            <field name="name">res.config.settings.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('settings')]" position="inside">
+                    <!--            <div class="scrolling-banner">-->
+                    <!--                <marquee behavior="scroll" direction="left" style="color: #fff; background-color: #336699; padding: 5px; font-size:16px">-->
+                    <!--                    Welcome to Shintheo Websocket setting panel. Here, make sure you set the port to your desired port, by default it is set to 9090. Also, you have to upload your ssl certification and private key pem files. After all these set, Shintheo Websocket will be open to your sever ip address or host name and your desired port. Happy consumption.-->
+                    <!--                </marquee>-->
+                    <!--            </div>-->
+                    <div class="app_settings_block" data-string="RPN Settings" string="RPN Settings"
+                         data-key="m0sh_rpn_base" name="m0sh_rpn_base">
+                        <h2 style="color: #336699; font-size: 20px; margin-bottom: 10px; text-align: center;">RPN
+                            Settings
+                        </h2>
+
+                        <div class="row mt16 o_settings_container">
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_auth_api_key">
+                                    <label for="auth_api_key"/>
+                                    <div class="text-muted">
+                                        Set the Endpoints API-Key here
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="auth_api_key" class="o_light_label"
+                                                   required="True"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_authorization_key">
+                                    <label for="authorization_key"/>
+                                    <div class="text-muted">
+                                        Set the Endpoints Authorization-Key here
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="authorization_key" class="o_light_label"
+                                                   required="True"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_min_account_balance">
+                                    <label for="rpn_base_config_min_account_balance"/>
+                                    <div class="text-muted">
+                                        This parameter allows you to specify the minimum amount that can be recharged in
+                                        a member's account.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_min_account_balance" class="o_light_label"
+                                                   required="True"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                             <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_min_amount_in_account">
+                                    <label for="rpn_base_config_min_amount_in_account"/>
+                                    <div class="text-muted">
+                                        This parameter allows you to specify the amount in account that when cross the member account is dis-activated.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_min_amount_in_account" class="o_light_label"
+                                                   required="True"/>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_re_activation_fee">
+                                    <label for="rpn_base_config_re_activation_fee"/>
+                                    <div class="text-muted">
+                                        This parameter allows you to specify the amount to pay for re-activating an account when the member account is dis-activated.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_re_activation_fee" class="o_light_label"
+                                                   required="True"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_percentage">
+                                    <label for="rpn_base_config_percentage"/>
+                                    <div class="text-muted">
+                                        This parameter allows you to specify the percentage to set For administrative fee deduction.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_percentage" class="o_light_label"
+                                                   required="True"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_min_membership_amount">
+                                    <label for="rpn_base_config_min_membership_amount"/>
+                                    <div class="text-muted">
+                                        This parameter allows you to specify the minimum amount contribution that will
+                                        be paid to become a member.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_min_membership_amount" class="o_light_label"
+                                                   required="True"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_currency_id">
+                                    <label for="rpn_base_config_currency_id"/>
+                                    <div class="text-muted">
+                                        The Currency
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_currency_id" class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_death_notice_code">
+                                    <label for="rpn_base_config_death_notice_code"/>
+                                    <div class="text-muted">
+                                        Death-Notice default format code
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_death_notice_code" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_format_code_length">
+                                    <label for="rpn_base_config_format_code_length"/>
+                                    <div class="text-muted">
+                                        This is the length of the numerical value for a Death-notice code.
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_format_code_length" required="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_config_payment_method">
+                                    <label for="rpn_base_config_payment_method"/>
+                                    <div class="text-muted">
+                                        Payment Mathod
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_config_payment_method" class="o_light_label"
+                                                   required="True"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_send_emails">
+                                    <label for="rpn_base_send_emails"/>
+                                    <div class="text-muted">
+                                        Send Emails
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_send_emails" class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6 o_setting_box">
+                                <div class="o_setting_right_pane" id="m0sh_rpn_base_send_push_notifications">
+                                    <label for="rpn_base_send_push_notifications"/>
+                                    <div class="text-muted">
+                                        Send Emails
+                                    </div>
+                                    <div class="content-group">
+                                        <div class="mt16">
+                                            <field name="rpn_base_send_push_notifications" class="o_light_label"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Add the scrolling banner here -->
+
+                </xpath>
+            </field>
+        </record>
+        <!-- Extend the existing res.config.settings action -->
+        <record id="res_config_settings_m0sh_rpn_base" model="ir.actions.act_window">
+            <field name="name">Settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+            <field name="context">{'module': 'm0sh_rpn_base'}</field>
+        </record>
+    </data>
+</odoo>

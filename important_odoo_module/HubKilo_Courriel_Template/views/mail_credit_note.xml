@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+<!-- Allow updating on noupdate=True records -->
+<function name="write" model="ir.model.data">
+    <function name="search" model="ir.model.data">
+        <value
+            eval="[('module', '=', 'account'), ('name', '=', 'email_template_edi_credit_note')]" />
+    </function>
+    <value eval="{'noupdate': False}" />
+</function>
+
+        <!-- Credit note template -->
+        <record id="account.email_template_edi_credit_note" model="mail.template">
+            <field name="name">Credit note: Send by email</field>
+                        <field name="body_html" type="html">
+
+                                             <html>
+
+                <body style="font-family: 'Roboto', sans-serif; background-color: #e2e2e2; margin: 0; padding: 0;">
+                    <div class="email-wrapper" style="max-width: 600px; margin: 20px auto; padding: 10px 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1); z-index: 4;">
+                        <div class="header" style="text-align: center; padding: 20px 0; background-color: #007BFF; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <img class="logo" src="https://drive.google.com/uc?export=view&amp;id=11quXHiWTQ8mIYBSlX9byZKlfRJmLpoZy" alt="Your App Logo" style="max-width: 110px;"/>
+                            <h2 style="margin: 10px 0; font-size: 32px; color: #ffffff;">HUbKilo Credit Note.</h2>
+                        </div>
+                        <div class="content" style="padding: 20px 0;">
+  <!-- CONTENT -->
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        Dear
+        <t t-if="object.partner_id.parent_id">
+            <t t-out="object.partner_id.name or ''">Brandon Freeman</t> (<t t-out="object.partner_id.parent_id.name or ''">Azure Interior</t>),
+        </t>
+        <t t-else="">
+            <t t-out="object.partner_id.name or ''">Brandon Freeman</t>,
+        </t>
+        <br /><br />
+        Here is your
+        <t t-if="object.name">
+            credit note <strong t-out="object.name or ''">RINV/2021/05/0001</strong>
+        </t>
+        <t t-else="">
+            credit note
+        </t>
+        <t t-if="object.invoice_origin">
+            (with reference: <t t-out="object.invoice_origin or ''">SUB003</t>)
+        </t>
+        amounting in <strong t-out="format_amount(object.amount_total, object.currency_id) or ''">$ 143,750.00</strong>
+        from <t t-out="object.company_id.name or ''">YourCompany</t>.
+        <br /><br />
+        Do not hesitate to contact us if you have any questions.
+        <t t-if="object.invoice_user_id.signature">
+            <br />
+            <t t-out="object.invoice_user_id.signature or ''">--<br/>Mitchell Admin</t>
+        </t>
+    </p>
+</div>
+
+                        </div>
+                    </div>
+                </body>
+                </html>
+
+            </field>
+        </record>
+
+<function name="write" model="ir.model.data">
+    <function name="search" model="ir.model.data">
+        <value
+            eval="[('module', '=', 'account'), ('name', '=', 'email_template_edi_credit_note')]" />
+    </function>
+    <value eval="{'noupdate': True}" />
+</function>
+
+    </data>
+</odoo>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Room App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Message Room App</h1>
+
+    <div>
+        <h2>Send a Message</h2>
+        <form id="messageForm">
+            <label for="room_id">Room ID:</label>
+            <input type="text" id="room_id" name="room_id" required><br>
+
+            <label for="author_id">Author ID:</label>
+            <input type="text" id="author_id" name="author_id" required><br>
+
+            <label for="message_content">Message:</label>
+            <input type="text" id="message_content" name="message_content" required><br>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </div>
+
+    <div>
+        <h2>Message Rooms</h2>
+        <ul id="messageRooms"></ul>
+    </div>
+
+    <script>
+        // Send a message using AJAX
+        $('#messageForm').submit(function(e) {
+            e.preventDefault();
+            const room_id = $('#room_id').val();
+            const author_id = $('#author_id').val();
+            const message_content = $('#message_content').val();
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:8090/api/send_message',
+                data: JSON.stringify({ room_id, author_id, message_content }),
+                contentType: 'application/json',
+                success: function(response) {
+                    alert(response.success || response.error);
+                    // You can update the UI here if needed.
+                }
+            });
+        });
+
+        // Retrieve message rooms using AJAX
+        $(document).ready(function() {
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8090/message_rooms',
+                success: function(response) {
+                    const messageRooms = JSON.parse(response);
+                    const messageRoomsList = $('#messageRooms');
+
+                    messageRooms.forEach(function(room) {
+                        const listItem = $('<li>').text(`Room: ${room.name}, Members: ${room.members.join(', ')}`);
+                        const messagesList = $('<ul>');
+
+                        room.messages.forEach(function(message) {
+                            const messageItem = $('<li>').text(`${message.author}: ${message.message} (${message.date})`);
+                            messagesList.append(messageItem);
+                        });
+
+                        listItem.append(messagesList);
+                        messageRoomsList.append(listItem);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

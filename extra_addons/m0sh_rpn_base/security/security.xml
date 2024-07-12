@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Users accounts -->
+
+        <!--res_partner_category-->
+        <record id="res_partner_rpn_category_root" model="res.partner.category">
+            <field name="name">RPN ROOT</field>
+            <field name="color" eval="7"/>
+        </record>
+
+        <record id="res_partner_rpn_category_member" model="res.partner.category">
+            <field name="name">RPN MEMBER</field>
+            <field name="color" eval="3"/>
+        </record>
+
+
+        <record id="res_partner_rpn_category_manager" model="res.partner.category">
+            <field name="name">RPN MANAGER</field>
+            <field name="color" eval="5"/>
+        </record>
+
+
+        <!--ROOT-->
+        <record id="partner_m0sh_rpn_base_root" model="res.partner">
+            <field name="name">RPN Root</field>
+            <field name="category_id" eval="[(6, 0, [ref('res_partner_rpn_category_root')])]"/>
+            <field name="ref">RPNROOT</field>
+            <field name="color">1</field>
+            <field name="type">contact</field>
+            <field name="image_1920" type="base64" file="m0sh_rpn_base/static/img/user_admin.png"/>
+        </record>
+
+        <record id="user_m0sh_rpn_base_root" model="res.users">
+            <field name="partner_id" ref="m0sh_rpn_base.partner_m0sh_rpn_base_root"/>
+            <field name="login">rpn.root</field>
+            <field name="password">RPN_Root+2023</field>
+            <field name="company_id">1</field>
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+
+        </record>
+
+
+        <!--member-->
+        <record id="partner_m0sh_rpn_base_default_member" model="res.partner">
+            <field name="name">RPN Default member</field>
+            <field name="category_id" eval="[(6, 0, [ref('res_partner_rpn_category_member')])]"/>
+            <field name="ref">RPNMEM</field>
+            <field name="color">4</field>
+            <field name="type">contact</field>
+            <field name="is_member" eval="True"/>
+            <field name="gender">male</field>
+            <field name="birthdate">1982-09-30</field>
+            <field name="image_1920" type="base64" file="m0sh_rpn_base/static/img/user_root.png"/>
+        </record>
+
+        <record id="user_m0sh_rpn_base_default_member" model="res.users">
+            <field name="partner_id" ref="m0sh_rpn_base.partner_m0sh_rpn_base_default_member"/>
+            <field name="login">rpn.member</field>
+            <field name="password">member-2023</field>
+            <field name="company_id">1</field>
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <!--manager-->
+        <record id="partner_m0sh_rpn_base_default_manager" model="res.partner">
+            <field name="name">RPN Default manager</field>
+            <field name="category_id" eval="[(6, 0, [ref('res_partner_rpn_category_manager')])]"/>
+            <field name="ref">RPNMA</field>
+            <field name="color">5</field>
+            <field name="type">contact</field>
+            <field name="is_manager" eval="True"/>
+            <field name="gender">female</field>
+            <field name="birthdate">1980-07-22</field>
+            <field name="image_1920" type="base64" file="m0sh_rpn_base/static/img/user_root.png"/>
+        </record>
+
+        <record id="user_m0sh_rpn_base_default_manager" model="res.users">
+            <field name="partner_id" ref="m0sh_rpn_base.partner_m0sh_rpn_base_default_manager"/>
+            <field name="login">rpn.manager</field>
+            <field name="password">manager-2023</field>
+            <field name="company_id">1</field>
+            <field name="groups_id" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+
+        <!--GROUPS-->
+        <!-- HK Root -->
+        <record model="ir.module.category" id="module_category_m0sh_rpn_base_root">
+            <field name="name">RPN ROOT</field>
+            <field name="sequence">70</field>
+            <field name="description">Category for the System Administrators group of all RPN modules</field>
+        </record>
+
+        <!-- HB member -->
+        <record model="ir.module.category" id="module_category_m0sh_rpn_base_member">
+            <field name="name">RPN member</field>
+            <field name="sequence">72</field>
+            <field name="description">Category for members of all RPN modules</field>
+        </record>
+
+        <!-- HK manager -->
+        <record model="ir.module.category" id="module_category_m0sh_rpn_base_manager">
+            <field name="name">RPN manager</field>
+            <field name="sequence">73</field>
+            <field name="description">Category for managers of all RPN modules</field>
+        </record>
+
+
+        <!-- manager -->
+        <record id="group_m0sh_rpn_base_manager" model="res.groups">
+            <field name="name">Group of managers</field>
+            <field name="comment">This group corresponds to users registered as manager</field>
+            <field name="color">1</field>
+            <field name="category_id" ref="m0sh_rpn_base.module_category_m0sh_rpn_base_manager"/>
+            <field name="users" eval="[(4, ref('m0sh_rpn_base.user_m0sh_rpn_base_default_manager'))]"/>
+        </record>
+
+        <!-- member -->
+        <record id="group_m0sh_rpn_base_member" model="res.groups">
+            <field name="name">Group of members</field>
+            <field name="comment">This group corresponds to users registered as members</field>
+            <field name="color">2</field>
+            <field name="category_id" ref="m0sh_rpn_base.module_category_m0sh_rpn_base_member"/>
+            <field name="users" eval="[(4, ref('m0sh_rpn_base.user_m0sh_rpn_base_default_member'))]"/>
+        </record>
+
+
+        <!-- SUPER ADMIN (ROOT) -->
+        <record id="group_m0sh_rpn_base_root" model="res.groups">
+            <field name="name">System Administrator (RPN)</field>
+            <field name="comment">System Administrator (all RPN modules)</field>
+            <field name="color">4</field>
+            <field name="implied_ids"
+                   eval="[(6, 0, [ref('m0sh_rpn_base.group_m0sh_rpn_base_member'),ref('m0sh_rpn_base.group_m0sh_rpn_base_manager')])]"/>
+            <field name="category_id" ref="m0sh_rpn_base.module_category_m0sh_rpn_base_root"/>
+            <field name="users" eval="[(4, ref('m0sh_rpn_base.user_m0sh_rpn_base_root'))]"/>
+        </record>
+
+
+        <!-- FIN -->
+    </data>
+</odoo>

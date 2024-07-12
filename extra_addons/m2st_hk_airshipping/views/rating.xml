@@ -1,0 +1,139 @@
+<odoo>
+    <data>
+        <!-- Form View for res.partner.air.rating -->
+        <record id="hubkilo_view_air_partner_rating_form" model="ir.ui.view">
+            <field name="name">res.partner.air.rating.form</field>
+            <field name="model">res.partner.air.rating</field>
+            <field name="arch" type="xml">
+                <form string="Air Traveler Rating">
+                    <sheet>
+                        <group>
+                            <field name="rater_id"/>
+                            <field name="rated_id"/>
+                            <field name="air_shipping_id"/>
+                            <field name="rating"/>
+                            <field name="comment"/>
+                            <field name="rating_date" widget="date"/>
+                            <field name="air_average_rating"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for res.partner.air.rating -->
+        <record id="hubkilo_view_air_partner_rating_tree" model="ir.ui.view">
+            <field name="name">res.partner.air.rating.tree</field>
+            <field name="model">res.partner.air.rating</field>
+            <field name="arch" type="xml">
+                <tree string="Air Traveler Ratings">
+                    <field name="rater_id"/>
+                    <field name="rated_id"/>
+                    <field name="rating"/>
+                    <field name="comment"/>
+                    <field name="rating_date" widget="date"/>
+                    <field name="air_average_rating"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for res.partner.air.rating -->
+        <record id="hubkilo_air_action_partner_rating" model="ir.actions.act_window">
+            <field name="name">HubKilo Air Traveler Ratings</field>
+            <field name="res_model">res.partner.air.rating</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_partner_air_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.air.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" string="Air Travel Average Rating" position="after">
+                <field name="air_average_rating" string="Air Travel Average Rating" />
+            </xpath>
+               </field>
+        </record>
+
+
+        <!-- Inherit res.partner -->
+        <record model="ir.ui.view" id="view_hb_air_review_inherit_res_partner_form">
+            <field name="name">view_hb_ari_review_inherit_res_partner_form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="m2st_hk_airshipping.view_m2sthk_inherit_res_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Air Traveler Received">
+                        <group colspan="4">
+                            <field name="air_rating_ids" nolabel="1" readonly="True" mode="tree">
+                                <tree string="air Traveler Ratings Received" colspan="4">
+                                    <field name="air_shipping_id"/>
+                                    <field name="rater_id"/>
+                                    <field name="rated_id"/>
+                                    <field name="rating"/>
+                                    <field name="comment"/>
+                                    <field name="rating_date" widget="date"/>
+                                    <field name="air_average_rating"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+
+                    <page string="air Traveler Ratings Given">
+                        <group colspan="4">
+                            <field name="given_air_rating_ids" nolabel="1" readonly="True" mode="tree">
+                                <tree string="Air Traveler Ratings Given" colspan="4">
+                                    <field name="air_shipping_id"/>
+                                    <field name="rater_id"/>
+                                    <field name="rated_id"/>
+                                    <field name="rating"/>
+                                    <field name="comment"/>
+                                    <field name="rating_date" widget="date"/>
+                                    <field name="air_average_rating"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+
+                </notebook>
+
+            </field>
+        </record>
+
+        <!-- Inherit m2st_hk_airshipping.travelbooking -->
+        <!-- <record model="ir.ui.view" id="view_hb_review_inherit_airshipping_travelbooking_form">
+            <field name="name">view_hb_review_inherit_airshipping_travelbooking_form</field>
+            <field name="model">m2st_hk_airdshipping.travelbooking</field>
+            <field name="inherit_id" ref="m2st_hk_airshipping.view_m2st_hk_airshipping_travelbooking_form"/>
+            <field name="arch" type="xml">
+                <button name="action_view_invoice" position="after">
+                    <button type="object"  name="action_view_rating"
+                            class="oe_stat_button"
+                            icon="fa-star" attrs="{'invisible':[('state', 'in', ('rejected'))]}">
+                        <field name="air_average_rating" widget="statinfo" string="Air Traveler Rating"/>
+
+                    </button>
+                </button>
+
+            </field>
+        </record> -->
+
+
+        <!-- Inherit m2st_hk_airshipping.travelbooking -->
+        <record model="ir.ui.view" id="view_hb_review_inherit_airshipping_shipping_form">
+            <field name="name">view_hb_review_inherit_airshipping_shipping_form</field>
+            <field name="model">m2st_hk_airshipping.shipping</field>
+            <field name="inherit_id" ref="m2st_hk_airshipping.view_m2st_hk_airshipping_shipping_form"/>
+            <field name="arch" type="xml">
+
+                <field name="disable" position="after">
+                    <field name="is_rated"/>
+                </field>
+            </field>
+        </record>
+
+
+       
+
+    </data>
+</odoo>

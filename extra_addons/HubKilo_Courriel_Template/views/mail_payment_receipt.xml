@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+<!-- Allow updating on noupdate=True records -->
+<function name="write" model="ir.model.data">
+    <function name="search" model="ir.model.data">
+        <value
+            eval="[('module', '=', 'account'), ('name', '=', 'mail_template_data_payment_receipt')]" />
+    </function>
+    <value eval="{'noupdate': False}" />
+</function>
+
+          <record id="account.mail_template_data_payment_receipt" model="mail.template">
+            <field name="name">Payment Receipt: Send by email</field>
+            <field name="body_html" type="html">
+
+                                        <html>
+
+                <body style="font-family: 'Roboto', sans-serif; background-color: #e2e2e2; margin: 0; padding: 0;">
+                    <div class="email-wrapper" style="max-width: 600px; margin: 20px auto; padding: 10px 20px; background-color: #ffffff; border-radius: 10px; box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1); z-index: 4;">
+                        <div class="header" style="text-align: center; padding: 20px 0; background-color: #007BFF; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                            <img class="logo" src="https://drive.google.com/uc?export=view&amp;id=11quXHiWTQ8mIYBSlX9byZKlfRJmLpoZy" alt="Your App Logo" style="max-width: 110px;"/>
+                            <h2 style="margin: 10px 0; font-size: 32px; color: #ffffff;">HUbKilo Payment Receipt.</h2>
+                        </div>
+                        <div class="content" style="padding: 20px 0;">
+  <!-- CONTENT -->
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        Dear <t t-out="object.partner_id.name or ''">Azure Interior</t><br/><br/>
+        Thank you for your payment.
+        Here is your payment receipt <strong t-out="(object.name or '').replace('/','-') or ''">BNK1-2021-05-0002</strong> amounting
+        to <strong t-out="format_amount(object.amount, object.currency_id) or ''">$ 10.00</strong> from <t t-out="object.company_id.name or ''">YourCompany</t>.
+        <br /><br />
+        Do not hesitate to contact us if you have any questions.
+        <br/><br/>
+        Best regards,
+        <t t-if="user.signature">
+            <br/>
+            <t t-out="user.signature or ''">--<br/>Mitchell Admin</t>
+        </t>
+    </p>
+</div>
+
+                        </div>
+                    </div>
+                </body>
+                </html>
+
+</field>
+        </record>
+
+<function name="write" model="ir.model.data">
+    <function name="search" model="ir.model.data">
+        <value
+            eval="[('module', '=', 'account'), ('name', '=', 'mail_template_data_payment_receipt')]" />
+    </function>
+    <value eval="{'noupdate': True}" />
+</function>
+
+    </data>
+</odoo>

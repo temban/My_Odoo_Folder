@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="shipping_offer_details" name="Shipping Offer Details">
+        <t name="Shipping Offer Details" t-name="hubkilo_website.shipping_offer_details" >
+            <!--            styles-->
+            <xpath expr="." position="inside">
+       <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+    <!-- Libraries Stylesheet -->
+    <link href="/hubkilo_website/static/src/lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/shipping_details.css?v=95530"/>
+                   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/wow/wow.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/easing/easing.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/counterup/counterup.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/shipping_offer_details.js?v=87997899800999999997989999998996936099999"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+
+         </xpath>
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+            <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+  .selected {
+    border: 2px solid #4fbf65;
+  }
+    </style>
+
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+                        <div class="oe_structure">
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header p-0 " style="background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+            <div class="container-fluid page-header-inner py-5"  style="display: flex;justify-content:center;align-items: center;flex-direction: column;">
+<!--                <h1 class="display-3 text-white mb-3 animated slideInDown">Shipping details</h1>-->
+                <div class="row container" id="travel_info">
+
+                     <div class="row container" style="display: flex;justify-content:center;">
+                    <!-- <h1 class="display-3 text-white mb-3 animated slideInDown">Rooms</h1> -->
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+                        <div class="text-center" style="display: flex;flex-direction: column;">
+                            <h4 class=""  style= "color: #217aff;">DEPARTURE</h4>
+                            <h6 id="shipping_details_offer_d_date" class="" style= "color: #1d1d1e;" ></h6>
+                            <h6 id="shipping_details_offer_d_time" class="" style= "color: #2d2d2e;"></h6>
+                        </div>
+
+                    </div>
+                    <div class="col-4" style=" border: rgba(255, 255, 255, 0.671) 2px solid;display: flex;justify-content:center;gap: 100px;">
+
+                    </div>
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+
+                        <div class="text-center" style="display: flex;flex-direction: column;">
+                            <h4 class="" style="color:#217aff">ARRIVAL</h4>
+                            <h6 id="shipping_details_offer_a_date" class="" style= "color: #1d1d1e;" ></h6>
+                            <h6 id="shipping_details_offer_a_time" class="" style= "color: #2d2d2e;"></h6>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row container" style="display: flex;justify-content:center;">
+                    <!-- <h1 class="display-3 text-white mb-3 animated slideInDown">Rooms</h1> -->
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+                        <div class="text-center" style="">
+                            <h5 id="shipping_details_offer_d_city"  class="text-white" ></h5>
+                            <h6 id="shipping_details_offer_d_country" class="" style="color: #217aff"></h6>
+                        </div>
+
+                    </div>
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+                        <div class="" style="display: flex;flex-direction: column;">
+                            <i class='fas fa-arrow-right' style='font-size:58px;color:#217aff'></i>
+
+                        </div>
+
+                    </div>
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+
+                        <div class="text-center" style="">
+                            <h5 id="shipping_details_offer_a_city" class="text-white" ></h5>
+                            <h6 id="shipping_details_offer_a_country" class="" style="color: #217aff"></h6>
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+                               <div class="container-xxl bg-white p-0">
+
+        <!-- Room Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Shipping Offers Details</h6>
+                </div>
+                <div id="all_results" class="row g-4"  style="display: flex;justify-content: center;">
+
+                    <div class=" col-lg-8 col-md-6 room-item shadow rounded " style="overflow:hidden">
+
+                         <div id="disagree_badge_offer" class="container_badge" style="position: absolute;top: -30px;right: -20px;height: 50px; width: 250px">
+                         </div>
+
+
+
+                            <div class="p-4 mt-2" style="">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 id="shipping_details_display_name_offer" class="mb-0" style="font-size:18px;font-weight:700"></h5>
+                                    <div class="ps-2">
+
+                                    </div>
+                                </div>
+                                <div style="display:flex;justify-content:space-between">
+                                <div>
+                                <h6 class="mb-0 mt-2" style="font-size:14px;font-weight:700">Reference:<span  style='font-size:14px;color:#217aff;font-weight: 400;' id="shipping_details_display_name2_offer" > </span></h6>
+                                    <h6 class="mb-0 mt-2" style="font-size:14px;font-weight:700">Shipping date:<span  style='font-size:14px;color:#217aff;font-weight: 400;' id="shipping_details_shipping_date_offer" > </span></h6>
+                                </div>
+                                <div id="shipping_details_buttons_offer">
+
+                                </div>
+
+
+
+                                </div>
+
+                                <p>
+  <a class="" data-toggle="collapse" style='font-size:14px;display:flex;justify-content:space-between;align-items:center;margin-top:30px;margin-bottom:30px' href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<span><i class='fas fa-user-check' style='font-size:14px;margin-right:5px'></i>
+Receiver Info</span>
+
+<i class='fas fa-angle-down' style='font-size:14px;margin-left:60px'></i>
+  </a>
+
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="">
+<div
+                                                                    style="display:flex;justify-content:start;align-items: center;gap:30px ;margin-top: 30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='fas fa-male'
+                                                                            style='font-size:14px;color:#217aff;margin-right:10px;'></i>Full Name
+                                                                    </h6>
+                                                                    <h6 id="shipping_details_receiver_partner_id_offer" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_partner_id[1]}</h6>
+                                                                </div>
+                                                                <div style="display:flex;justify-content:start;align-items: center;gap:30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='fas fa-envelope-open'
+                                                                            style='font-size:18px;color:#217aff;margin-right:10px;'></i>Email</h6>
+                                                                    <h6 id="shipping_details_receiver_email_offer" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_email}</h6>
+                                                                </div>
+                                                                <div style="display:flex;justify-content:start;align-items: center;gap:30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='far fa-address-card'
+                                                                            style='font-size:14px;color:#217aff;margin-right:10px;'></i>Address</h6>
+                                                                    <h6 id="shipping_details_receiver_address_offer" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_address}</h6>
+                                                                </div>
+                                                                <div style="display:flex;justify-content:start;align-items: center;gap:30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='fas fa-phone'
+                                                                            style='font-size:14px;color:#217aff;margin-right:10px;'></i>Phone</h6>
+                                                                    <h6 id="shipping_details_receiver_phone_offer" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_phone}</h6>
+                                                                </div>  </div>
+                                                            </div>
+
+
+
+
+                                <div id="shipping_details_action_buttons_offer" class="" style="display:flex;justify-content:center;gap:20px">
+ <a href="/add/new/travel" class="btn btn-info"  style="text-transform: capitalize;font-weight:600;font-size:12px" >
+                                     Create A Travel
+                                   </a>
+
+                                   <button class="btn btn-primary"  style="text-transform: capitalize;font-weight:600;font-size:12px" href="#" data-bs-toggle="modal" data-bs-target="#travelList">
+                                     Add A Travel
+                                   </button>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+    <!-- MODAL LUGGAGE START -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Luggage Info</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="luggage_info">
+                                <div style="display:flex;justify-content:center;align-item:center">
+                                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL LUGGAGE END -->
+
+
+      <!-- MODAL TRAVEL VIEW START -->
+      <div class="modal fade" id="travelList" tabindex="-1" aria-labelledby="exampleModalLabelTransfer" aria-hidden="true" >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLabel">
+                List of your travels available
+              </h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+                                    <div class="col-md-10">
+                            <div class="row g-2">
+
+                            </div>
+                        </div>
+            </div>
+
+            <div id="travel_view_list_offer" class="modal-body row" style="display: flex,align-items: center,justify-content:center">
+                  <div style="display:flex;justify-content:center;align-item:center">
+                   <div class="spinner-grow text-primary" style="margin-top:50px;margin-bottom:50px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+            </div>
+            <div id="search_row" class="modal-body row" style="display: flex,align-items: center,justify-content:center">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button onclick="addTravelToShippingOffer()" type="button" class="btn btn-primary">Add Now</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL TRAVEL VIEW END -->
+
+                </div>
+                <div id="traveler_info">
+
+                </div>
+
+                <div id="search_row" class="row g-4">
+
+                </div>
+            </div>
+        </div>
+        <!-- Room End -->
+
+
+
+
+
+    </div>
+                        </div>
+
+
+
+        </t>
+
+        </t>
+
+
+    </template>
+</odoo>

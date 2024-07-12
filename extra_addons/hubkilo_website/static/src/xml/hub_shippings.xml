@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="shipping" name="Shipping">
+        <t name="Shipping" t-name="hubkilo_website.shipping" inherit_id="web.assets_backend">
+            <!--            styles-->
+            <xpath expr="." position="inside">
+       <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+    <!-- Libraries Stylesheet -->
+    <link href="/hubkilo_website/static/src/lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/shipping.css?v=1960"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/wow/wow.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/easing/easing.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/counterup/counterup.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/shipping.js?v=89"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+
+         </xpath>
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+ <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p,h6 {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+
+    </style>
+
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+                        <div class="oe_structure">
+
+           <!-- Page Header Start -->
+        <div class="container-fluid page-header p-0" style="background-position:bottom;background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+<h1 class="display-3 text-white mb-3 animated slideInDown" style="font-weight:700">My Shippings</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Room Start -->
+        <div class="container-xxl bg-white  py-5" style="margin-bottom:150px;">
+            <div class="container bg-white">
+                     <ul class="text-center nav nav-pills mb-3" id="pills-tab" role="tablist" style="display: flex;align-items: center;">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link border border-primary active" style="font-family: 'Poppins',sans-serif;width: 170px;height:60px;font-size:16px"  id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Request</button>
+            </li>
+            <li class="nav-item " role="presentation">
+              <button class="nav-link border border-primary" style="font-family: 'Poppins',sans-serif;width: 170px;height:60px;font-size:16px"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Offers</button>
+            </li>
+          </ul>
+
+                <div class="tab-content" id="pills-tabContent" style="margin-top:30px">
+<!--              FIRST TAB-->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                      <h6 style="font-size:14px;font-weight:600">Notice</h6>
+                      <p style="font-size:12px;">A shipping request is a shipment on an existing travel.That means that these are shipments done on a travel by you</p>
+                    </div>
+                </div>
+             <div class="row g-2 mb-4">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select id="searchInputOrders" class="form-select" oninput="liveSearchOrders(this.value)">
+                                        <option value="all">ALL</option>
+                                        <option value="pending">PENDING</option>
+                                        <option value="accepted">ACCEPTED</option>
+                                        <option value="rejected">CANCEL</option>
+                                        <option value="paid">PAID</option>
+                                        <option value="received">RECEIVED</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-8 d-flex justify-content-end">
+                            <a href="/travels" class="btn btn-primary" style="font-size:14px">+ Ship again</a>
+                        </div>
+                    </div>
+
+            <div id="all_results" class="row g-4" style="">
+
+                    <div style="display:flex;justify-content:center;align-item:center">
+                                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+                    </div>
+
+                </div>
+
+                <div id="search_row_orders" class="row g-4">
+
+                </div>
+            </div>
+
+<!--              SECOND TAB-->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                          <h6 style="font-size:14px;font-weight:600">Notice</h6>
+                            <p style="font-size:12px;">A shipment offer is a shipping waiting for a travel.That means that these are your shipments offer that you created so that it can be added by a traveler on his travel</p>
+                    </div>
+                </div>
+            <div class="row g-2 mb-4">
+                        <div class="col-md-4">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <select id="searchInputOffers" class="form-select" oninput="liveSearchOffers(this.value)">
+                                        <option value="all">ALL</option>
+                                        <option value="pending">PENDING</option>
+                                        <option value="accepted">ACCEPTED</option>
+                                        <option value="rejected">CANCEL</option>
+                                        <option value="paid">PAID</option>
+                                        <option value="received">RECEIVED</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-8 d-flex justify-content-end">
+                            <a href="/add/new/shipping" class="btn btn-primary" style="font-size:14px">+ Add New Shipping Offer</a>
+                        </div>
+                    </div>
+
+<!--                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">-->
+<!--                    <h1 class="mb-5">My <span class="text-primary text-uppercase">Shipping Offers</span></h1>-->
+<!--                </div>-->
+                <div id="my_shipping_offers_results" class="row g-4" >
+                    <div style="display:flex;justify-content:center;align-item:center">
+                                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+                    </div>
+
+                </div>
+
+
+                <div id="search_row_offers" class="row g-4">
+
+                </div>
+
+            </div>
+          </div>
+
+            </div>
+
+        </div>
+        <!-- Room End -->
+
+
+
+
+
+                        </div>
+
+
+
+        </t>
+
+        </t>
+
+
+    </template>
+</odoo>

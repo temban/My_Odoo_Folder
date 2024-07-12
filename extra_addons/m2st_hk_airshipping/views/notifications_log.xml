@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+        <!-- Form View for res.partner.rating -->
+        <record id="hubkilo_air_view_partner_notifications_form" model="ir.ui.view">
+            <field name="name">res.partner.notifications.form</field>
+            <field name="model">air.notification.log</field>
+            <field name="arch" type="xml">
+                <form string="Air Travel Notifications">
+                    <sheet>
+                        <group>
+                            <field name="sender_partner_id"/>
+                            <field name="receiver_partner_id"/>
+                            <field name="message_title"/>
+                            <field name="message_body"/>
+                            <field name="is_seen_sender"/>
+                            <field name="is_seen_receiver"/>
+                             <field name="disable_sender"/>
+                            <field name="disable_receiver"/>
+                            <field name="date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for res.partner.rating -->
+        <record id="hubkilo_air_view_partner_notifications_tree" model="ir.ui.view">
+            <field name="name">res.partner.notifications.form</field>
+            <field name="model">air.notification.log</field>
+            <field name="arch" type="xml">
+                <tree string="Air Travel Notifications">
+                            <field name="sender_partner_id"/>
+                            <field name="receiver_partner_id"/>
+                            <field name="message_title"/>
+                            <field name="message_body"/>
+                            <field name="is_seen_sender"/>
+                            <field name="is_seen_receiver"/>
+                             <field name="disable_sender"/>
+                            <field name="disable_receiver"/>
+                            <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for res.partner.rating -->
+        <record id="hubkilo_air_action_partner_notifications" model="ir.actions.act_window">
+            <field name="name">HubKilo Air Traveler Notifications</field>
+            <field name="res_model">air.notification.log</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+                <!-- Adding the Partner Ratings tab in the Contacts form -->
+        <record id="view_partner_form_inherit_air_shipping" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+<!--                    <field name="average_rating"/>-->
+                    <page string="Air Travel Notifications" name="partner_notifications_tab">
+                        <h3 style="color:#00BFFF; text-align:center; margin-bottom:1rem;"> Air Partner Notifications Sent</h3>
+                        <field name="partner_air_notif_sent" string="Air Travel Partner Notifications Sent"/>
+                         <h3 style="color:#00BFFF; text-align:center; margin-bottom:1rem;"> Air Partner Notifications Received</h3>
+                        <field name="partner_air_notif_received" string="Air Partner Notifications Received"/>
+                    </page>
+<!--                    <page string="Air Partner Notifications Received" name="partner_notifications_tab">-->
+<!--                        <field name="partner_notif_received"/>-->
+<!--                    </page>-->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

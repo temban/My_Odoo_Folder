@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="send__verify__code__from__mobile__app.list">
+      <field name="name">Send_Verify_Code_From_Mobile_App list</field>
+      <field name="model">send__verify__code__from__mobile__app.send__verify__code__from__mobile__app</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="send__verify__code__from__mobile__app.action_window">
+      <field name="name">Send_Verify_Code_From_Mobile_App window</field>
+      <field name="res_model">send__verify__code__from__mobile__app.send__verify__code__from__mobile__app</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="send__verify__code__from__mobile__app.action_server">
+      <field name="name">Send_Verify_Code_From_Mobile_App server</field>
+      <field name="model_id" ref="model_send__verify__code__from__mobile__app_send__verify__code__from__mobile__app"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Send_Verify_Code_From_Mobile_App" id="send__verify__code__from__mobile__app.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="send__verify__code__from__mobile__app.menu_1" parent="send__verify__code__from__mobile__app.menu_root"/>
+    <menuitem name="Menu 2" id="send__verify__code__from__mobile__app.menu_2" parent="send__verify__code__from__mobile__app.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="send__verify__code__from__mobile__app.menu_1_list" parent="send__verify__code__from__mobile__app.menu_1"
+              action="send__verify__code__from__mobile__app.action_window"/>
+    <menuitem name="Server to list" id="send__verify__code__from__mobile__app" parent="send__verify__code__from__mobile__app.menu_2"
+              action="send__verify__code__from__mobile__app.action_server"/>
+-->
+  </data>
+</odoo>

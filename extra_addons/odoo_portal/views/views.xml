@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="odoo_portal.list">
+      <field name="name">odoo_portal list</field>
+      <field name="model">odoo_portal.odoo_portal</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening data on models -->
+<!--
+    <record model="ir.actions.act_window" id="odoo_portal.action_window">
+      <field name="name">odoo_portal window</field>
+      <field name="res_model">odoo_portal.odoo_portal</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="odoo_portal.action_server">
+      <field name="name">odoo_portal server</field>
+      <field name="model_id" ref="model_odoo_portal_odoo_portal"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="odoo_portal" id="odoo_portal.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="odoo_portal.menu_1" parent="odoo_portal.menu_root"/>
+    <menuitem name="Menu 2" id="odoo_portal.menu_2" parent="odoo_portal.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="odoo_portal.menu_1_list" parent="odoo_portal.menu_1"
+              action="odoo_portal.action_window"/>
+    <menuitem name="Server to list" id="odoo_portal" parent="odoo_portal.menu_2"
+              action="odoo_portal.action_server"/>
+-->
+  </data>
+</odoo>

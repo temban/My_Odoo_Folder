@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="create_travel" name="Create New Travel">
+        <t name="Create New Travel" t-name="hubkilo_website.create_travel">
+
+<xpath expr="." position="inside">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.rtl.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/ajouter_voyage.css?v=6600"/>
+        <link href="/hubkilo_website/static/src/css/style.css?v=166" rel="stylesheet"/>
+        <link href="/hubkilo_website/static/src/css/wizard.css?v=4366" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/hubkilo_website/static/src/assets/images/favicon.ico" />
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend-plugin.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend.css?v=1.0.0"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/remixicon/fonts/remixicon.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+            <!--            javascript-->
+            <xpath expr="." position="inside">
+                  <!-- Backend Bundle JavaScript -->
+<!--    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/backend-bundle.min.js"></script>-->
+
+    <!-- Table Treeview JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/table-treeview.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/customizer.js"></script>
+
+    <!-- Chart Custom JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/chart-custom.js"></script>
+
+    <!-- app JavaScript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/assets/js/app.js"></script>
+
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+         </xpath>
+
+            <xpath expr="." position="inside">
+                      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/ajouter.js?v=8119900789990000000900999087677996899989918"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/wizard.js?v=1196412"></script>
+                      <script  src="/hubkilo_website/static/src/js/autocomplete.js?v=9166888888888888"></script>
+                <script  src="/hubkilo_website/static/src/js/autocompleteProfile.js?v=1858894"></script>
+          <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+        </xpath>
+
+            <t t-call="website.layout">
+<style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p,label {
+ font-family: 'Poppins',sans-serif;
+ font-size:12px;
+  font-weight:600
+}
+
+
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+
+    </style>
+<script>
+    $(document).ready(function(){
+
+
+  // $('.my-select').selectpicker();
+    // $(function () {
+      // $('select').selectpicker();
+  // });
+
+  });
+
+  </script>
+<script>
+
+setTimeout(()=>{
+    const phoneInputField = document.getElementById("phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+      "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+},5000)
+                </script>
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+    <div class="container-xxl bg-white p-0">
+<div id="toastContainer" aria-live="polite" aria-atomic="true" style="position: absolute; top: 0; right: 0; z-index: 1;"></div>
+
+
+
+
+        <!-- Booking Start -->
+        <div class="container-xxl py-2  mt-4">
+            <div class="container mt-4">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="">Create your <span class="text-primary text-uppercase">Travel Announcement</span></h1>
+                                        <h6 class="section-title text-center text-primary text-uppercase">Create Travel</h6>
+
+                </div>
+
+
+    <div class="row" style="justify-content: center;align-items: center;margin-top: 20px;margin-bottom: 100px">
+        <div class="side_bar" style="display: flex;flex-direction: column;justify-content: space-between;box-shadow: 0 10px 10px rgb(62, 62, 62)">
+            <div class="side_bar_items_section">
+                <div class="side_bar_item" style="display: flex;align-items: center;gap: 10px;">
+                    <div class="side_bar_item_icon active" data-step="1"><span
+                            class="side_bar_item_icon_number">1</span></div><span
+                        class="side_bar_item_icon_text activeText" data-step1="1">Travel Type</span>
+                </div>
+
+                <div class="side_bar_item" style="display: flex;align-items: center;gap: 10px;">
+                    <div class="side_bar_item_icon" data-step="2"><span class="side_bar_item_icon_number">2</span></div>
+                    <span class="side_bar_item_icon_text" data-step1="2">Travel Details</span>
+                </div>
+
+                <div class="side_bar_item" style="display: flex;align-items: center;gap: 10px;">
+                    <div class="side_bar_item_icon" data-step="3"><span class="side_bar_item_icon_number">3</span></div>
+                    <span class="side_bar_item_icon_text" data-step1="3">User Verification</span>
+                </div>
+
+                <div class="side_bar_item" style="display: flex;align-items: center;gap: 10px;">
+                    <div class="side_bar_item_icon" data-step="4"><span class="side_bar_item_icon_number">4</span></div>
+                    <span class="side_bar_item_icon_text" data-step1="4">Confirmation</span>
+                </div>
+
+                <div class="side_bar_item" style="display: flex;align-items: center;gap: 10px;">
+                    <div class="side_bar_item_icon" data-step="5"><span class="side_bar_item_icon_number">5</span></div>
+                    <span class="side_bar_item_icon_text" data-step1="5">Successful</span>
+                </div>
+
+            </div>
+            <div class="side_bar_items">
+
+            </div>
+        </div>
+
+        <div class="side_info" style="display: flex;flex-direction: column;justify-content: space-between;box-shadow: 0 10px 10px rgb(62, 62, 62)">
+
+            <!-- section 1 start-->
+            <div class="sectionn mysectionn" id="sectionn1"
+                style="display: flex;flex-direction: column;justify-content: space-between;">
+                <div>
+                    <div class="side_info_header">
+                        <span class="side_info_header_title">Select travel type</span>
+                    </div>
+                    <div class="side_info_main">
+                        <div class="side_info_main1">
+                            <div id="road" class="side_info_item" onclick="selectType(1,'road')" data-value="road">
+                                <div class="image_tag1">
+
+                                </div>
+                                <p style="text-align: center;margin-top:20px;font-weight: 700;font-family: Poppins;">
+                                    ROAD</p>
+                            </div>
+                            <div id="air" class="side_info_item" onclick="selectType(1,'air')" data-value="air">
+                                <div class="image_tag2">
+                                </div>
+                                <p style="text-align: center;margin-top:20px;font-weight: 700;font-family: Poppins;">AIR
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="side_info_footer">
+                    <button class="btn btn_back" onclick="MyprevSection(1)"
+                        style="border: solid rgba(247,248,251,1) 0.5px;background: rgba(247,248,251,1);color: #8f9ca9;font-family: Poppins;font-weight: 700;font-size: 12px;">BACK</button>
+
+                    <div id="error_section1">
+
+                    </div>
+
+
+                    <button class="btn" onclick="nextSection(1)"
+                        style="font-size: 12px;font-weight: 700;font-family: Poppins;color: rgba(255,255,255,1);border: 1px solid rgba(108,112,220,1);background:#217aff;">NEXT
+                        STEP</button>
+                </div>
+            </div>
+            <!-- section 1 end -->
+
+            <!-- section 2 start-->
+            <div class="sectionn mysectionn" id="sectionn2"
+                style="display: none;flex-direction: column;justify-content: space-between;">
+                <div>
+                    <div class="side_info_header">
+                        <span class="side_info_header_title">Travel details</span>
+                    </div>
+                    <div class="side_info_main">
+<!--                        ROAD DETAILS START-->
+                        <div id="road_details" style="display:none" class="side_info_main1 row">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <label for="ville_de_depart" class="required form-label">Departure
+                                        city:</label>
+                                    <input id="ville_de_depart" type="text" class="form-control "
+                                        autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="departureDate_error" class="alert alert-danger" role="alert"
+                                        style="display:none">
+                                        Please select a future date and time
+                                    </div>
+                                    <label for="exampleFormControlInput1" class="required form-label">Departure
+                                        Date:</label>
+                                    <input id="date_de_depart" type="datetime-local" onchange="handleDateChange()"
+                                        class="form-control form-control-solid" placeholder="" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="ville_de_arriver" class="required form-label">Arrival
+                                        city:</label>
+                                    <input id="ville_de_arriver" type="text" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Arrival
+                                        date:</label>
+                                    <input id="date_de_arrivee" type="datetime-local" onchange="handleDateChange1()"
+                                        class="form-control form-control-solid" placeholder="" />
+                                </div>
+                            </div>
+
+                        </div>
+<!--                        ROAD DETAILS END-->
+
+<!--                        AIR DETAILS START-->
+                        <div id="air_details" style="display:none" class="side_info_main1 row">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <label for="ville_de_depart_air" class="required form-label">Departure
+                                        city:</label>
+                                    <input id="ville_de_depart_air" type="text" class="form-control "
+                                        autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="departureDate_error_air" class="alert alert-danger" role="alert"
+                                        style="display:none">
+                                        Please select a future date and time
+                                    </div>
+                                    <label for="exampleFormControlInput1" class="required form-label">Departure
+                                        Date:</label>
+                                    <input id="date_de_depart_air" type="datetime-local" onchange="handleDateChangeAir()"
+                                        class="form-control form-control-solid" placeholder="" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="ville_de_arriver_air" class="required form-label">Arrival
+                                        city:</label>
+                                    <input id="ville_de_arriver_air" type="text" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Arrival
+                                        date:</label>
+                                    <input id="date_de_arrivee_air" type="datetime-local" onchange="handleDateChangeAir1()"
+                                        class="form-control form-control-solid" placeholder="" />
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="price_per_kilo" class="required form-label">Price / Kg:</label>
+                                    <input id="price_per_kilo" type="number" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="quantity_available" class="required form-label">Quantity available:</label>
+                                    <input id="quantity_available" type="number" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="quantity_available" class="required form-label">Restrictions of what you want:</label>
+                                    <textarea id="Restriction_of_what_you" class="form-control " placeholder="" style="background:white" ></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                  <div class="form-group form-check">
+                                    <input id="choose_Envelop" type="checkbox" class="form-check-input" />
+                                    <label class="form-check-label" for="choose_Envelop">Are you taking envelop?</label>
+                                  </div>
+                                   <div class="form-group form-check">
+                                    <input id="choose_computers" type="checkbox" class="form-check-input" />
+                                    <label class="form-check-label" for="choose_computers">Are you taking computers?</label>
+                                  </div>
+                            </div>
+
+
+                        </div>
+<!--                        AIR DETAILS END-->
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="side_info_footer">
+                    <button class="btn btn_back" onclick="prevSection(2)"
+                        style="border: solid rgba(247,248,251,1) 0.5px;background: rgba(247,248,251,1);color: #8f9ca9;font-family: Poppins;font-weight: 700;font-size: 12px;">BACK</button>
+
+                    <div id="error_section2">
+
+                    </div>
+
+                    <button id="stepTwoAir" class="btn" onclick="verifyFormAir(2)" style="display:none;font-size: 12px;font-weight: 700;font-family: Poppins;color: rgba(255,255,255,1);border: 1px solid rgba(108,112,220,1);background: #217aff;">NEXT STEP</button>
+                    <button id="stepTwoRoad" class="btn" onclick="verifyFormRoad(2)" style="display:none;font-size: 12px;font-weight: 700;font-family: Poppins;color: rgba(255,255,255,1);border: 1px solid rgba(108,112,220,1);background: #217aff;">NEXT STEP</button>
+                </div>
+            </div>
+            <!-- section 2 end -->
+
+            <!-- section 3 start-->
+            <div class="sectionn mysectionn" id="sectionn3"
+                style="display: none;flex-direction: column;justify-content: space-between;">
+                <div>
+                    <div class="side_info_header">
+                        <span class="side_info_header_title">User Verification</span>
+                    </div>
+                    <div class="side_info_main">
+                        <div class="side_info_main1 row">
+                            <div class="col-12" style="display:none" id="unverified">
+                            <div class="row" >
+                                <div class="col-12" style="display:flex;gap:10px">
+                                 <h3>Unverified</h3>
+                                <img style="width:30px;height:30px" src="/hubkilo_website/static/src/img/warning-comic-sign.png" alt="check verify" data-bs-toggle="tooltip" data-bs-placement="top" title="unverified"/>
+                                </div>
+                                <div id="verification_btn" class="col-12" onclick="show_verification()" style="display:flex;gap:10px">
+                                 <button class="btn btn-info" type="button" style="margin:10px 0px;text-transform:capitalize">Complete Information Here</button>
+                                </div>
+                                 <div id="simple_unverified_form" class="row">
+                              <div class="col-md-6">
+                                <div class="">
+                                    <label for="exampleFormControlInput1" class="required form-label">Place of birth</label>
+                                     <input id="birth_city1" type="text" class="form-control my-form-control"
+                                            placeholder="" style="background:white" autocomplete="off" disabled="disabled" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Residential address</label>
+                               <input id="residence_city1" type="text" class="form-control my-form-control" placeholder="" style="background:white" autocomplete="off" disabled="disabled" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Phone</label>
+                                    <input id="phone1" type="tel" class="form-control my-form-control phone" style="width:100%; max-width:100%;" disabled="disabled" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Date of birth</label>
+                                 <input id="birthdate1" type="date" format="yyyy-MM-dd" name="birthdate" autocomplete="off" class="form-control my-form-control bg-white" disabled="disabled" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Gender</label>
+                                   <select id="gender1" type="text" placeholder="Sex" name="gender" autocomplete="off" class="form-control my-form-control bg-white" disabled="disabled">
+                                       <option value="false"></option>
+                                       <option value="male">male</option>
+                                       <option value="female">female</option>
+                                   </select>
+                                </div>
+                            </div>
+                                </div>
+
+                                <div id="unverified_form" style="display:none" class="col-12">
+                                    <div class="row">
+                                                                    <div class="col-md-6">
+                                <div class="">
+                                    <label for="exampleFormControlInput1" class="required form-label">Place of birth</label>
+                                     <input id="birth_city" type="text" class="form-control my-form-control"
+                                            placeholder="" style="background:white" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Residential address</label>
+                               <input id="residence_city" type="text" class="form-control my-form-control" placeholder="" style="background:white" autocomplete="off" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Phone</label>
+                                    <input id="phone" type="tel" class="form-control my-form-control phone" style="width:100%; max-width:100%;" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Date of birth</label>
+                                 <input id="birthdate" type="date" format="yyyy-MM-dd" name="birthdate" autocomplete="off" class="form-control my-form-control bg-white"  />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Gender</label>
+                                   <select id="gender" type="text" placeholder="Sex" name="gender" autocomplete="off" class="form-control my-form-control bg-white">
+                                       <option value="false"></option>
+                                       <option value="male">male</option>
+                                       <option value="female">female</option>
+                                   </select>
+                                </div>
+                            </div>
+                              <div class="col-12" style="display:flex;justify-content:center">
+                                 <button id="updateButton" style="text-transform:capitalize;width:300px" class="save_btn btn btn-primary" type="button" onclick="updateUserAdd()">Update Now </button>
+                            </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            </div>
+                            <div class="col-12" style="display:none" id="verified">
+                              <div class="row" >
+                                <div class="col-12" style="display:flex;gap:10px">
+                                 <h3>Verified</h3>
+                                <img style="width:30px;height:30px" src="/hubkilo_website/static/src/img/verified.png" alt="verified"/>
+                                </div>
+                            <div class="col-md-6">
+                                <div class="">
+                                    <label for="exampleFormControlInput1" class="required form-label">Place of birth</label>
+                                     <input id="birth_city2" type="text" class="form-control my-form-control"
+                                            placeholder="" style="background:white" autocomplete="off" disabled="disabled" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Residential address</label>
+                               <input id="residence_city2" type="text" class="form-control my-form-control" placeholder="" style="background:white" autocomplete="off" disabled="disabled" />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Phone</label>
+                                    <input id="phone2" type="tel" class="form-control my-form-control phone" style="width:100%; max-width:100%;background:white" disabled="disabled"/>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Date of birth</label>
+                                 <input id="birthdate2" type="date" format="yyyy-MM-dd" name="birthdate" autocomplete="off" class="form-control my-form-control bg-white" disabled="disabled"  />
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1" class="required form-label">Gender</label>
+                                   <select id="gender2" type="text" placeholder="Sex" name="gender" autocomplete="off" class="form-control my-form-control bg-white" disabled="disabled">
+                                       <option value="false"></option>
+                                       <option value="male">male</option>
+                                       <option value="female">female</option>
+                                   </select>
+                                </div>
+                            </div>
+
+                            </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="side_info_footer">
+                    <button class="btn btn_back" onclick="prevSection(3)"
+                        style="border: solid rgba(247,248,251,1) 0.5px;background: rgba(247,248,251,1);color: #8f9ca9;font-family: Poppins;font-weight: 700;font-size: 12px;">BACK</button>
+
+                    <button class="save-btn btn" onclick="userVerify(3)"
+                        style="font-size: 12px;font-weight: 700;font-family: Poppins;color: rgba(255,255,255,1);border: 1px solid rgba(108,112,220,1);background: #217aff;">NEXT STEP</button>
+                </div>
+            </div>
+            <!-- section 3 end -->
+
+            <!-- section 4 start-->
+            <div class="sectionn mysectionn" id="sectionn4"
+                style="display: none;flex-direction: column;justify-content: space-between;">
+                <div>
+                    <div class="side_info_header">
+                        <span class="side_info_header_title">Confirm Details</span>
+                    </div>
+                    <div class="side_info_main" style="overflow-y: auto;white-space: nowrap;height:440px;">
+                        <div class="side_info_main1 row">
+                            <div id="confirmation" class="row" style="">
+
+                            </div>
+                            <div class="display:flex;justify-content:center;align-items:center">
+                            <div id="confirmDetailsRoad" class="row" style="display:none ">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Departure city:</label>
+                                        <input id="confirmDepartCity" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Departure date:</label>
+                                        <input id="confirmDepartDate" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Arrival city:</label>
+                                        <input id="confirmArrivalCity" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Arrival date:</label>
+                                        <input id="confirmArrivalDate" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div id="confirmDetailsAir" class="row" style="display:none ">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Departure city:</label>
+                                        <input id="confirmDepartCityAir" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Departure date:</label>
+                                        <input id="confirmDepartDateAir" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Arrival city:</label>
+                                        <input id="confirmArrivalCityAir" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="required form-label">Arrival date:</label>
+                                        <input id="confirmArrivalDateAir" readonly="1" style="background: white;" type="text"
+                                            class="form-control" placeholder="" />
+                                    </div>
+                                </div>
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="price_per_kilo_confirm" class="required form-label">Price / Kg:</label>
+                                    <input id="price_per_kilo_confirm" type="number" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="quantity_available_confirm" class="required form-label">Quantity available:</label>
+                                    <input id="quantity_available_confirm" type="number" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="Restriction_of_what_you_confirm" class="required form-label">Restrictions of what you want:</label>
+                                    <textarea id="Restriction_of_what_you_confirm" class="form-control " placeholder="" style="background:white" ></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                  <div class="form-group form-check">
+                                    <input id="choose_Envelop_confirm" type="checkbox" class="form-check-input" />
+                                    <label class="form-check-label" for="choose_Envelop">Are you taking envelop?</label>
+                                  </div>
+                                   <div class="form-group form-check">
+                                    <input id="choose_computers_confirm" type="checkbox" class="form-check-input" />
+                                    <label class="form-check-label" for="choose_computers">Are you taking computers?</label>
+                                  </div>
+                            </div>
+
+                            </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="side_info_footer">
+                    <button class="btn btn_back" onclick="prevSection(4)"
+                        style="border: solid rgba(247,248,251,1) 0.5px;background: rgba(247,248,251,1);color: #8f9ca9;font-family: Poppins;font-weight: 700;font-size: 12px;">BACK</button>
+
+                    <button id="add_btn_road" class="save-btn btn" onclick="add(4)" style="display:none;font-size: 12px;font-weight: 700;font-family: Poppins;color: rgba(255,255,255,1);border: 1px solid rgba(108,112,220,1);background: #217aff;">CONFIRM AND ROAD</button>
+                    <button id="add_btn_air" class="save-btn btn" onclick="addA()" style="display:none;font-size: 12px;font-weight: 700;font-family: Poppins;color: rgba(255,255,255,1);border: 1px solid rgba(108,112,220,1);background: #217aff;">CONFIRM AND AIR</button>
+                </div>
+            </div>
+            <!-- section 4 end -->
+
+            <!-- section 5 start-->
+            <div class="sectionn mysectionn" id="sectionn5"
+                style="display: none;flex-direction: column;justify-content: space-between;">
+                <div>
+                    <div class="side_info_header">
+                        <span class="side_info_header_title">Successful</span>
+                    </div>
+                    <div class="side_info_main">
+                        <div class="side_info_main1 row">
+
+
+    <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+    <img src="/hubkilo_website/static/src/media/successfully-done.gif" alt="successfully done" style="width:300px;height: 300px;" />
+    <h1 style="color:#00B050;text-align:center">Travel created successfully</h1>
+      <a href="/my/travels" class="btn btn-success" style="width: 170px; color: white;text-transform: capitalize;">See your travels <i class="fas fa-arrow-right"></i> </a>
+
+    </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="side_info_footer">
+<!--                    <button class="btn btn_back" onclick="prevSection(4)"-->
+<!--                        style="border: solid rgba(247,248,251,1) 0.5px;background: rgba(247,248,251,1);color: #8f9ca9;font-family: Poppins;font-weight: 700;font-size: 12px;">BACK</button>-->
+                </div>
+            </div>
+            <!-- section 5 end -->
+
+        </div>
+    </div>
+
+
+            </div>
+        </div>
+        <!-- Booking End -->
+
+    </div>
+
+
+<!--Error Modal Start-->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class='fas fa-exclamation-triangle' style='font-size:28px;color:red;margin-right:10px'></i>Alert</h1>
+      </div>
+      <div id="alert_error_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--Error Modal End-->
+
+
+
+<!--Success Modal Start-->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class='fa fa-check-circle' style='font-size:28px;color:#4fbf65;margin-right:10px'></i>Alert</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_success_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+<!--Success Modal End-->
+
+            </t>
+
+        </t>
+
+    </template>
+</odoo>

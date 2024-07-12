@@ -1,0 +1,77 @@
+<odoo>
+    <data>
+        <!-- Form View for res.partner.rating -->
+        <record id="hubkilo_view_partner_notifications_form" model="ir.ui.view">
+            <field name="name">res.partner.notifications.form</field>
+            <field name="model">notification.log</field>
+            <field name="arch" type="xml">
+                <form string="Road Traveler Notifications">
+                    <sheet>
+                        <group>
+                            <field name="sender_partner_id"/>
+                            <field name="receiver_partner_id"/>
+                            <field name="message_title"/>
+                            <field name="message_body"/>
+                            <field name="is_seen_sender"/>
+                            <field name="is_seen_receiver"/>
+                             <field name="disable_sender"/>
+                            <field name="disable_receiver"/>
+                            <field name="date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for res.partner.rating -->
+        <record id="hubkilo_view_partner_notifications_tree" model="ir.ui.view">
+            <field name="name">res.partner.notifications.form</field>
+            <field name="model">notification.log</field>
+            <field name="arch" type="xml">
+                <tree string="Road Traveler Notifications">
+                            <field name="sender_partner_id"/>
+                            <field name="receiver_partner_id"/>
+                            <field name="message_title"/>
+                            <field name="message_body"/>
+                            <field name="is_seen_sender"/>
+                            <field name="is_seen_receiver"/>
+                             <field name="disable_sender"/>
+                            <field name="disable_receiver"/>
+                            <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for res.partner.rating -->
+        <record id="hubkilo_action_partner_notifications" model="ir.actions.act_window">
+            <field name="name">HubKilo Road Traveler Notifications</field>
+            <field name="res_model">notification.log</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        	<menuitem id="menu_m0st_hk_root_config_partner_shipper"  name="Notifications"
+			          		  parent="m1st_hk_roadshipping.menu_m1st_hk_root_employee_road" sequence="4" action="hubkilo_action_partner_notifications" />
+
+                <!-- Adding the Partner Ratings tab in the Contacts form -->
+        <record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+<!--                    <field name="average_rating"/>-->
+                    <page string="Road Traveler Notifications" name="partner_notifications_tab">
+                        <h3 style="color:#00BFFF; text-align:center; margin-bottom:1rem;">Road Traveler Notifications Sent</h3>
+                        <field name="partner_notif_sent" string="Partner Notifications Sent"/>
+                         <h3 style="color:#00BFFF; text-align:center; margin-bottom:1rem;">Road Traveler Notifications Received</h3>
+                        <field name="partner_notif_received" string="Partner Notifications Received"/>
+                    </page>
+<!--                    <page string="Partner Notifications Received" name="partner_notifications_tab">-->
+<!--                        <field name="partner_notif_received"/>-->
+<!--                    </page>-->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

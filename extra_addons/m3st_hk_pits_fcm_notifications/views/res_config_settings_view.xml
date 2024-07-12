@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_m2st_hk_airshipping" model="ir.ui.view">
+            <field name="name">res.config.settings.custom.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="m0st_hk_base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='base']" position="after">
+                    <h2>HUBKILO Road TRAVEL FCM SETTINGS Options</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_notif_enabled">
+                                <label for="hkpits_notif_enabled"/>
+                                <div class="text-muted">
+                                    Enabled FCM Notifications on the process
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_notif_enabled" class="o_light_label"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_create_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_create_title"/>
+                                <div class="text-muted">
+                                    Created Shipping Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_create_title" class="o_light_label"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_create_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_create_body"/>
+                                <div class="text-muted">
+                                    Created Shipping Message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_create_body" class="o_light_label"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_rejected_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_rejected_title"/>
+                                <div class="text-muted">
+                                    Shipping rejected title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_rejected_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_rejected_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_rejected_body"/>
+                                <div class="text-muted">
+                                    Shipping rejected body message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_rejected_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_cancelled_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_cancelled_title"/>
+                                <div class="text-muted">
+                                    Shipping Cancelled Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_cancelled_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_cancelled_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_cancelled_body"/>
+                                <div class="text-muted">
+                                    Shipping Cancelled Body Message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_cancelled_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_price_submit_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_price_submit_title"/>
+                                <div class="text-muted">
+                                    New proposed price Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_price_submit_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_price_submit_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_price_submit_body"/>
+                                <div class="text-muted">
+                                    New proposed price body message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_price_submit_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_price_validate_by_shipper_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_price_validate_by_shipper_title"/>
+                                <div class="text-muted">
+                                    Price validated by Shipper Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_price_validate_by_shipper_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_price_validate_by_shipper_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_price_validate_by_shipper_body"/>
+                                <div class="text-muted">
+                                    Price validated by Shipper message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_price_validate_by_shipper_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane"
+                                 id="hkpits_shipping_notif_price_validate_by_traveler_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_price_validate_by_traveler_title"/>
+                                <div class="text-muted">
+                                    Price validated by Traveler Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_price_validate_by_traveler_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_price_validate_by_traveler_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_price_validate_by_traveler_body"/>
+                                <div class="text-muted">
+                                    Price validated by Traveler message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_price_validate_by_traveler_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_paid_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_paid_title"/>
+                                <div class="text-muted">
+                                    Shipping has been Paid Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_paid_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_paid_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_paid_body"/>
+                                <div class="text-muted">
+                                    Shipping has been Paid message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_paid_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_received_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_received_title"/>
+                                <div class="text-muted">
+                                    Packages has been received Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_received_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_received_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_received_body"/>
+                                <div class="text-muted">
+                                    Packages has been received message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_received_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_delivered_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_delivered_title"/>
+                                <div class="text-muted">
+                                    Packages has been delivered Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_delivered_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_delivered_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_delivered_body"/>
+                                <div class="text-muted">
+                                    Packages has been delivered message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_delivered_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_rated_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_rated_title"/>
+                                <div class="text-muted">
+                                    Shipping has been rated Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_rated_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_shipping_notif_rated_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_shipping_notif_rated_body"/>
+                                <div class="text-muted">
+                                    Shipping has been rated message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_shipping_notif_rated_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_create_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_create_title"/>
+                                <div class="text-muted">
+                                    Travel Create Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_create_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_create_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_create_body"/>
+                                <div class="text-muted">
+                                    Travel Create message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_create_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_published_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_published_title"/>
+                                <div class="text-muted">
+                                    Travel has been published Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_published_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_published_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_published_body"/>
+                                <div class="text-muted">
+                                    Travel has been published message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_published_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_accepted_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_accepted_title"/>
+                                <div class="text-muted">
+                                    Travel has been Accepted / Running Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_accepted_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_accepted_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_accepted_body"/>
+                                <div class="text-muted">
+                                    Travel has been Accepted / Running message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_accepted_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_completed_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_completed_title"/>
+                                <div class="text-muted">
+                                    Travel has been Completed Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_completed_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_completed_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_completed_body"/>
+                                <div class="text-muted">
+                                    Travel has been Completed message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_completed_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_cancelled_title"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_cancelled_title"/>
+                                <div class="text-muted">
+                                    Travel has been cancelled Title
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_cancelled_title"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_right_pane" id="hkpits_travel_notif_cancelled_body"
+                                 attrs="{'invisible': [('hkpits_notif_enabled', '=', False)]}">
+                                <label for="hkpits_travel_notif_cancelled_body"/>
+                                <div class="text-muted">
+                                    Travel has been cancelled message
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt16">
+                                        <field name="hkpits_travel_notif_cancelled_body"
+                                               attrs="{'required': [('hkpits_notif_enabled', '=', True)]}"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hubkilo_website_hubkilo_website,hubkilo_website.hubkilo_website,model_hubkilo_website_hubkilo_website,base.group_user,1,1,1,1

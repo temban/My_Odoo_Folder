@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!--Inherit and add field to fleet.vehicue-->
+<!--      <record model="ir.ui.view" id="fidelity_card_inherit">-->
+<!--          <field name="name">fidelity.card.inherit</field>-->
+<!--          <field name="model">res.users</field>-->
+<!--          <field name="inherit_id" ref="base.view_users_form"/>-->
+<!--          <field name="arch" type="xml">-->
+<!--              <xpath expr="//group[2]" position="before">-->
+<!--                  <group string="Fedility Bonus">-->
+<!--                          <field name="client_points" />-->
+<!--                          <field name="client_bonus" />-->
+<!--                  </group>-->
+<!--              </xpath>-->
+<!--          </field>-->
+<!--      </record>-->
+
+              <record id="view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='vat']" string="Fidelity Points and Bonus" position="after">
+                <field name="client_points" string="Points" />
+                <field name="client_bonus" string="Bonus" />
+            </xpath>
+            </field>
+        </record>
+  </data>
+</odoo>

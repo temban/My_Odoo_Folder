@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <!-- Form View for res.partner.rating -->
+        <record id="rpn_view_partner_notifications_form" model="ir.ui.view">
+            <field name="name">res.partner.notifications.form</field>
+            <field name="model">rpn.notification.log</field>
+            <field name="arch" type="xml">
+                <form string="Partner RPN Notifications">
+                    <sheet>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="message_title"/>
+                            <field name="message_body"/>
+                            <field name="is_seen"/>
+                            <field name="disable"/>
+                            <field name="date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for res.partner.rating -->
+        <record id="rpn_view_partner_notifications_tree" model="ir.ui.view">
+            <field name="name">res.partner.notifications.form</field>
+            <field name="model">rpn.notification.log</field>
+            <field name="arch" type="xml">
+                <tree string="Partner RPN Notifications">
+                    <field name="partner_id"/>
+                    <field name="message_title"/>
+                    <field name="message_body"/>
+                    <field name="is_seen"/>
+                    <field name="disable"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for res.partner.rating -->
+        <record id="rpn_action_partner_notifications" model="ir.actions.act_window">
+            <field name="name">RPN Partner Notifications</field>
+            <field name="res_model">rpn.notification.log</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Adding the Partner Ratings tab in the Contacts form -->
+        <record id="rpn_notif_view_partner_form_inherit" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <!--                    <field name="average_rating"/>-->
+                    <page string="Member's Notifications" name="partner_notifications_tab">
+                        <field name="partner_notif" string="Member's Notifications"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

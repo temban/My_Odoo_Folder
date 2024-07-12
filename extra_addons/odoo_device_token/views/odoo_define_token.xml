@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="paginate_travel_template" name="Paginate Travel Template">
+        <t t-call="website.layout">
+            <t t-set="title">Travel Information</t>
+            <div class="container">
+                <h1>Travel Information</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Destination</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="travels" t-as="travel">
+                            <tr>
+                                <td><t t-esc="travel.source" /></td>
+                                <td><t t-esc="travel.destination" /></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <ul class="pagination">
+                        <li t-if="page &lt; 1">
+                            <a t-attf-href="/travel/paginate?page={{ page - 1 }}">Previous</a>
+                        </li>
+                        <t t-foreach="range(1, total_pages + 1)" t-as="p">
+                            <li t-if="p == page">
+                                <span t-esc="p" />
+                            </li>
+                            <li t-else="">
+                                <a t-attf-href="/travel/paginate?page={{ p }}">{{ p }}</a>
+                            </li>
+                        </t>
+                        <li t-if="page &lt; total_pages">
+                            <a t-attf-href="/travel/paginate?page={{ page + 1 }}">Next</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

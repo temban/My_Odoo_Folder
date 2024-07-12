@@ -1,0 +1,150 @@
+.voyage_section{
+padding: 20px 20px;
+}
+
+.search_bar{
+    position: relative;
+top: 22px;
+background: #217aff;
+border-radius: 15px;
+padding: 0 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 60px 40px;
+}
+
+.search_button_voyages{
+    background: #FFFFFF;
+    border-radius: 30px;
+    margin: 0 5px;
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+color: #217aff;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5px;
+margin: 5px;
+}
+
+.search_button_voyages:hover,:active{
+    color: #FFFFFF;
+}
+.search_button_voyages:active{
+    color: #FFFFFF;
+}
+.ajouter_voyage{
+    display: flex;
+    justify-content: end;
+}
+
+.btn_voyage{
+    background: #000000;
+    border-radius: 10px;
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 27px;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 20px 20px;
+
+}
+.btn_voyage:hover{
+    color: #217aff;
+    background-color: #ffffff;
+    
+}
+
+
+.voyages_container{
+    padding: 20px 20px;
+}
+
+
+.my_card{
+    /* width: 368px; */
+    height: 207px;
+background: #FFFFFF;
+box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+border-radius: 15px;
+padding: 2px 20px;
+display: flex;
+flex-direction: column;
+/* align-items: center; */
+justify-content: space-between;
+}
+.card_country1{
+    height: 60px;
+    border-top: 1px rgba(146, 143, 143, 0.438) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card_country{
+    height: 60px;
+    border-bottom: 1px rgba(146, 143, 143, 0.438) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.card_country,h6{
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.heading{
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+.input_div,h4{
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.type{
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 700px) {
+    .btn_voyage{
+        padding: 10px 10px;
+        font-weight: 500;
+        font-size: 10px;
+    }
+    .search_bar{
+        padding: 15px;
+
+    }
+    .voyage_section{
+        padding: 0px;
+    }
+    .search_button_voyages{
+        font-weight: 500;
+font-size: 10px;
+height: 30px;
+
+    }
+  }
+
+    .nav-pills .nav-item .nav-link:hover {
+        background-color: #6192da;
+        color:white
+        /* Add any other hover styles as desired */
+    }

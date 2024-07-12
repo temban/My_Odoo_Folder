@@ -1,0 +1,27 @@
+<odoo>
+  <data>
+	  		<record model="ir.ui.view" id="sh_view_hkbase_inherit_res_city_tree">
+            <field name="name">view_hkbase_inherit_res_city_tree</field>
+        	<field name="model">res.city</field>
+			<field name="inherit_id" ref="op_res_city.view_city_tree"/>
+        	<field name="arch" type="xml">
+				<field name="country_id" position="after">
+        			<field name="country_state_id" invisible="1"/>
+					<field name="country_code" />
+        		</field>
+			</field>
+        </record>
+        <record model="ir.ui.view" id="sh_view_hkbase_inherit_res_city_form">
+            <field name="name">view_hkbase_inherit_res_city_form</field>
+        	<field name="model">res.city</field>
+			<field name="inherit_id" ref="op_res_city.view_city_form"/>
+        	<field name="arch" type="xml">
+				<field name="country_id" position="before">
+					<field name="country_state_id" invisible="1"/>
+					<field name="name_fr" />
+					<field name="country_code" />
+        		</field>
+			</field>
+        </record>
+  </data>
+</odoo>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="auth_signup.signup" name="Sign up login">
+        <t t-call="web.login_layout">
+            <form id="signup_form" class="oe_signup_form" role="form" method="post" t-if="not message">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+
+                <t t-call="auth_signup.fields">
+                    <t t-set="only_passwords" t-value="bool(token and not invalid_token)" />
+                </t>
+
+                <p class="alert alert-danger" t-if="error" role="alert">
+                    <t t-esc="error" />
+                </p>
+                <input type="hidden" name="redirect" t-att-value="redirect" />
+                <input type="hidden" name="token" t-att-value="token" />
+                <div class="text-center oe_login_buttons pt-3">
+                    <button type="submit" id="signup_btn" class="btn btn-primary btn-block">Sign up</button>
+                    <a t-attf-href="/web/login?{{ keep_query() }}" class="btn btn-link btn-sm" role="button">Already have an account?</a>
+                    <div class="o_login_auth" />
+                </div>
+            </form>
+        </t>
+    </template>
+   <template id="sh_signup_verfiy_template">
+    <t t-call="web.login_layout">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Function to show loading indicator
+    function showLoading1Indicator() {
+        $("#loading_indicator1").show(); // Show loading indicator
+    }
+
+    // Function to hide loading indicator
+    function hideLoading1Indicator() {
+        $("#loading_indicator1").hide(); // Hide loading indicator
+    }
+                function show1ErrorToast() {
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Something went wrong!.",
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000 // Duration of the toast
+        });
+    }
+                $("#button_verify").click(function (e) {
+                    showLoading1Indicator()
+                    $.ajax({
+                        url: "/web/signup/verify",
+                        data: { url: window.location.href, code: $("#code").val() },
+                        type: "post",
+                        cache: false,
+                        success: function (result) {
+                            var datas = JSON.parse(result);
+                            if (datas.success == "1") {
+                                hideLoading1Indicator()
+                                window.location.href = "/my";
+                            }
+                            if (datas.error == "0") {
+<!--                                url = "/web/signup/error/" + String(datas.user_id);-->
+<!--                                window.location.href = url;-->
+                                    hideLoading1Indicator()
+                                 show1ErrorToast();
+                            }
+                        },
+                    });
+                });
+            });
+        </script>
+        <style>
+.txt-center{
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+}
+.two-step-div .two-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #3c3c3c;
+    margin-top: 15px;
+}
+
+.two-step-div .my-img{
+    width: 140px;
+    height: auto;
+}
+
+.two-step-div .two-p{
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: #666666;
+}
+
+.two-step-div #form{
+    direction: ltr;
+}
+
+.two-step-div #form input{
+    border-color: transparent;
+    background: transparent;
+    border-bottom: 1.5px solid #cccccc;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.two-step-div #form input:focus{
+    outline: 0px transparent !important;
+    box-shadow: transparent !important;
+    border-right: transparent !important;
+    border-left: transparent !important;
+    border-top: transparent !important;
+    border-color: #00AEEF;
+    animation: border-pulsate 1.5s infinite;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.two-step-div .not-first:disabled{
+    background-color: transparent;
+    border-bottom: 1px solid #cccccc !important;
+}
+
+@-moz-keyframes border-pulsate {
+    0% {
+        border-color: #00AEEF;
+    }
+    50% {
+        border-color: rgba(0,0,0,0.3);
+    }
+    100% {
+        border-color: #00AEEF;
+    }
+}
+@-webkit-keyframes border-pulsate {
+    0% {
+        border-color: #00AEEF;
+    }
+    50% {
+        border-color: rgba(0,0,0,0.3);
+    }
+    100% {
+        border-color: #00AEEF;
+    }
+}
+@-o-keyframes border-pulsate {
+    0% {
+        border-color: #00AEEF;
+    }
+    50% {
+        border-color: rgba(0,0,0,0.3);
+    }
+    100% {
+        border-color: #00AEEF;
+    }
+}
+@keyframes border-pulsate {
+    0% {
+        border-color: #00AEEF;
+    }
+    50% {
+        border-color: rgba(0,0,0,0.3);
+    }
+    100% {
+        border-color: #00AEEF;
+    }
+}
+
+.btn-verify{
+    background: #00AEEF;
+    color: #ffffff;
+    border-color: transparent;
+    border-radius: 7px;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    /*transition: all 0.5s;*/
+    width: auto;
+    position: relative;
+    transition: 0.5s ease;
+
+}
+
+.btn-verify:hover {
+    transform: translateY(-8px);
+
+}
+
+.btn-verify:disabled{
+    background: rgba(103, 187, 209, 0.93);
+    cursor: auto;
+}
+
+.btn-verify:disabled:hover{
+    transform: none;
+
+}
+        </style>
+
+
+
+        <div class="col-lg-12 center1 txt-center card-box2 two-step-div">
+    <img class="my-img" src="https://icons-for-free.com/iconfiles/png/512/locked+login+password+privacy+private+protect+protection+safe-1320196167397530530.png"/>
+    <p class="two-title">Two Step Verification</p>
+    <p class="two-p">Please enter the verification code that was sent to your email.</p>
+    <form id="form">
+        <div>
+         <input type="text" name="code" id="code" class="form-group form-control-sm" placeholder="Enter Code" />
+        </div>
+    </form>
+            <div class="row">
+            <div class="col-lg-12 mt-3">
+                    <a href="#" id="resend_code_link">Resend Code <span id="loading_indicator" style="display: none;" class="spinner-border spinner-border-sm mb-1" role="status" aria-hidden="true"></span></a>
+        </div>
+            <div class="col-lg-12">
+                    <button id="button_verify"  style="margin-top: 35px" class="btn btn-primary btn-embossed btn-verify">Verify <span id="loading_indicator1" style="display: none;" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span></button>
+        </div>
+        </div>
+
+            <script>
+                $(document).ready(function () {
+                // Function to show loading indicator
+    function showLoadingIndicator() {
+        $("#loading_indicator").show(); // Show loading indicator
+    }
+
+    // Function to hide loading indicator
+    function hideLoadingIndicator() {
+        $("#loading_indicator").hide(); // Hide loading indicator
+    }
+    function showErrorToast() {
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Something went wrong!.",
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 5000 // Duration of the toast
+        });
+    }
+    function successToast() {
+     Swal.fire({
+            icon: "success",
+            title: "Verification Code Resent",
+            text: "Verification code has been successfully resent to your mail.",
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 5000 // Duration of the toast
+        });
+    }
+    function resendVerificationCode() {
+                var url = window.location.href;
+                var urlParts = url.split("/");
+                var user_id = urlParts[urlParts.length - 1];
+                console.log("user_id:", user_id)
+                showLoadingIndicator()
+        var settings = {
+            "url": "/update_verification_code/"+user_id,
+            "method": "PUT",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+            },
+            "data": JSON.stringify({
+                "jsonrpc": "2.0"
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+            if (response.result.success) {
+                    hideLoadingIndicator();
+                    successToast();
+
+                }
+        }).fail(function (error) {
+                console.error(error);
+                // Hide loading indicator
+                hideLoadingIndicator();
+                showErrorToast();
+                // Show error message or perform error handling
+            });
+    }
+
+    // Resend code link click event handler
+    $("#resend_code_link").click(function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+        resendVerificationCode(); // Call the function to resend the code
+    });
+});
+            </script>
+</div>
+    </t>
+</template>
+
+    <template id="email_approval_sorry">
+        <t t-call="website.layout">
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+            <script type="text/javascript">
+                $( document ).ready(function() {
+                	$("#button_verify").click(function(e){
+                		$.ajax({url: "/web/signup/error/verify",
+                			data: {'url':window.location.href},
+                			type: "post",
+                			cache: false,
+                			success: function(result){
+                				var datas = JSON.parse(result);
+                				if(datas.success=='1' &amp;&amp; datas.user_id){
+                					url = "/web/signup/verify/"+String(datas.user_id);
+                					window.location.href = url;
+                					}
+                				},
+                			});
+                	});
+                });
+            </script>
+            <div class="container">
+                <h1>Sorry!</h1>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="status">
+                            Your Code is invalid.
+                            <button type="button" class="close" data-dismiss="alert">&amp;times;</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                    	<div t-field="website.company_id.partner_id"
+                t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <button id="button_verify" class="btn btn-primary 0" role="button">Verify</button>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>

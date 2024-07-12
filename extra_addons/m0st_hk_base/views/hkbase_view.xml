@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+
+
+
+<!--		<record id="view_res_city_form" model="ir.ui.view">-->
+<!--    <field name="name">res.city.form</field>-->
+<!--    <field name="model">res.city</field>-->
+<!--    <field name="arch" type="xml">-->
+<!--        <form string="City Form">-->
+<!--            &lt;!&ndash; Add other fields here &ndash;&gt;-->
+<!--            <footer>-->
+<!--            </footer>-->
+<!--        </form>-->
+<!--    </field>-->
+<!--</record>-->
+
+		<!-- Inherit res.partner -->
+		<record model="ir.ui.view" id="view_hkbase_inherit_res_city_form">
+            <field name="name">view_hkbase_inherit_res_city_form</field>
+        	<field name="model">res.city</field>
+			<field name="inherit_id" ref="op_res_city.view_city_form"/>
+        	<field name="arch" type="xml">
+				<field name="country_id" position="before">
+					<field name="country_state_id" invisible="1"/>
+        		</field>
+			</field>
+        </record>
+
+
+		<record model="ir.ui.view" id="view_hkbase_inherit_res_city_tree">
+            <field name="name">view_hkbase_inherit_res_city_tree</field>
+        	<field name="model">res.city</field>
+			<field name="inherit_id" ref="op_res_city.view_city_tree"/>
+        	<field name="arch" type="xml">
+				<field name="country_id" position="before">
+        			<field name="country_state_id" invisible="1"/>
+        		</field>
+			</field>
+        </record>
+
+		<record model="ir.ui.view" id="view_hkbase_inherit_res_city_filter">
+            <field name="name">view_hkbase_inherit_res_city_filter</field>
+        	<field name="model">res.city</field>
+			<field name="inherit_id" ref="op_res_city.view_city_search"/>
+        	<field name="arch" type="xml">
+				<field name="country_id" position="after">
+        			<field name="country_state_id" />
+					<filter name="groupby_country_state" string="State / Region" context="{'group_by': 'country_state_id'}"/>
+        		</field>
+			</field>
+        </record>
+
+
+
+
+
+
+		<!-- Tree View -->
+		<record model="ir.ui.view" id="view_m0sthk_luggage_type_tree">
+			<field name="name">m0sthk.luggage_type.tree_view</field>
+			<field name="model">m0sthk.luggage_type</field>
+			<field name="arch" type="xml">
+				<tree string="Luggage Type list" editable="bottom">
+					<field name="name"/>
+					<field name="code" />
+					<field name="type" />
+				</tree>
+			</field>
+		</record>
+
+		<!-- search View -->
+		<record model="ir.ui.view" id="view_m0sthk_luggage_type_filter">
+            <field name="name">m0sthk.luggage_type.filter_view</field>
+			<field name="model">m0sthk.luggage_type</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search...">
+            		<field name="name"/>
+					<field name="code" />
+					<field name="type" />
+
+                	<newline />
+
+                    <group expand="0" string="Group filter">
+                    	<filter name="group_by_type" string="By Type" icon="gtk-select-color" domain="[]" context="{'group_by':'type'}"/>
+                    </group>
+                </search>
+             </field>
+         </record>
+
+		<!-- ACTIONS -->
+    	<record model="ir.actions.act_window" id="action_view_m0sthk_luggage_type_tree">
+			<field name="name">Luggages Types</field>
+			<field name="view_id" ref="view_m0sthk_luggage_type_tree"/>
+			<field name="context">{'search_default_group_by_type':1}</field>
+			<field name="res_model">m0sthk.luggage_type</field>
+			<field name="view_mode">tree</field>
+    		<field name="search_view_id" ref="view_m0sthk_luggage_type_filter"/>
+			<field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					<h2> Luggages Type </h2>
+                    Luggages types allow you to categorize your luggages
+                </p>
+            </field>
+		</record>
+
+
+
+
+	<!-- Tree View -->
+		<record model="ir.ui.view" id="view_m0sthk_luggage_model_tree">
+			<field name="name">m0sthk.luggage_model.tree_view</field>
+			<field name="model">m0sthk.luggage_model</field>
+			<field name="arch" type="xml">
+				<tree string="Luggages list" editable="bottom">
+					<field name="nature"/>
+					<field name="luggage_type_id" />
+					<field name="name"/>
+					<field name="description"/>
+					<field name="average_width" required="1" />
+					<field name="average_height" required="1" />
+					<field name="average_weight" required="1" />
+					<field name="average_size" required="1" />
+					<field name="max_width" required="1" />
+					<field name="max_height" required="1" />
+					<field name="max_size" required="1" />
+					<field name="max_weight" required="1" />
+					<field name="amount_to_deduct" />
+					<field name="currency_id" />
+
+				</tree>
+			</field>
+		</record>
+
+		<!-- search View -->
+		<record model="ir.ui.view" id="view_m0sthk_luggage_model_filter">
+            <field name="name">m0sthk.luggage_model.filter_view</field>
+			<field name="model">m0sthk.luggage_model</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search...">
+            		<field name="luggage_type_id" />
+					<field name="name"/>
+					<field name="nature"/>
+					<field name="average_width"/>
+					<field name="average_height" />
+					<field name="average_weight"/>
+					<field name="average_size" />
+					<field name="max_width" />
+					<field name="max_height"/>
+					<field name="max_weight" />
+					<field name="max_size" />
+
+            		<group expand="0" string="Group filter">
+                    	<filter name="group_by_luggage_type_id" string="By luggage Type" icon="gtk-select-color" domain="[]" context="{'group_by':'luggage_type_id'}"/>
+                		<filter name="group_by_nature" string="By luggage Nature" icon="gtk-select-color" domain="[]" context="{'group_by':'nature'}"/>
+                    </group>
+                </search>
+             </field>
+         </record>
+
+		<!-- ACTIONS -->
+    	<record model="ir.actions.act_window" id="action_view_m0sthk_luggage_model_tree">
+			<field name="name">Luggages List</field>
+			<field name="view_id" ref="view_m0sthk_luggage_model_tree"/>
+			<field name="context">{'search_default_group_by_luggage_type_id':1,'search_default_group_by_nature':1}</field>
+			<field name="res_model">m0sthk.luggage_model</field>
+			<field name="view_mode">tree</field>
+    		<field name="search_view_id" ref="view_m0sthk_luggage_model_filter"/>
+			<field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					<h2> Luggages Model </h2>
+                    The Luggages models allow you to classify the different package and thus better make the statistics
+                </p>
+            </field>
+		</record>
+	</data>
+</odoo>

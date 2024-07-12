@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="shipping_details" name="Shipping Details">
+        <t name="Shipping Details" t-name="hubkilo_website.shipping_details" >
+            <!--            styles-->
+            <xpath expr="." position="inside">
+       <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+
+    <!-- Libraries Stylesheet -->
+    <link href="/hubkilo_website/static/src/lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/shipping_details.css?v=95530"/>
+    <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/ajouter_voyage.css" />
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/wizard2.css?v=384669848889944993003"/>
+
+
+                      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend-plugin.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/css/backend.css?v=1.0.0"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css"/>
+      <link rel="stylesheet" href="/hubkilo_website/static/src/assets/vendor/remixicon/fonts/remixicon.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/wow/wow.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/easing/easing.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/counterup/counterup.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+    <script type="text/javascript" src="/hubkilo_website/static/src/js/shipping_details.js?v=5019999989989254997993799999629"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+            <script  src="/hubkilo_website/static/src/js/autocompleteShippingDetails.js?v=1888899999958889900999998888869988999999909999999988779894"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="/hubkilo_website/static/src/js/App/owl.iife.js"></script>
+
+         </xpath>
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+            <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+  .selected {
+    border: 2px solid #4fbf65;
+  }
+    </style>
+
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+                        <div class="oe_structure">
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header p-0 " style="background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+            <div class="container-fluid page-header-inner py-5"  style="display: flex;justify-content:center;align-items: center;flex-direction: column;">
+<!--                <h1 class="display-3 text-white mb-3 animated slideInDown">Shipping details</h1>-->
+                <div class="row container">
+                     <div class="row container" style="display: flex;justify-content:center;">
+                    <!-- <h1 class="display-3 text-white mb-3 animated slideInDown">Rooms</h1> -->
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+                        <div class="text-center" style="display: flex;flex-direction: column;">
+                            <h4 class=""  style= "color: #217aff;">DEPARTURE</h4>
+                            <h6 id="shipping_details_d_date" class="" style= "color: #1d1d1e;" ></h6>
+                            <h6 id="shipping_details_d_time" class="" style= "color: #2d2d2e;"></h6>
+                        </div>
+
+                    </div>
+                    <div class="col-4" style=" border: rgba(255, 255, 255, 0.671) 2px solid;display: flex;justify-content:center;gap: 100px;">
+
+                    </div>
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+
+                        <div class="text-center" style="display: flex;flex-direction: column;">
+                            <h4 class="" style="color:#217aff">ARRIVAL</h4>
+                            <h6 id="shipping_details_a_date" class="" style= "color: #1d1d1e;" ></h6>
+                            <h6 id="shipping_details_a_time" class="" style= "color: #2d2d2e;"></h6>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row container" style="display: flex;justify-content:center;">
+                    <!-- <h1 class="display-3 text-white mb-3 animated slideInDown">Rooms</h1> -->
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+                        <div class="text-center" style="">
+                            <h5 id="shipping_details_d_city"  class="text-white" ></h5>
+                            <h6 id="shipping_details_d_country" class="" style="color: #217aff"></h6>
+                        </div>
+
+                    </div>
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+                        <div class="" style="display: flex;flex-direction: column;">
+                            <i class='fas fa-arrow-right' style='font-size:58px;color:#217aff'></i>
+
+                        </div>
+
+                    </div>
+                    <div class="col-4" style="background:rgba(255, 255, 255, 0.671);display: flex;justify-content:center;gap: 100px;">
+
+                        <div class="text-center" style="">
+                            <h5 id="shipping_details_a_city" class="text-white" ></h5>
+                            <h6 id="shipping_details_a_country" class="" style="color: #217aff"></h6>
+                        </div>
+
+                    </div>
+                </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+                               <div class="container-xxl bg-white p-0">
+
+        <!-- Room Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">My Shipping Details</h6>
+                </div>
+                <div id="" class="row g-4"  style="display: flex;justify-content: center;">
+
+   <div class=" col-lg-8 col-md-6 room-item shadow rounded " style="overflow:hidden">
+
+                         <div id="disagree_badge" class="container_badge" style="position: absolute;top: -30px;right: -20px;height: 50px; width: 250px">
+                         </div>
+
+
+
+                            <div class="p-4 mt-2" style="">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 id="shipping_details_display_name" class="mb-0" style="font-size:18px;font-weight:700"></h5>
+                                    <div class="ps-2">
+
+                                    </div>
+                                </div>
+                                <div style="display:flex;justify-content:space-between">
+                                <div>
+                                <h6 class="mb-0 mt-2" style="font-size:14px;font-weight:700">Reference:<span  style='font-size:14px;color:#217aff;font-weight: 400;' id="shipping_details_display_name2" > </span></h6>
+                                    <h6 class="mb-0 mt-2" style="font-size:14px;font-weight:700">Shipping date:<span  style='font-size:14px;color:#217aff;font-weight: 400;' id="shipping_details_shipping_date" > </span></h6>
+                                </div>
+                                <div id="shipping_details_buttons">
+<button class="btn py-2 px-4" onclick="seeLuggage()" style="background: #000000;color:white;border-radius:5px;font-size:12px;text-transform: capitalize;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class='fas fa-suitcase-rolling' style="color:white"></i> Luggage Info</button>
+                                        <button id="shipping_chat_button" onclick="storeBookingInfos()" class="btn py-2 px-4" style="background: white;color:black;border: 1px solid black;text-transform: capitalize;border-radius:5px;font-size:12px;display:none">Negotiate
+                                        <i class='fas fa-comment-alt' style='color:black'></i>
+                                    </button>
+                                </div>
+
+
+
+                                </div>
+
+                                <p>
+  <a class="" data-toggle="collapse" style='font-size:14px;display:flex;justify-content:space-between;align-items:center;margin-top:30px;margin-bottom:30px' href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<span><i class='fas fa-user-check' style='font-size:14px;margin-right:5px'></i>
+Receiver Info</span>
+
+<i class='fas fa-angle-down' style='font-size:14px;margin-left:60px'></i>
+  </a>
+
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="">
+<div
+                                                                    style="display:flex;justify-content:start;align-items: center;gap:30px ;margin-top: 30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='fas fa-male'
+                                                                            style='font-size:14px;color:#217aff;margin-right:10px;'></i>Full Name
+                                                                    </h6>
+                                                                    <h6 id="shipping_details_receiver_partner_id" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_partner_id[1]}</h6>
+                                                                </div>
+                                                                <div style="display:flex;justify-content:start;align-items: center;gap:30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='fas fa-envelope-open'
+                                                                            style='font-size:18px;color:#217aff;margin-right:10px;'></i>Email</h6>
+                                                                    <h6 id="shipping_details_receiver_email" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_email}</h6>
+                                                                </div>
+                                                                <div style="display:flex;justify-content:start;align-items: center;gap:30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='far fa-address-card'
+                                                                            style='font-size:14px;color:#217aff;margin-right:10px;'></i>Address</h6>
+                                                                    <h6 id="shipping_details_receiver_address" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_address}</h6>
+                                                                </div>
+                                                                <div style="display:flex;justify-content:start;align-items: center;gap:30px;">
+                                                                    <h6 style="font-size:14px;font-weight: 700;"><i class='fas fa-phone'
+                                                                            style='font-size:14px;color:#217aff;margin-right:10px;'></i>Phone</h6>
+                                                                    <h6 id="shipping_details_receiver_phone" style="font-size:14px;color: #217aff;font-weight: 400">${table.receiver_phone}</h6>
+                                                                </div>  </div>
+                                                            </div>
+
+
+                                <div id="shipping_details_action_buttons" class="" style="display:flex;justify-content:center;gap:20px">
+                                  <button id="edit1" onclick="showEdit()" class="btn" style="display:none;border-radius:10px;border:solid 2px black;color:black;text-transform: capitalize;" > Edit <i class='fas fa-pen'></i></button>
+                                    <div id="edit2" style="display:none">
+                                      <button onclick="showEdit2()" class="btn" style="border-radius:10px;border:solid 2px black;color:black;text-transform: capitalize;" > Edit </button>
+                                    </div>
+
+<!--                                    <button id="transferShippingOrders" class="btn"  onclick="Transferer()" style="text-transform: capitalize;border-radius:10px;display:${displayTrans  !== 'none' ? 'inline' : 'none'};border:solid 2px black;color:black" data-bs-toggle="modal" data-bs-target="#exampleModalTransfer">Transfer <i class='fas fa-caret-right'></i><i class='fas fa-caret-right'></i></button>-->
+                                    <button id="transferShippingOrders" class="btn"  onclick="Transferer()" style="text-transform: capitalize;border-radius:10px;display:none;border:solid 2px black;color:black" data-bs-toggle="modal" data-bs-target="#exampleModalTransfer">Transfer <i class='fas fa-caret-right'></i><i class='fas fa-caret-right'></i></button>
+
+                                    <button id="deleteMyReserve" class="btn" onclick="DeleteMyReserve()"
+                                        style="display:none;text-transform: capitalize;border-radius:10px;border:solid 2px black;color:black">Cancel <i class='fas fa-ban'></i></button>
+
+                                     <button id="proceedToPay" type="button" class="btn" onclick="goToInvoice()" style="text-transform: capitalize;display:none;background:#217aff;color:white;font-weight:700">
+                                    Proceed To Pay
+                                     </button>
+
+                                     <div id="my_rate_div" style="display:none">
+                                     <button id="rate_traveler" type="button" class="btn" data-toggle="modal" data-target="#rating" style="text-transform: capitalize;display:none;background:#217aff;color:white;font-weight:700">
+                                    Rate Traveler <i class="fa fa-thumbs-up" style="color:white"></i>
+                                     </button>
+                                     </div>
+
+                                   <button id="view_my_code" onclick="ViewCode()" style="text-transform: capitalize;display:none;border:solid 2px black;color:black" href="#" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                     View Code
+                                   </button>
+
+                                   <button id="view_travel_list" class="btn btn-primary"  style="text-transform: capitalize;display:none;" href="#" data-bs-toggle="modal" data-bs-target="#travelList">
+                                     View Travel List
+                                   </button>
+                                </div>
+                            </div>
+                        </div>
+
+<div id="editSection" style="display:none" class="col-lg-10 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+<div class="room-item shadow rounded overflow-hidden">
+<div class="p-4 mt-2" style="">
+                <div id="" class="modal-body row">
+                <div class="row" id="destination_section">
+                <h6 style="font-size:14px;font-weight:600">Travel Destination</h6>
+                                        <div class="side_info_main1 row">
+                            <div class="col-md-6">
+                                <div class="">
+                                    <label style="font-size:12px" for="ville_de_depart" class="required form-label">Departure
+                                        city:</label>
+                                    <input id="ville_de_depart" type="text" class="form-control "
+                                        autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div id="departureDate_error" class="alert alert-danger" role="alert"
+                                        style="display:none">
+                                        Please select a future date and time
+                                    </div>
+                                    <label style="font-size:12px" for="exampleFormControlInput1" class="required form-label">Departure
+                                        Date:</label>
+                                    <input id="date_de_depart" type="datetime-local" onchange="handleDateChange()"
+                                        class="form-control form-control-solid" placeholder="" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="font-size:12px" for="ville_de_arriver" class="required form-label">Arrival
+                                        city:</label>
+                                    <input id="ville_de_arriver" type="text" class="form-control "
+                                        placeholder="" autocomplete="off" style="background:white" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label style="font-size:12px" for="exampleFormControlInput1" class="required form-label">Arrival
+                                        date:</label>
+                                    <input id="date_de_arrivee" type="datetime-local" onchange="handleDateChange1()"
+                                        class="form-control form-control-solid" placeholder="" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                </div>
+                    <div class="row">
+                        <h6 style="font-size:14px;font-weight:600">Luggage Type</h6>
+                        <div class="luggage_type">
+                            <div id="envelope" class=" side_info_item" onclick="showSectionDetails('section1')"
+                                data-value="section1">
+                                <div class="image_tag1">
+
+                                </div>
+                                <p style="text-align: center;margin-top:20px;font-weight: 700;font-family: Poppins;">
+                                    ENVELOPE</p>
+                            </div>
+                            <div id="briefcase" class=" side_info_item" onclick="showSectionDetails('section2')"
+                                style="" data-value="section2">
+                                <div class="image_tag2">
+                                </div>
+                                <p style="text-align: center;margin-top:20px;font-weight: 700;font-family: Poppins;">
+                                    BRIEFCASE
+                                </p>
+                            </div>
+                            <div id="suitcase" class=" side_info_item" onclick="showSectionDetails('section3')" style=""
+                                data-value="section3">
+                                <div class="image_tag3">
+                                </div>
+                                <p style="text-align: center;margin-top:20px;font-weight: 700;font-family: Poppins;">
+                                    SUITCASE
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div id="section1" class="section row" style="display: none;">
+                                <div class="row">
+                                    <div id="section11"
+                                        style="overflow-x: auto;white-space: nowrap;height:180px;display:flex">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="section2" class="section row" style="display: none;">
+                                <div class="row">
+                                    <div id="section22"
+                                        style="overflow-x: auto;white-space: nowrap;height:180px;display:flex">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="section3" class="section row" style="display: none;">
+                                <div class="row">
+                                    <div id="section33"
+                                        style="overflow-x: auto;white-space: nowrap;height:180px;display:flex">
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                      <div id="luggageDetails" class="mt-4 row" style="display:none">
+                            <div class="row" >
+                              <div class="col-md-4 form-group">
+                                <label style="font-size:12px" for="weight">Weight</label>
+                                <input type="text" class="bg-white form-control" id="weight"/>
+                              </div>
+
+                              <div class="col-md-4 form-group">
+                                <label style="font-size:12px" for="width">Width</label>
+                                <input type="text" class="bg-white form-control" id="width"/>
+                              </div>
+
+                              <div class="col-md-4 form-group">
+                                <label style="font-size:12px" for="height">Height</label>
+                                <input type="text" class="bg-white form-control" id="height"/>
+                              </div>
+
+                              <div class="form-group col-md-12">
+                                <label style="font-size:12px" for="description">Description</label>
+                                <textarea class="form-control" id="description" rows="2"></textarea>
+                              </div>
+                            <div class="col-md-12" style="justify-content:end">
+                                 <button id="saveLuggage" class="btn btn-secondary" onclick="saveEditLuggageInfoDetails()" style="text-transform:capitalize;font-size:12px">Save</button>
+                             </div>
+
+                            </div>
+
+                          </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <h6 style="font-size:14px;font-weight:600;margin-top:15px">Luggage Images</h6>
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="form-group" style="display: flex;flex-direction: column;">
+                                <img id="image-colis11" src="#" class="no-icon"
+                                    style="width: 200;height: 100;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;" />
+                                <label for="image-input-colis1" style="width: 200" class="custom-file-upload">
+                                    <i class="fa fa-cloud-upload" style="color: white; "></i> Choose file
+                                </label>
+                                <input onchange="loadFileColisOffer1(event)" class="input" type="file"
+                                    id="image-input-colis1" accept="image/*" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="form-group" style="display: flex;flex-direction: column;">
+                                <img id="image-colis22" src="#" class="no-icon"
+                                    style="width: 200;height: 100;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;" />
+                                <label for="image-input-colis2" style="width: 200" class="custom-file-upload">
+                                    <i class="fa fa-cloud-upload" style="color: white; "></i> Choose file
+                                </label>
+                                <input onchange="loadFileColisOffer2(event)" class="input" type="file"
+                                    id="image-input-colis2" accept="image/*" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 d-flex justify-content-center">
+                            <div class="form-group" style="display: flex;flex-direction: column;">
+                                <img id="image-colis33" src="#" class="no-icon"
+                                    style="width: 200;height: 100;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;" />
+                                <label for="image-input-colis3" style="width: 200" class="custom-file-upload">
+                                    <i class="fa fa-cloud-upload" style="color: white; "></i> Choose file
+                                </label>
+                                <input onchange="loadFileColisOffer3(event)" class="input" type="file"
+                                    id="image-input-colis3" accept="image/*" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="receiver_details" class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="" class="required form-label fs-6" style="font-size:14px">Select a
+                                    receiver</label>
+                                <div class="col-md-12" style="margin-top:5px">
+
+                                    <div class="form-check form-switch form-check-custom form-check-solid "
+                                        style="margin-left:25px;margin-top:10px">
+                                        <input id="flexSwitchChecked" onclick="handleCheckboxOfferChange(this)"
+                                            class="form-check-input h-50px w-50px" type="checkbox" value="checked" />
+                                        <label class="form-check-label" for="flexSwitchChecked"
+                                            style="font-size:14px;font-weight:400">
+                                            Add a new receiver
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div id="second_des" class="col-md-12" style="margin-top:10px">
+
+                                    <p>
+                                    <div class="" style="display:flex;justify-content:space-between"
+                                        data-toggle="collapse" href="#receiverList" role="button" aria-expanded="false"
+                                        aria-controls="collapseExample">
+                                        <span>
+                                            <i class='fas fa-address-book' style="margin-right:5px"></i>
+                                            My Receiver List
+                                        </span>
+                                        <i class='fas fa-angle-down'></i>
+                                    </div>
+                                    </p>
+                                    <!--                                    <div class="collapse" id="receiverList" style="overflow:hidden">-->
+                                    <div id="destinataire" class="row" style="height:250px;overflow: auto;">
+                                    </div>
+                                    <!--</div>-->
+
+                                </div>
+                                <div id="second_second" class="col-md-12" style="margin-top:10px">
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row" id="recipient_form" style="display:none">
+
+                            <div class="row d-flex justify-content-center" style="">
+                                <div class="col-md-3">
+                                    <label for="receiver_name" class=" mb-2" style="font-size:12px">Receiver
+                                        picture</label>
+
+                                    <div style="display: flex;flex-direction: column;">
+                                        <img id="image-colisPicture" src="#" class="no-icon"
+                                            style="width: 150px;height: 150px;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;" />
+                                        <label for="image-input-colisPicture" style="width: 150px"
+                                            class="custom-file-upload">
+                                            <i class="fa fa-cloud-upload" style="color: white; "></i> Upload
+                                        </label>
+                                        <input onchange="loadFileColisPicture(event)" class="input" type="file"
+                                            id="image-input-colisPicture" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8" style="display:flex;justify-content:center">
+                                    <div class="row ">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="receiver_name" class="mb-2"
+                                                    style="font-size:12px">Name</label>
+                                                <input id="receiver_name" type="text" class="form-control" name="lname"
+                                                    placeholder="" style="background:white" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="receiver_email" class="mb-2"
+                                                    style="font-size:12px">Email</label>
+                                                <input id="receiver_email" oninput="searchPartners(this.value)"
+                                                    type="email" class="form-control" name="lname" placeholder=""
+                                                    style="background:white" />
+                                            </div>
+                                            <!-- Button trigger modal -->
+                                            <div id="receiver_button" style="display:none">
+                                                <a href="#" class="" style="color:red" data-bs-toggle="modal"
+                                                    data-bs-target="#UserList">
+                                                    User Already Exist in HubKilo click here to select him
+                                                </a>
+
+
+                                            </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="UserList" tabindex="-2"
+                                                aria-labelledby="UserList" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Users in
+                                                                HubKilo</h5>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div id="users_card" class="row">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="receiver_phone" class="mb-2" style="font-size:12px">Phone
+                                                    No</label>
+                                                <input id="receiver_phone" type="tel" class="form-control" name="phone"
+                                                    placeholder="" style="background:white" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="receiver_address" class="mb-2"
+                                                    style="font-size:12px">Street</label>
+                                                <input id="receiver_address" type="text" class="form-control"
+                                                    name="lname" placeholder="" style="background:white" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="receiver_city_id" class="mb-2"
+                                                    style="font-size:12px">Beneficiary's city</label>
+                                                <input id="receiver_city_id" oninput="residentCity()" type="text" class="form-control"
+                                                    name="lname" placeholder="" style="background:white"
+                                                    autocomplete="off" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                    <button id="my_reserve_button" onclick="myBooking1('${table.travelbooking_id}')" type="button" class="btn btn-primary"> Update now </button>
+                    <button id="my_reserve_button2" style="display:none" onclick="editUserAndManualShipping('${table.travelbooking_id}')" type="button" class="btn btn-primary"> Update now </button>
+                     </div>
+
+                </div>
+
+</div>
+</div>
+</div>
+
+
+<div id="aboutTravelSection" class="col-lg-8 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="p-4 mt-2" style="">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <h5 class="mb-0" style="font-size:18px;font-weight:700">About Traveler</h5>
+                                      <a class="" onclick="seePartnerRatings()" style="text-decoration:none;color:#217aff;font-weight:700" data-toggle="collapse" href="#viewRating" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                       View Ratings
+                                      </a>
+                                    </div>
+                                <div id="traveler_profile" class="d-flex justify-content-between mb-3">
+
+                                </div>
+                                <div class="collapse" id="viewRating">
+                                <div class="card card-body" id="rating_view">
+
+
+                                </div>
+                                </div>
+                                 </div>
+
+                            </div>
+                    </div>
+
+
+   <!-- MODAL RATE START -->
+   <div class="modal fade" id="rating" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Rate Traveler</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&amp;times;</span>
+        </button>
+      </div>
+   <div class="" style="display: flex;justify-content: center;align-items: center;flex-direction: column;">
+     <div class="star-rating">
+         <input type="radio" id="5-stars" name="rating" value="5" onclick="handleClick(5)" />
+         <label for="5-stars" class="star">&#9733;</label>
+         <input type="radio" id="4-stars" name="rating" value="4" onclick="handleClick(4)" />
+         <label for="4-stars" class="star">&#9733;</label>
+         <input type="radio" id="3-stars" name="rating" value="3" onclick="handleClick(3)" />
+         <label for="3-stars" class="star">&#9733;</label>
+         <input type="radio" id="2-stars" name="rating" value="2" onclick="handleClick(2)" />
+         <label for="2-stars" class="star">&#9733;</label>
+         <input type="radio" id="1-star" name="rating" value="1" onclick="handleClick(1)" />
+         <label for="1-star" class="star">&#9733;</label>
+     </div>
+     <input id="rating_text" class="form-control" type="text" style="width:250px;margin-bottom:10px" />
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" onclick="rateNow(${table.id})" class="btn btn-primary">Rate Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+   <!-- MODAL RATE START -->
+
+
+     <!-- MODAL LUGGAGE START -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Luggage Info</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="luggage_info">
+                                <div style="display:flex;justify-content:center;align-item:center">
+                                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL LUGGAGE END -->
+
+      <!-- MODAL TRANSFER START -->
+      <div class="modal fade" id="exampleModalTransfer" tabindex="-1" aria-labelledby="exampleModalLabelTransfer" aria-hidden="true" >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                List of travels available
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+                                    <div class="col-md-10">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <select id="searchInput3" class="form-select" oninput="liveSearch3(this.value)">
+                                        <option disabled="" selected="">Type of travel</option>
+                                        <option value="road">Road</option>
+                                        <option value="air">Air</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="search_depart" oninput="liveSearch(this.value)" type="text" class="form-control datetimepicker-input"
+                                            placeholder="Departure City" style="background:white"  />
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="search_arrive"  oninput="liveSearch2(this.value)" type="text" class="form-control datetimepicker-input"
+                                            placeholder="Arrival City" style="background:white" />
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+            <div id="search_row1" class="modal-body row" style="display: flex,align-items: center,justify-content:center">
+                  <div style="display:flex;justify-content:center;align-item:center">
+                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+            </div>
+            <div id="search_row" class="modal-body row" style="display: flex,align-items: center,justify-content:center">
+
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL TRANSFER END -->
+
+
+      <!-- MODAL TRAVEL VIEW START -->
+      <div class="modal fade" id="travelList" tabindex="-1" aria-labelledby="exampleModalLabelTransfer" aria-hidden="true" >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                List of travels available
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div>
+                                    <div class="col-md-10">
+                            <div class="row g-2">
+
+                            </div>
+                        </div>
+            </div>
+
+            <div id="travel_view_list" class="modal-body row" style="display: flex,align-items: center,justify-content:center">
+                  <div style="display:flex;justify-content:center;align-item:center">
+                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+                    </div>
+                    </div>
+            </div>
+            <div id="search_row" class="modal-body row" style="display: flex,align-items: center,justify-content:center">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button onclick="addTravelToShippingOffer()" type="button" class="btn btn-primary">Add Now</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL TRAVEL VIEW END -->
+
+      <!-- MODAL VIEW CODE START -->
+      <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                Validation code
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+                     <div id="qrcode" style="display:flex;justify-content:center;align-items:center"></div>
+              </div>
+            <div class="" style="padding:20px">
+              <h5 style="text-align: center">
+                Validation Code:
+                <b id="code_id" style="color: red; text-align: center"> </b>
+              </h5>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- MODAL VIEW CODE END -->
+
+
+
+                </div>
+                <div id="traveler_info">
+
+                </div>
+
+                <div id="search_row" class="row g-4">
+
+                </div>
+            </div>
+        </div>
+        <!-- Room End -->
+
+
+
+
+
+    </div>
+                        </div>
+
+
+                            <!--Error Modal Start-->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel"><i class='fas fa-exclamation-triangle' style='color:red;margin-right:10px'></i>Alert</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_error_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+                                  <!--Error Modal End-->
+
+
+
+                                        <!--Success Modal Start-->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title fs-5" id="exampleModalLabel"><i class='fa fa-check-circle' style='color:#4fbf65;margin-right:10px'></i>Alert</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_success_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+                                  <!--Success Modal End-->
+
+        </t>
+
+        </t>
+
+
+    </template>
+</odoo>

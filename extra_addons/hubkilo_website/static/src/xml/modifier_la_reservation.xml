@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+  <template id="modifier_la_reservation_page" name="Modification de la Reservation">
+    <t name="Modification de la Reservation" t-name="hubkilo_website.modifier_la_reservation_page"
+      inherit_id="web.assets_backend">
+      <!--            styles-->
+      <xpath expr="." position="inside">
+        <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+        <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/plugins/global/plugins.bundle.css" />
+        <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/sass/components/_variables.scss" />
+        <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/sass/components/_card.scss/" />
+        <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css"
+          href="/hubkilo_website/static/src/plugins/custom/fullcalendar/fullcalendar.bundle.css" />
+        <link rel="stylesheet" type="text/css"
+          href="/hubkilo_website/static/src/plugins/custom/datatables/datatables.bundle.css" />
+        <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/voyage_page.css" />
+        <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/ajouter_voyage.css" />
+                  <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+
+      </xpath>
+
+      <!--            javascript-->
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+        <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+        <script type="text/javascript"
+          src="/hubkilo_website/static/src/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+        <script type="text/javascript" src="/hubkilo_website/static/src/js/widgets.bundle.js"></script>
+        <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/widgets.js"></script>
+        <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/apps/chat/chat.js"></script>
+        <script type="text/javascript"
+          src="/hubkilo_website/static/src/js/custom/utilities/modals/upgrade-plan.js"></script>
+        <script type="text/javascript"
+          src="/hubkilo_website/static/src/js/custom/utilities/modals/create-app.js"></script>
+        <script type="text/javascript"
+          src="/hubkilo_website/static/src/js/custom/utilities/modals/new-target.js"></script>
+        <script type="text/javascript"
+          src="/hubkilo_website/static/src/js/custom/utilities/modals/users-search.js"></script>
+        <script type="text/javascript" src="/hubkilo_website/static/src/js/bootstrap.min.js"></script>
+        <script src="/hubkilo_website/static/src/js/modification_reservation.js?v=589"></script>
+        <script type="text/javascript" src="/hubkilo_website/static/src/js/additionalCustom.js?v=901"></script>
+               <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+
+      </xpath>
+
+      <!--            javascript-->
+
+      <t t-call="website.layout">
+<style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+
+    </style>
+        <div class="oe_structure">
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);background-size: cover;">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown" style="font-weight:700">Update Shipping</h1>
+
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+            <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                               <div class="col-lg-4 col-md-4 col-sm-12 mt-4"  style="display:flex;flex-direction: column;align-items: center;justify-content: center;">
+                                          <div class="form-group" style="display: flex;flex-direction: column;">
+                                              <img id="image-colis1" src="#" class="no-icon"
+                                                  style="width: 250;height: 150;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;"/>
+                                              <label for="image-input-colis1" style="width: 250" class="custom-file-upload">
+                                                  <i class="fa fa-cloud-upload" style="color: white; "></i> Choose file
+                                              </label>
+                                              <input onchange="loadFileColis1(event)" class="input" type="file" id="image-input-colis1" accept="image/*"/>
+                                          </div>
+                               </div>
+                              <div class="col-lg-4 col-md-4 col-sm-12 mt-4" style="display:flex;flex-direction: column;align-items: center;justify-content: center;">
+                                          <div class="form-group" style="display: flex;flex-direction: column;">
+                                              <img id="image-colis2" src="#"  class="no-icon"
+                                                  style="width: 250;height: 150;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;"/>
+                                              <label for="image-input-colis2" style="width: 250" class="custom-file-upload">
+                                                  <i class="fa fa-cloud-upload" style="color: white; "></i> Choose file
+                                              </label>
+                                              <input onchange="loadFileColis2(event)" class="input" type="file" id="image-input-colis2" accept="image/*"/>
+                                          </div>
+                               </div>
+                              <div class="col-lg-4 col-md-4 col-sm-12 mt-4" style="display:flex;flex-direction: column;align-items: center;justify-content: center;">
+                                          <div class="form-group" style="display: flex;flex-direction: column;">
+                                              <img id="image-colis3" src="#" class="no-icon"
+                                                  style="width: 250;height: 150;background-image: url(/hubkilo_website/static/src/media/svg/avatars/blank.svg);background-size: cover;"/>
+                                              <label for="image-input-colis3" style="width: 250" class="custom-file-upload">
+                                                  <i class="fa fa-cloud-upload" style="color: white; "></i> Choose file
+                                              </label>
+                                              <input onchange="loadFileColis3(event)" class="input" type="file" id="image-input-colis3" accept="image/*"/>
+                                          </div>
+                               </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 mt-4" style="display:flex;align-items: center;justify-content: center;">
+                                <button style="display:flex;justify-content:center;align-item:center;width:350" type="button" onclick="updatePictues()" class="pic btn btn-success">Edit pictures</button>
+
+                              </div>
+
+
+                          </div>
+
+                        <div class="container" style="margin-top:2rem">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Travel Booking</h6>
+                    <h1 class="mb-5" style="color:black">Update <span class="text-primary text-uppercase">Shipping</span></h1>
+                </div>
+                            <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                                           <div style="width:500px;">
+                    <div  class="">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="row">
+                                    <div class="col-md-12">
+
+
+                                    <div class="col-md-12">
+
+<label class="fs-6 fw-semibold mb-2 mt-2">Luggage Model</label>
+
+<input type="text" id="myInput"  class="form-control form-control-solid" placeholder="Select a luggage model" data-bs-toggle="modal" data-bs-target="#staticBackdrop"/>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">luggage models</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="my_modal_body" class="modal-body row">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+                                    </div>
+
+                                    <div class="col-md-12" style="margin-top:5px">
+
+                                    <div class="form-check form-switch form-check-custom form-check-solid " style="margin-left:25px;margin-top:10px">
+                                                                <input id="flexSwitchChecked" onclick=" handleCheckboxChangeBook(this)" class="form-check-input h-50px w-50px" type="checkbox" value=""  checked="checked" />
+                                                                <label class="form-check-label" for="flexSwitchChecked">
+                                                                    The Receiver exists in Hubkilo
+                                                                </label>
+                                                            </div>
+
+                                    </div>
+
+                                    <div id="second_des" class="col-md-12" style="margin-top:10px">
+                <label class="fs-6 fw-semibold mb-2">Recipient: <span id="recipient" style="color:#217aff"> </span></label>
+                                                                <div id="destinataire_image" ></div>
+
+                                                                <select id="destinataire" onchange="handleSelectChangeReservation(this)"  class="form-select" data-placeholder="Choisissez un destinataire">
+                                                                </select>
+
+															</div>
+                                    <div id="second_second" class="col-md-12" style="margin-top:10px">
+
+
+															</div>
+                                    <div id="recipient_form">
+
+                                    </div>
+
+
+                                    </div>
+
+
+                                    <div class="col-12" id="kt_modal_add_customer_submit">
+                                        <button id="my_reserve_button" style="display:flex;justify-content:center;align-item:center" onclick="updateReserve(event)"  class="save-btn btn btn-primary w-100 py-3" >Update Now</button>
+                                    </div>
+                                    <div class="modal-footer flex-center" id="button_id" >
+
+									</div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+
+
+            </div>
+
+        </div>
+
+      </t>
+    </t>
+
+
+  </template>
+</odoo>

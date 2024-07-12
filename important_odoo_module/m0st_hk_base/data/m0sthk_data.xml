@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+		<!--res.country.state-->
+		<record model="res.country.state" id="data_res_country_state_en">
+		    <field name="name">EXTR&#202;ME-NORD</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">EN</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_no">
+		    <field name="name">NORD</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">NO</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_ad">
+		    <field name="name">ADAMAOUA</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">AD</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_ce">
+		    <field name="name">CENTRE</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">CE</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_es">
+		    <field name="name">EST</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">ES</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_su">
+		    <field name="name">SUD</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">SU</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_lt">
+		    <field name="name">LITTORAL</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">LT</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_ou">
+		    <field name="name">OUEST</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">OU</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_nw">
+		    <field name="name">NORD-WEST</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">NW</field>
+		</record>
+    	
+    	<record model="res.country.state" id="data_res_country_state_sw">
+		    <field name="name">SOUTH-WEST</field>
+	        <field name="country_id" ref="base.cm" />
+			<field name="code">SW</field>
+		</record>
+    	
+    	
+    	
+	
+    	<!--LUGGAGES TYPE-->
+		<record model="m0sthk.luggage_type" id="data_m0sthk_luggage_type_envelope">
+		    <field name="name">Envelopes</field>
+			<field name="type">envelope</field>
+		</record>
+	
+		<record model="m0sthk.luggage_type" id="data_m0sthk_luggage_type_briefcase">
+		    <field name="name">Backpack / Briefcase</field>
+			<field name="type">briefcase</field>
+		</record>
+
+		<record model="m0sthk.luggage_type" id="data_m0sthk_luggage_type_suitcase">
+		    <field name="name">Suitcase / Box</field>
+			<field name="type">suitcase</field>
+		</record>
+	
+		
+	
+		<!--LUGGAGES MODEL-->
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a0">
+		    <field name="name">A0 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A0</field>
+			<field name="average_width">84.1</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">118.9</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">4.0</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a1">
+		    <field name="name">A1 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A1</field>
+			<field name="average_width">59.4</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">84.1</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">3.5</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a2">
+		    <field name="name">A2 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A2</field>
+			<field name="average_width">42.0</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">59.4</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">3.0</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a3">
+		    <field name="name">A3 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A3</field>
+			<field name="average_width">29.7</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">42.0</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">2.5</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a4">
+		    <field name="name">A4 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A4</field>
+			<field name="average_width">21.0</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">29.7</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">2.0</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a5">
+		    <field name="name">A5 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A5</field>
+			<field name="average_width">14.8</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">21.0</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">1.5</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_a6">
+		    <field name="name">A6 format</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_envelope" />
+			<field name="nature">A6</field>
+			<field name="average_width">10.5</field>
+			<field name="average_size">1.50</field>
+			<field name="average_height">14.8</field>
+			<field name="average_weight">0.05</field>
+			<field name="max_width">84.1</field>
+			<field name="max_size">42.05</field>
+			<field name="max_height">118.9</field>
+			<field name="max_weight">0.99</field>
+    		<field name="amount_to_deduct">1.0</field>
+		</record>
+	
+    	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_little_size">
+		    <field name="name">Backpack</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_briefcase" />
+			<field name="nature">little_size</field>
+			<field name="average_width">17.0</field>
+			<field name="average_size">8.05</field>
+			<field name="average_height">20.0</field>
+			<field name="average_weight">7.0</field>
+			<field name="max_width">23.0</field>
+			<field name="max_size">11.05</field>
+			<field name="max_height">25.0</field>
+			<field name="max_weight">9.0</field>
+    		<field name="amount_to_deduct">7.0</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_medium_size">
+		    <field name="name">Briefcase</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_briefcase" />
+			<field name="nature">medium_size</field>
+			<field name="average_width">20.0</field>
+			<field name="average_size">10.0</field>
+			<field name="average_height">23.0</field>
+			<field name="average_weight">10.0</field>
+			<field name="max_width">25.0</field>
+			<field name="max_size">12.50</field>
+			<field name="max_height">27.0</field>
+			<field name="max_weight">15.0</field>
+    		<field name="amount_to_deduct">10.0</field>
+		</record>
+	
+		<record model="m0sthk.luggage_model" id="data_m0sthk_luggage_model_large_size">
+		    <field name="name">Suitcase / Box</field>
+			<field name="luggage_type_id" ref="data_m0sthk_luggage_type_suitcase" />
+			<field name="nature">large_size</field>
+			<field name="average_width">40.0</field>
+			<field name="average_size">20.0</field>
+			<field name="average_height">55.0</field>
+			<field name="average_weight">22.0</field>
+			<field name="max_width">40.0</field>
+			<field name="max_size">20.0</field>
+			<field name="max_height">56.0</field>
+			<field name="max_weight">25.0</field>
+    		<field name="amount_to_deduct">12.5</field>
+		</record>
+
+
+		<!--IR.CRON-->
+
+		<record id="data_m0sthk_ir_cron_related_partner_to_user" model="ir.cron">
+			<field name="name">Hubkilo Cron for relating partner to user</field>
+			<field name="hk_code">HK_RELATED_PARTNER_USER_JOB</field>
+			<field name="model_id" ref="model_m0sthk_base"/>
+			<field name="state">code</field>
+			<field name="code">model.related_partner_to_user()</field>
+			<field name='interval_number'>1</field>
+			<field name='interval_type'>days</field>
+			<field name="numbercall">-1</field>
+		</record>
+    </data>
+</odoo>

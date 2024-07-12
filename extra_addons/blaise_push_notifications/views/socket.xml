@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+
+<record id="view_res_config_settings_socket_inherit" model="ir.ui.view">
+    <field name="name">res.config.settings.custom.view.form.inherit</field>
+    <field name="model">res.config.settings</field>
+    <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//div[@id='blaise_push']" position="after">
+            <div id="blaise_socket" style="position:relative; margin:2rem 0 2rem 0">
+                <h2>Blaise Websocket</h2>
+                <div class="o_setting_right_pane" style="position:relative; margin:1rem 0 0 6rem">
+                    <div class="wrapper" style="display: flex; align-items: center;">
+                        <!-- Add your fields here in the desired order -->
+                        <div class="row my-3" style="position: relative; border-left: 1px solid grey;">
+
+                            <div class="col-md-12">
+                                 <label for="pusher_app_id" class="col-md-12-form-label">Pusher App ID:</label>
+                                <field name="pusher_app_id" class="form-control"/>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="pusher_key" class="col-md-12-form-label">Pusher Key:</label>
+                                <field name="pusher_key" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="row my-3 mx-3">
+                            <div class="col-md-12">
+                                <label for="pusher_secret" class="col-md-12-form-label">Pusher Secret:</label>
+                                <field name="pusher_secret" class="form-control"/>
+                            </div>
+                            <div class="col-md-12">
+                                 <label for="pusher_cluster" class="col-md-12-form-label">Pusher Cluster:</label>
+                                <field name="pusher_cluster" class="form-control"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </field>
+</record>
+    </data>
+</odoo>

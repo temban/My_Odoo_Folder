@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+     <record id="view_res_config_settings_auth_key_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.custom.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='invite_users']" position="after">
+                     <div id="manager_points_bonus">
+                        <h2>Set Partner Points for Bonus</h2>
+                         <div class="o_setting_right_pane" style="margin:1rem 0 0 6rem">
+                                <div class="wrapper" style="display: flex; align-items: center;">
+        <div class="row my-3" style="position: relative; border-left: 1px solid grey;">
+            <div class="col-md-12 mb-1">
+                <span style="font-weight: 600; font-size:14px; color: black; margin-bottom:3px">Configuration</span>
+                <p style="color: grey; font-size:14px;">Set the number of points needed to acquire a bonus</p>
+            </div>
+            <div class="col-md-12 mb-3">
+                <div style="display: flex; align-items: center;">
+                    <span style="color: black; font-size:14px; margin-right:20px; margin-bottom:10px;">Number of Points:</span>
+                    <field name="manager_required_bonus_points" string="Points" style="height: 30px; width: 400px; margin-left:5rem"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+</odoo>

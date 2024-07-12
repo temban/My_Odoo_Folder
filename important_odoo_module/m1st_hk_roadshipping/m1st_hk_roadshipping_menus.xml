@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	
+			
+	<menuitem id="menu_m1st_hk_userinterface_my_travel"  name="My Travels" 
+  			parent="m0st_hk_base.menu_m0st_hk_root_userinterface" sequence="2" 
+	          action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_travelbooking_kanban_my"
+			groups="m0st_hk_base.group_hkbase_traveler"/>
+
+	
+	<menuitem id="menu_m1st_hk_userinterface_my_shipping"  name="My Shippings" 
+  			parent="m0st_hk_base.menu_m0st_hk_root_userinterface" sequence="3" 
+	          action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_shipping_kanban_my"
+			groups="m0st_hk_base.group_hkbase_shipper"/>
+	
+	<menuitem id="menu_m1st_hk_userinterface_my_msg"  name="My Messages" 
+  			parent="m0st_hk_base.menu_m0st_hk_root_userinterface" sequence="4" 
+			groups="m0st_hk_base.group_hkbase_traveler,m0st_hk_base.group_hkbase_shipper"/>
+	
+		<menuitem id="menu_m1st_hk_userinterface_my_msg_sent"  name="Sent" 
+  			parent="m1st_hk_roadshipping.menu_m1st_hk_userinterface_my_msg" sequence="1" 
+		          action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_travelmessage_tree_my"
+			groups="m0st_hk_base.group_hkbase_traveler,m0st_hk_base.group_hkbase_shipper"/>
+	
+		<menuitem id="menu_m1st_hk_userinterface_my_msg_receive"  name="Received" 
+  			parent="m1st_hk_roadshipping.menu_m1st_hk_userinterface_my_msg" sequence="2" 
+		          action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_travelmessage_tree_my2"
+			groups="m0st_hk_base.group_hkbase_traveler,m0st_hk_base.group_hkbase_shipper"/>
+
+		<menuitem id="menu_m1st_hk_userinterface_my_msg_all"  name="All"
+  			parent="m1st_hk_roadshipping.menu_m1st_hk_userinterface_my_msg" sequence="3"
+		          action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_travelmessage_tree_my3"
+			groups="m0st_hk_base.group_hkbase_traveler,m0st_hk_base.group_hkbase_shipper"/>
+
+				
+	<!--EMPLOYEE MENU-->
+	<menuitem id="menu_m1st_hk_root_employee" parent="m0st_hk_base.menu_m0st_hk_root"
+		          	name="Management" sequence="2" groups="m0st_hk_base.group_hkbase_employee" />
+	
+		<menuitem id="menu_m1st_hk_root_employee_travel" parent="menu_m1st_hk_root_employee"
+		          	name="Travels" sequence="1" 
+		          	action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_travelbooking_kanban" />
+
+		<menuitem id="menu_m1st_hk_root_employee_shipping" parent="menu_m1st_hk_root_employee"
+		          	name="Shippings" sequence="2" 
+		          	action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_shipping_kanban" />
+
+		<menuitem id="menu_m1st_hk_root_employee_message" parent="menu_m1st_hk_root_employee"
+		          	name="All messages" sequence="3" 
+		          	action="m1st_hk_roadshipping.action_view_m1st_hk_roadshipping_travelmessage_tree" />
+	
+</odoo>

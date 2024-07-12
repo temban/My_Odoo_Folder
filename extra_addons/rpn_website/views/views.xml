@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="rpn_website.list">
+      <field name="name">rpn_website list</field>
+      <field name="model">rpn_website.rpn_website</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="rpn_website.action_window">
+      <field name="name">rpn_website window</field>
+      <field name="res_model">rpn_website.rpn_website</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="rpn_website.action_server">
+      <field name="name">rpn_website server</field>
+      <field name="model_id" ref="model_rpn_website_rpn_website"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="rpn_website" id="rpn_website.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="rpn_website.menu_1" parent="rpn_website.menu_root"/>
+    <menuitem name="Menu 2" id="rpn_website.menu_2" parent="rpn_website.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="rpn_website.menu_1_list" parent="rpn_website.menu_1"
+              action="rpn_website.action_window"/>
+    <menuitem name="Server to list" id="rpn_website" parent="rpn_website.menu_2"
+              action="rpn_website.action_server"/>
+-->
+  </data>
+</odoo>

@@ -1,0 +1,193 @@
+<odoo>
+    <data>
+        <record id="view_first_other_account_recharge_form" model="ir.ui.view">
+            <field name="name">account.recharge</field>
+            <field name="model">account.recharge</field>
+            <field name="arch" type="xml">
+
+                <form string="Account Recharge Form">
+                    <div>
+                        <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 15px; border-radius: 8px; border: 1px solid #ccc; margin: 10px;">
+                            <p style="margin: 10px 0;">
+                                <strong>Welcome to RPN Association's Account Recharge wizard!</strong>
+                            </p>
+                            <p style="margin: 10px 0;">Your
+                                <strong>RPN Association membership fee is
+                                    <field name="membership_fee"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                . The minimum recharge amount is
+                                <strong>
+                                    <field name="min_recharge"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                .
+                                So the total amount to pay on your invoice will be
+                                <strong>
+                                    <field name="total"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                .
+                            </p>
+                            <p style="margin: 10px 0;">Your recharge will help sustain our community initiatives and
+                                services. Thank you for your contribution!
+                            </p>
+                        </div>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="partner_id" style="margin-bottom: 20px"/>
+                            <field name="min_recharge" style="margin-bottom: 40px"/>
+                            <field name="total" style="margin-bottom: 20px"/>
+                            <field name="move_id"/>
+                        </group>
+                        <group>
+                            <field name="amount" style="margin-bottom: 20px"/>
+                            <field name="membership_fee" style="margin-bottom: 20px"/>
+                            <field name="currency_id" style="margin-bottom: 20px"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button
+                                name="member_first_recharge"
+                                type="object"
+                                string="Recharge Account"
+                                class="oe_highlight"
+                        />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_first_account_recharge_form" model="ir.actions.act_window">
+            <field name="name">account recharge</field>
+            <field name="res_model">account.recharge</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record id="view_re_activation_feet_recharge_form" model="ir.ui.view">
+            <field name="name">account.recharge</field>
+            <field name="model">account.recharge</field>
+            <field name="arch" type="xml">
+
+                <form string="Account Re-activation Recharge Form">
+                    <div>
+                        <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 15px; border-radius: 8px; border: 1px solid #ccc; margin: 10px;">
+                            <p style="margin: 10px 0;">
+                                <strong>Welcome to RPN Association's Account Re-activation Recharge wizard!</strong>
+                            </p>
+                            <p style="margin: 10px 0;">Your
+                                <strong>RPN Association Re-activation Fee is
+                                    <field name="re_activation_fee"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                . Your negative balance is
+                                <strong>
+                                    <field name="account_balance"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                . The minimum recharge amount is
+                                <strong>
+                                    <field name="min_recharge"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                .
+                                So the total amount to pay on your invoice will be
+                                <strong>
+                                    <field name="total_re_activation_fee"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                .
+                            </p>
+                            <p style="margin: 10px 0;">Your recharge will help sustain our community initiatives and
+                                services. Thank you for your contribution!
+                            </p>
+                        </div>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="partner_id" style="margin-bottom: 20px"/>
+                            <field name="min_recharge" style="margin-bottom: 40px"/>
+                            <field name="currency_id" style="margin-bottom: 20px"/>
+                            <field name="move_id"/>
+                        </group>
+                        <group>
+                            <field name="amount" style="margin-bottom: 20px"/>
+                            <field name="re_activation_fee" style="margin-bottom: 20px"/>
+                            <field name="account_balance" style="margin-bottom: 20px"/>
+                            <field name="total_re_activation_fee" style="margin-bottom: 20px"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button
+                                name="member_re_activation_recharge"
+                                type="object"
+                                string="Re-activate Account"
+                                class="oe_highlight"
+                        />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_re_activation_fee_recharge_form" model="ir.actions.act_window">
+            <field name="name">account recharge</field>
+            <field name="res_model">account.recharge</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record id="view_other_account_recharge_form" model="ir.ui.view">
+            <field name="name">account.recharge</field>
+            <field name="model">account.recharge</field>
+            <field name="arch" type="xml">
+
+                <form string="Account Recharge Form">
+                    <div>
+                        <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 15px; border-radius: 8px; border: 1px solid #ccc; margin: 10px;">
+                            <p style="margin: 10px 0;">
+                                <strong>Welcome to RPN Association's Account Recharge wizard!</strong>
+                            </p>
+                            <p style="margin: 10px 0;">The minimum recharge amount is
+                                <strong>
+                                    <field name="min_recharge"/>
+                                    <field name="currency_id"/>
+                                </strong>
+                                .
+                            </p>
+                            <p style="margin: 10px 0;">Your recharge will help sustain our community initiatives and
+                                services. Thank you for your contribution!
+                            </p>
+                        </div>
+                    </div>
+
+                    <group>
+                        <group>
+                            <field name="partner_id" style="margin-bottom: 20px"/>
+                            <field name="min_recharge" style="margin-bottom: 40px"/>
+                            <field name="move_id"/>
+                        </group>
+                        <group>
+                            <field name="amount" style="margin-bottom: 20px"/>
+                            <field name="currency_id" style="margin-bottom: 20px"/>
+                            <!--                            <field name="total_recharge" style="margin-bottom: 20px"/>-->
+                        </group>
+                    </group>
+                    <footer>
+                        <button
+                                name="member_other_recharge"
+                                type="object"
+                                string="Recharge Account"
+                                class="oe_highlight"
+                        />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="action_other_account_recharge_form" model="ir.actions.act_window">
+            <field name="name">account recharge</field>
+            <field name="res_model">account.recharge</field>
+            <field name="view_mode">form</field>
+        </record>
+
+    </data>
+</odoo>

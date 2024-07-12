@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- Inherit business.appointment -->
+		<record model="ir.ui.view" id="view_shintheo_fc_inherit_business_appointment_form">
+            <field name="name">view_shintheo_fc_inherit_business_appointment_form</field>
+        	<field name="model">business.appointment</field>
+			<field name="inherit_id" ref="business_appointment.business_appointment_view_form"/>
+        	<field name="arch" type="xml">
+				<group name="appointment_details" position="after">
+        			<group colspan="4" col="4" string="Discount details" name="group_name_discount_items">
+						<group colspan="2" col="2">
+							<field name="discount_type" widget="radio" required="True" />
+						</group>
+
+						<group colspan="2" col="2">
+        					
+							<field name="product_discount_id" domain="[('discount_management', '=', 'discount')]" 
+							       attrs="{'invisible': [('discount_type', 'in', ['percentage', 'bonus', 'none'])], 'required': [('discount_type', '=', 'value')]}"
+									options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+
+							<field name="percentage_value" attrs="{'invisible': [('discount_type', 'in', ['value', 'bonus', 'none'])], 'required': [('discount_type', '=', 'percentage')]}"  />
+						</group>
+					</group>
+				</group>
+        		
+        		<xpath expr="//field[@name='extra_product_ids']" position="attributes">
+            		<attribute name="readonly">True</attribute>
+            	</xpath> 
+        		
+				<notebook position="inside">
+        			<page string="Bonus products" name="bonus_products" attrs="{'invisible': [('discount_type', 'in', ['percentage', 'value', 'none'])]}">
+                    	<field name="product_line_bonus_ids" nolabel="1"
+        				       attrs="{'invisible': [('discount_type', 'in', ['percentage', 'value', 'none'])], 'required': [('discount_type', '=', 'bonus')]}">
+                            <tree editable="bottom">
+                                <field name="product_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" domain="[('discount_management', '=', 'bonus')]" />
+                                <field name="product_uom_qty"/>
+                            </tree>
+                            <form>
+                                <sheet>
+                                    <group>
+                                        <field name="product_id" domain="[('discount_management', '=', 'bonus')]" />
+                                		<field name="product_uom_qty"/>                                  
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+				</notebook>
+			</field>
+        </record>
+		
+		
+		<!-- Inherit product.template -->
+		<record model="ir.ui.view" id="view_shintheo_fc_inherit_product_template_form_view">
+            <field name="name">view_shintheo_fc_inherit_product_template_form_view</field>
+        	<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view"/>
+        	<field name="arch" type="xml">
+				<field name="list_price" position="after">
+        			<field name="discount_management" widget="radio" />
+        		</field>
+        		
+			</field>
+        </record>
+	
+	
+		<!-- Inherit sale.order -->
+		<record model="ir.ui.view" id="view_shintheo_fc_inherit_view_order_form">
+            <field name="name">view_shintheo_fc_inherit_view_order_form</field>
+        	<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form"/>
+        	<field name="arch" type="xml">
+				<xpath expr="//field[@name='order_line']/tree/field[@name='price_total']" position="before">
+	                <field name="is_bonus_used" widget="boolean_favorite" />
+	            </xpath>
+        		
+			</field>
+        </record>
+	</data>
+</odoo>

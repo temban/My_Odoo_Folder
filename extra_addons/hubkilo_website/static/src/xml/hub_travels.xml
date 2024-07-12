@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="voyages" name="Available Travel">
+        <t name="Available Travels" t-name="hubkilo_website.voyages" owl="1">
+            <!--            styles-->
+   <xpath expr="." position="inside">
+
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/home.css"/>
+                    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.rtl.min.css"/>
+
+    <!-- Template Stylesheet -->
+    <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+    <link href="/hubkilo_website/static/src/css/hubkilo.css" rel="stylesheet"/>
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/voyage.css?v=1066"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+<!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/wow/wow.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/easing/easing.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/waypoints/waypoints.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/counterup/counterup.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/hubkilo_website/static/src/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <!-- Template Javascript -->
+    <script src="/hubkilo_website/static/src/js/voyages.js?v=45668889889988899999999999"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=10099"></script>
+    <script src="/hubkilo_website/static/src/js/App/owl.iife.js"></script>
+         </xpath>
+
+            <!--            javascript-->
+
+        <t t-call="website.layout">
+
+
+<!--  LOADER START              -->
+     <div class="loader_container">
+        <img src="/hubkilo_website/static/src/media/loading.gif" width="250px"/>
+    </div>
+<!--  LOADER END             -->
+
+
+                        <div class="oe_structure" >
+    <style>
+        @font-face {
+    font-family: 'Obitron';
+    src: url(/hubkilo_website/static/src/fonts/Orbitron-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(/hubkilo_website/static/src/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/hubkilo_website/static/src/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat',sans-serif;
+}
+
+p {
+ font-family: 'Poppins',sans-serif;
+}
+
+.state {
+    font-family:'Obitron',sans-serif ;
+}
+
+    </style>
+    <style>
+
+.myPagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.pagination ul{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 8px;
+  border-radius: 50px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.pagination ul li{
+  color: #217aff;
+  list-style: none;
+  line-height: 45px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+.pagination ul li.numb{
+  list-style: none;
+  height: 45px;
+  width: 45px;
+  margin: 0 3px;
+  line-height: 45px;
+  border-radius: 50%;
+}
+.pagination ul li.numb.first{
+  margin: 0px 3px 0 -5px;
+}
+.pagination ul li.numb.last{
+  margin: 0px -5px 0 3px;
+}
+.pagination ul li.dots{
+  font-size: 22px;
+  cursor: default;
+}
+.pagination ul li.btn{
+  padding: 0 20px;
+  border-radius: 50px;
+}
+.pagination li.active,
+.pagination ul li.numb:hover,
+.pagination ul li:first-child:hover,
+.pagination ul li:last-child:hover{
+  color: #fff;
+  background: #217aff;
+}
+</style>
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-position:bottom;background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown" style="font-weight:700">Travels</h1>
+
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <!-- Booking Start -->
+        <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="bg-white shadow" style="padding: 35px;">
+                    <div class="row g-2">
+                        <div class="col-md-10">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <select id="searchInput3" class="form-select" oninput="hub_travels.liveSearch3(this.value)">
+                                        <option disabled="" selected="">Type of travel</option>
+                                        <option value="road">Road</option>
+                                        <option value="air">Air</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="search_depart" oninput="hub_travels.liveSearch(this.value)" type="text" class="form-control datetimepicker-input"
+                                            placeholder="Departure City" style="background:white"  />
+                                </div>
+                                <div class="col-md-3">
+                                    <input id="search_arrive"  oninput="hub_travels.liveSearch2(this.value)" type="text" class="form-control datetimepicker-input"
+                                            placeholder="Arrival City" style="background:white" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="/add/new/travel" class="btn btn-primary w-100" style="font-size:15px;text-transform: capitalize">+ Add New Travel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking End -->
+
+
+
+                               <div class="container-xxl bg-white p-0">
+
+        <!-- Room Start -->
+        <div class="container-xxl">
+            <div class="container" style="padding-bottom:50px">
+           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="display: flex;align-items: center;">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link border border-primary  active" style="font-family: 'Poppins',sans-serif;width: 200px;height:50px;font-size:16px"  id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">All</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link border border-primary " style="font-family: 'Poppins',sans-serif;width: 200px;height:50px;font-size:16px"  id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">My Travels</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+<!--              FIRST TAB-->
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Travels</span></h1>
+                </div>
+
+   <div id="all_results_div" style="display: flex;justify-content: space-between;flex-direction: column;min-height: 545px;">
+
+        <div id="all_results" class="row g-4" style="">
+
+        <div style="display:flex;justify-content:center;align-item:center">
+                                           <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+                            </div>
+
+        </div>
+
+             <div class="myPagination">
+            <div class="pagination">
+                <ul> <!--pages or li are comes from javascript --> </ul>
+            </div>
+            </div>
+
+    </div>
+
+                <div id="search_row" class="row g-4" style="margin-bottom:100px;">
+
+                </div>
+            </div>
+
+<!--              SECOND TAB-->
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-5">My <span class="text-primary text-uppercase">Travels</span></h1>
+                </div>
+                <div id="my_results" class="row g-4" >
+                    <div style="display:flex;justify-content:center;align-item:center">
+                                   <div class="spinner-grow text-primary" style="margin-top:100px;margin-bottom:200px;text-align:center;width: 10rem; height: 10rem;" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+                    </div>
+
+                </div>
+
+            </div>
+          </div>
+            </div>
+        </div>
+        <!-- Room End -->
+
+
+
+<!--        &lt;!&ndash; Back to Top &ndash;&gt;-->
+<!--        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>-->
+    </div>
+                        </div>
+
+
+                                        <!--Error Modal Start-->
+<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class='fas fa-exclamation-triangle' style='font-size:28px;color:red;margin-right:10px'></i>Alert</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="alert_error_message" class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>
+                                  <!--Error Modal End-->
+
+
+
+
+        </t>
+
+        </t>
+
+    </template>
+</odoo>

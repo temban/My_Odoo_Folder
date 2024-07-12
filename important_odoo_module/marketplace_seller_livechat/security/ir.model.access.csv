@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_website_track_portal,portal_access_website_track,website.model_website_track,base.group_portal,1,0,0,0
+access_website_track_portal_user,portal_access_website_track_user,mail.model_mail_message,base.group_portal,1,1,1,1
+access_website_track_portal_user,portal_access_website_track_user,base.model_ir_attachment,,1,1,1,1
+access_website_track_portal_portal,portal_access_website_track_portal,mail.model_mail_channel,base.group_portal,1,1,1,1
+access_website_visitor_portal,portal_access_website_visitor,website.model_website_visitor,base.group_portal,1,0,0,0

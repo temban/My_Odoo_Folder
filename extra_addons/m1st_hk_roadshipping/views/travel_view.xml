@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!--icc_training.training-->
+		<!-- Form view -->
+    	<record model="ir.ui.view" id="view_m1st_hk_roadshipping_travelbooking_form">
+			<field name="name">m1st_hk_roadshipping.travelbooking.form_view</field>
+			<field name="model">m1st_hk_roadshipping.travelbooking</field>
+			<field name="arch" type="xml">
+				<form string="Road Travel Booking Form Edit">
+					<p class="oe_grey"> Create / Edit your Travel Booking data </p>
+					<header>
+						<button class="oe_highlight" name="set_to_pending" states="rejected" string="Put back into pending" type="object" icon="fa-arrow-left text-warning" />
+						<button class="oe_highlight" name="set_to_negotiating" states="pending" string="Publish" type="object" icon="fa-check-square text-info" />
+						<button class="oe_highlight" name="set_to_accepted" states="negotiating" string="Open" type="object" icon="fa-check-square text-info" />
+						<button class="oe_highlight" name="set_to_completed" states="accepted" string="Close" type="object" icon="fa-stop text-success" />
+						<button class="oe_highlight" name="set_to_rejected" states="pending,negotiating" string="Cancel" type="object" icon="fa-stop text-danger" />
+						
+						<field name="state" widget="statusbar" statusbar_visible="pending,negotiating,accepted,completed,rejected" statusbar_colors='{"completed":"grey", "pending":"blue"}' />
+					</header>
+					<sheet string="Road Travel Booking Form Edit">
+						<div class="oe_button_box" name="button_box">
+							<button type="object"  name="action_view_shipping"
+								class="oe_stat_button" icon="fa-pencil-square-o"
+								attrs="{'invisible':['|', ('shipping_count', '=', 0), ('state', 'in', ('pending','rejected'))]}">
+								<field name="shipping_count" widget="statinfo" string="Shippings"/>
+								<!--<field name='invoice_ids' invisible="1"/>-->
+							</button>
+
+							<button type="object"  name="action_view_message"
+								class="oe_stat_button"
+								icon="fa-enveloppe" attrs="{'invisible':['|', ('message_count', '=', 0), ('state', 'in', ('pending','rejected'))]}">
+								<field name="message_count" widget="statinfo" string="Messages"/>
+
+							</button>
+
+							<button type="object"  name="action_view_invoice"
+								class="oe_stat_button" icon="fa-dollar"
+								 attrs="{'invisible':['|', ('invoice_count', '=', 0), ('state', 'in', ('pending','rejected'))]}">
+								<field name="invoice_count" widget="statinfo" string="Invoices"/>
+
+							</button>
+						</div>
+
+						<widget name="web_ribbon" title="PENDING / DRAFT" bg_color="bg-muted"
+								attrs="{'invisible': [('state', 'not in', ['pending'])]}"
+								tooltip="The draft State means that travel is registered but not published. In oder words it's in an Awaiting validation state No one except you can see it." />
+
+						<widget name="web_ribbon" title="PUBLISHED" bg_color="bg-success"
+								attrs="{'invisible': [('state', 'not in', ['negotiating'])]}"
+								tooltip="The published State means that travel your travel is visible by all the shippers."/>
+
+						<widget name="web_ribbon" title="RUNNING" bg_color="bg-warning"
+								attrs="{'invisible': [('state', 'not in', ['accepted'])]}"
+								tooltip="The running State means that negociations are over and the traveler² is registered but not published. No one except you can see it."/>
+
+						<widget name="web_ribbon" title="COMPLETE" bg_color="bg-info"
+								attrs="{'invisible': [('state', 'not in', ['completed'])]}"
+								tooltip="This is the final state of te travel. In this state the travel is closed."/>
+
+						<widget name="web_ribbon" title="REJECTED" bg_color="bg-danger"
+								attrs="{'invisible': [('state', 'not in', ['rejected'])]}"
+								tooltip="The rejected State means that travel is cancelled and cannot any longer be scheduled."/>
+						
+						<group colspan="4" col="4" string="Generals Informations">
+							<group colspan="2" col="2" >
+								<field name="name" />
+								<field name="code" />
+								<field name="booking_date" />
+								<field name="total_weight" />
+							</group>
+
+							<group colspan="2" col="2">
+								<field name="partner_id" domain="[('related_user_id', '=', uid)]"
+								       options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+								<field name="booking_type"/>
+								<field name="booking_price"/>
+								<field name="bank_account"/>
+								<field name="local_currency_id"/>
+							</group>
+						
+						</group>
+						
+						
+						<group colspan="4" col="4" string="Travel infos">
+							<group colspan="2" col="2" string="Departure">
+								<field name="departure_city_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+								<field name="departure_date" />
+							</group>
+
+							<group colspan="2" col="2" string="Arrival">
+								<field name="arrival_city_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+								<field name="arrival_date" />
+							</group>
+						</group>
+						
+						<notebook colspan="4">
+							<page string="Road Shippings" name="page_name_shippings_items">
+								<group colspan="4">
+									<field name="shipping_ids" nolabel="1" mode="tree" >
+										<tree string="Shippings" colspan="4" 
+										      decoration-muted="state=='pending'"
+											  decoration-warning="state=='accepted'"
+											  decoration-success="state=='paid'"
+											  decoration-primary="state=='confirm'"
+											  decoration-info="state=='received'"
+												decoration-danger="state=='rejected'">
+
+											<button class="oe_highlight" name="set_to_pending" states="rejected" string="Put back into pending" type="object" icon="fa-arrow-left text-warning" />
+											<button class="oe_highlight" name="set_to_rejected" states="pending" string="Reject" type="object" icon="fa-stop text-danger" />
+											<!--<button class="oe_highlight" name="set_to_paid" states="accepted" string="Pay shipping" type="object" icon="fa-dollar text-success"/>-->
+											<button class="oe_highlight" name="set_to_confirm" states="paid" string="Mark as received" type="object" icon="fa-play text-success" />
+											<button class="oe_highlight" name="set_to_received" states="confirm" string="Mark as delivred" type="object" icon="fa-stop text-warning" />
+
+											<field name="name" />
+											<field name="partner_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+											<field name="receiver_partner_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+											<field name="receiver_email" invisible="True" />
+											<field name="receiver_phone" invisible="True"  />
+											<field name="receiver_address" invisible="True" />
+											<field name="shipping_price" />
+											<field name="position" />
+											<field name="state" widget="badge" />
+
+										</tree>
+									</field>
+								</group>
+							</page>
+							
+							
+							<page string="Messages" name="page_name_messages_items">
+								<group colspan="4">
+									<field name="travelmessage_ids" nolabel="1" mode="tree" readonly="True">
+										<tree string="Messages" colspan="4" editable="bottom"
+												decoration-info="state=='draft'" 
+										      decoration-success="state=='validate'" >
+											
+											<field name="name" />
+											<field name="travel_partner_id" invisible="1" />
+											<field name="shipping_partner_id" invisible="1" />
+											
+											<field name="sender_partner_id" invisible="1" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}"/>
+											<field name="receiver_partner_id" invisible="1" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}"/>
+											<field name="shipping_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}"/>
+											
+											<field name="price" />
+											<field name="date" />
+											<field name="shipper_validate" />
+											<field name="state" />
+											<button class="oe_highlight" name="set_to_validate" states="draft" 
+											        string="Validate price" type="object" icon="fa-check-square text-info"
+													confirm="Do you really want to validate this price&#63; By doing so the related shipment will be closed" />
+										</tree>
+									</field>
+								</group>
+							</page>
+							
+							<page string="Road Luggage infos" name="page_name_luggages_items">
+								<group colspan="4">
+									<field name="luggage_ids" nolabel="1" readonly="1" >
+										<tree string="Road Luggage infos" colspan="4" >
+											<field name="name" />
+											<field name="luggage_model_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+											<field name="shipping_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+											
+											<field name="average_width" />
+											<field name="average_height" />
+											<field name="average_weight" />
+										</tree>
+									
+										<form string="Road Luggage infos" colspan="4">
+											<header>
+												
+											</header>
+			                                <sheet>
+												<group colspan="4" col="4" >
+													<group colspan="2" col="2" string="Generals Informations">
+														<field name="name"/>
+														<field name="luggage_model_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+														<field name="shipping_id" options="{'no_open': True, 'no_create': True, 'no_create_edit': True}" />
+											
+													</group>
+						
+													<group colspan="2" col="2" string="Features">
+														<field name="average_width"/>
+														<field name="average_height"/>
+														<field name="average_weight"/>
+													</group>
+												</group>
+			                                	
+			                                	<group colspan="6" col="6" string="Images">
+													<group colspan="2" col="2">
+														<field name="luggage_image1" widget="image" class="oe_avatar"/>
+													</group>
+													
+			                                		<group colspan="2" col="2">
+														<field name="luggage_image2" widget="image" class="oe_avatar"/>
+													</group>
+			                                		
+			                                		<group colspan="2" col="2">
+														<field name="luggage_image3" widget="image" class="oe_avatar"/>
+													</group>
+												</group>
+												
+											</sheet>
+										</form>
+									</field>
+								</group>
+							</page>
+
+
+							<page string="Road Travel Invoices" name="page_name_invoices_items">
+								<group colspan="4">
+									<field name="move_ids" nolabel="1" mode="tree" readonly="True">
+										<tree string="Invoices" colspan="4" editable="bottom"
+												decoration-info="state=='draft'"
+											  decoration-danger="state=='cancel'"
+										      decoration-success="state=='posted'" >
+
+											<field name="name" />
+											<field name="payment_link" />
+											<field name="partner_id" />
+											<field name="invoice_date" />
+
+											<field name="narration" />
+											<field name="amount_total" />
+
+											<field name="payment_state" widget="badge" />
+											<field name="state" widget="badge"/>
+
+										</tree>
+									</field>
+								</group>
+							</page>
+
+						</notebook>
+						
+					</sheet>
+				</form>
+			</field>
+        </record>
+
+		
+        <!-- Tree View -->
+		<record model="ir.ui.view" id="view_m1st_hk_roadshipping_travelbooking_tree">
+			<field name="name">m1st_hk_roadshipping.travelbooking.tree_view</field>
+			<field name="model">m1st_hk_roadshipping.travelbooking</field>
+			<field name="arch" type="xml">
+				<tree string="Road Travels List" decoration-info="state=='pending'" decoration-success="state=='completed'"
+						decoration-warning="state=='accepted'" decoration-muted="state=='negotiating'"
+						decoration-danger="state=='rejected'">
+					<field name="name" />
+					<field name="code" />
+					<field name="booking_date" />
+					<field name="partner_id" />
+					<field name="booking_type"/>
+					<field name="booking_price"/>
+					<field name="local_currency_id" invisible="1" />
+					<field name="state" widget="badge"  />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_m1st_hk_roadshipping_travelbooking_kanban">
+			<field name="name">m1st_hk_roadshipping.travelbooking.kanban_view</field>
+			<field name="model">m1st_hk_roadshipping.travelbooking</field>
+			<field name="arch" type="xml">
+				<kanban class="o_kanban_mobile" sample="1">
+					<field name="color"/>
+					<field name="code" />
+					<field name="partner_id" />
+					<field name="departure_date" />
+
+					<field name="total_weight"/>
+					<field name="departure_city_id" />
+
+					<field name="arrival_city_id"/>
+					<field name="booking_price"/>
+
+					<field name="arrival_date" />
+
+					<templates>
+						<t t-name="kanban-box">
+							<t t-set="color" t-value="kanban_color(record.color.raw_value)"/>
+							<div t-att-class="color + (record.color.raw_value in [1,3,5,7,9,11] ? ' oe_kanban_color_alert' : '') + ' oe_kanban_global_click'">
+								<div class="o_kanban_image">
+									<img t-att-src="kanban_image('res.partner', 'avatar_128', record.partner_id.raw_value)" t-att-title="record.partner_id.value" t-att-alt="record.partner_id.value" class="oe_kanban_avatar o_image_24_cover"/>
+
+									<!--<img alt="Luggage image" t-att-src="kanban_image('m0sthk.luggage', 'luggage_image3', record.id.raw_value)"/>-->
+								</div>
+								<div class="oe_kanban_details">
+									<strong><field name="code"/></strong>
+
+									<strong t-if="record.departure_date.raw_value" class="col-4 pl-0 text-right">
+                                        <i class="fa fa-clock-o" aria-label="Departure Date" role="img" title="Departure Date"/> <field name="departure_date"/>
+                                    </strong>
+
+									<strong><field name="departure_city_id"/></strong>
+									<strong><field name="arrival_city_id"/></strong>
+									<div>
+										<ul>
+											<li><strong>Total Weight: </strong><t t-esc="record.total_weight.value"/></li>
+											<li><strong>Arrival date: </strong><t t-esc="record.arrival_date.value"/></li>
+											<li><strong>Total price: </strong><t t-esc="record.booking_price.value"/></li>
+										</ul>
+									</div>
+								 </div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<!-- search View -->
+		<record model="ir.ui.view" id="view_m1st_hk_roadshipping_travelbooking_filter">
+            <field name="name">m1st_hk_roadshipping.travelbooking.filter_view</field>
+            <field name="model">m1st_hk_roadshipping.travelbooking</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Search...">
+            		<field name="name" />
+					<field name="code" />
+					<field name="booking_date" />
+					<field name="partner_id" />
+					<field name="booking_type"/>
+					<field name="booking_price"/>
+					<field name="local_currency_id" invisible="1" />
+            		
+                	<group expand="1" string="Filtres Basiques">
+                		<field name="state" string="State" >
+	            			<filter name="state_pending"  domain="[('state', '=', 'pending')]"  help="Awaiting validation"  icon="STOCK_YES"/>
+	            			<filter name="state_accepted"  domain="[('state', '=', 'accepted')]"  help="Validated"  icon="STOCK_YES"/>
+	            			<filter name="state_completed"  domain="[('state', '=', 'completed')]"  help="Finished"  icon="STOCK_CLOSE"/>
+                			<filter name="state_rejected"  domain="[('state', '=', 'rejected')]"  help="Cancelled"  icon="STOCK_YES"/>
+                		</field>
+                	</group>
+                		
+                    <group expand="0" string="Groupement">
+             			<filter string="Traveler" name="group_by_partner_id" icon="terp-go-year" domain="[]" context="{'group_by':'partner_id'}"/>
+                    	
+                    	<filter string="State" name="group_by_state" icon="terp-go-year" domain="[]" context="{'group_by':'state'}"/>
+                    	
+                    	 <separator orientation="vertical" />
+                       
+                    </group>
+                </search>
+             </field>
+         </record>
+    	
+
+		
+        <!-- ACTIONS -->
+    	<record model="ir.actions.act_window" id="action_view_m1st_hk_roadshipping_travelbooking_kanban">
+			<field name="name">Road Travels</field>
+			<field name="view_id" ref="view_m1st_hk_roadshipping_travelbooking_kanban"/>
+			<!-- <field name="domain">[list of 3-tuples (max 250 characters)]</field> -->
+			<field name="context">{'search_default_group_by_partner_id':1,'search_default_group_by_state':1}</field>
+			<field name="res_model">m1st_hk_roadshipping.travelbooking</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<!-- <field name="target">new</field> -->
+			<field name="search_view_id" ref="view_m1st_hk_roadshipping_travelbooking_filter"/>
+			<field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					<h2>Road Travels </h2>
+                </p>
+            </field>
+		</record>
+	
+	
+		<record model="ir.actions.act_window" id="action_view_m1st_hk_roadshipping_travelbooking_kanban_my">
+			<field name="name">My Travels</field>
+			<field name="view_id" ref="view_m1st_hk_roadshipping_travelbooking_kanban"/>
+			 <field name="domain">[('partner_id.related_user_id', '=', uid)]</field> 
+			<field name="context">{'search_default_group_by_state':1}</field>
+			<field name="res_model">m1st_hk_roadshipping.travelbooking</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<!-- <field name="target">new</field> -->
+			<field name="search_view_id" ref="view_m1st_hk_roadshipping_travelbooking_filter"/>
+			<field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+					<h2> My Travels </h2>
+                </p>
+            </field>
+		</record>
+	
+    	
+    	
+	</data>
+</odoo>

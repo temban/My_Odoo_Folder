@@ -1,0 +1,145 @@
+<odoo>
+    <data>
+        <!-- Form View for res.partner.rating -->
+        <record id="hubkilo_view_partner_rating_form" model="ir.ui.view">
+            <field name="name">res.partner.rating.form</field>
+            <field name="model">res.partner.rating</field>
+            <field name="arch" type="xml">
+                <form string="Partner Rating">
+                    <sheet>
+                        <group>
+                            <field name="shipping_id" required="True"/>
+                            <field name="rater_id" invisible="True" />
+                            <field name="rated_id" invisible="True"  />
+
+                            <field name="rating"/>
+                            <field name="comment" placeholder="Comment" nolabel="1" />
+                            <field name="rating_date" widget="date"/>
+                            <field name="average_rating"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View for res.partner.rating -->
+        <record id="hubkilo_view_partner_rating_tree" model="ir.ui.view">
+            <field name="name">res.partner.rating.tree</field>
+            <field name="model">res.partner.rating</field>
+            <field name="arch" type="xml">
+                <tree string="Partner Ratings">
+					<field name="shipping_id" required="True"/>
+                    <field name="rater_id"/>
+                    <field name="rated_id"/>
+                    <field name="rating"/>
+                    <field name="comment"/>
+                    <field name="rating_date" widget="date"/>
+                    <field name="average_rating"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action for res.partner.rating -->
+        <record id="hubkilo_action_partner_rating" model="ir.actions.act_window">
+            <field name="name">HubKilo Partner Ratings</field>
+            <field name="view_id" ref="hubkilo_view_partner_rating_tree"/>
+            <field name="res_model">res.partner.rating</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        	<menuitem id="menu_m0st_hk_root_config_partner_shipper"  name="All Travellers Ratings"
+			          		  parent="m0st_hk_base.menu_m0st_hk_root_config_partner" sequence="3" action="hubkilo_action_partner_rating" />
+
+
+			
+			
+		<!-- Inherit res.partner -->
+		<record model="ir.ui.view" id="view_hb_review_inherit_res_partner_form">
+            <field name="name">view_hb_review_inherit_res_partner_form</field>
+        	<field name="model">res.partner</field>
+			<field name="inherit_id" ref="m1st_hk_roadshipping.view_m1sthk_inherit_res_partner_form"/>
+        	<field name="arch" type="xml">
+        		<notebook position="inside">
+        			<page string="Ratings Received">
+        				<group colspan="4">
+							<field name="rating_ids" nolabel="1" readonly="True" mode="tree" >
+								<tree string="Ratings Received" colspan="4">
+									<field name="shipping_id"/>
+									<field name="rater_id"/>
+									<field name="rated_id"/>
+									<field name="rating"/>
+									<field name="comment"/>
+									<field name="rating_date" widget="date"/>
+									<field name="average_rating"/>
+								</tree>
+							</field>
+						</group>
+        			</page>
+        		
+        			<page string="Ratings Given">
+        				<group colspan="4">
+							<field name="given_rating_ids" nolabel="1" readonly="True" mode="tree" >
+								<tree string="Ratings Given" colspan="4">
+									<field name="shipping_id"/>
+									<field name="rater_id"/>
+									<field name="rated_id"/>
+									<field name="rating"/>
+									<field name="comment"/>
+									<field name="rating_date" widget="date"/>
+									<field name="average_rating"/>
+								</tree>
+							</field>
+						</group>
+        			</page>
+        		
+        		</notebook>
+        		
+			</field>
+        </record>
+
+        <!-- Inherit m1st_hk_roadshipping.travelbooking -->
+		<record model="ir.ui.view" id="view_hb_review_inherit_roadshipping_travelbooking_form">
+            <field name="name">view_hb_review_inherit_roadshipping_travelbooking_form</field>
+        	<field name="model">m1st_hk_roadshipping.travelbooking</field>
+			<field name="inherit_id" ref="m1st_hk_roadshipping.view_m1st_hk_roadshipping_travelbooking_form"/>
+        	<field name="arch" type="xml">
+                <button name="action_view_invoice" position="after">
+                    <button type="object"  name="action_view_rating"
+                            class="oe_stat_button"
+                            icon="fa-star" attrs="{'invisible':[('state', 'in', ('rejected'))]}">
+                        <field name="average_rating" widget="statinfo" string="Rating"/>
+
+                    </button>
+                </button>
+
+			</field>
+        </record>
+
+
+
+         <!-- Inherit m1st_hk_roadshipping.travelbooking -->
+		<record model="ir.ui.view" id="view_hb_review_inherit_roadshipping_shipping_form">
+            <field name="name">view_hb_review_inherit_roadshipping_shipping_form</field>
+        	<field name="model">m1st_hk_roadshipping.shipping</field>
+			<field name="inherit_id" ref="m1st_hk_roadshipping.view_m1st_hk_roadshipping_shipping_form"/>
+        	<field name="arch" type="xml">
+                <widget name="web_ribbon">
+                    <div class="oe_button_box" name="button_box">
+                       <button type="object"  name="action_view_rating"
+                            class="oe_stat_button"
+                            icon="fa-star" attrs="{'invisible':[('state', 'in', ('rejected'))]}">
+                            <field name="average_rating" widget="statinfo" string="Rating"/>
+                        </button>
+                    </div>
+                </widget>
+
+                <field name="disable" position="after">
+                    <field name="is_rated"/>
+                    <field name="disagree"/>
+                </field>
+			</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_invoice_document_custom"
+        model="account.move"
+        string="Invoice"
+        report_type="qweb-pdf"
+        file="account.report_invoice_document"
+        name="invoice_pdf_header.report_invoice_document_custom"
+        attachment_use="True"
+    />
+</odoo>

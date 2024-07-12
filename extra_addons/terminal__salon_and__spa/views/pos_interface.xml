@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <template id="point_of_sale_custom" inherit_id="point_of_sale.template">
+            <xpath expr="//div[@class='order-container']" position="inside">
+                <div>
+                    <label>Custom Field:</label>
+                    <input type="text" t-att-value="order.custom_field"/>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

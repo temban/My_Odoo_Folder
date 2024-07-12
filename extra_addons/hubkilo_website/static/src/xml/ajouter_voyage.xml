@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <template id="ajouter" name="Ajouter Voyages Page">
+        <t name="Ajouter Voyages Page" t-name="hubkilo_website.ajouter">
+
+<xpath expr="." position="inside">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.rtl.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css"/>
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/plugins/global/plugins.bundle.css"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/sass/components/_variables.scss"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/sass/components/_card.scss/"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/plugins/custom/fullcalendar/fullcalendar.bundle.css"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/plugins/custom/datatables/datatables.bundle.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/ajouter_voyage.css?v=78000"/>
+      <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/searchable_input.css?v=103"/>
+        <link href="/hubkilo_website/static/src/css/style.css" rel="stylesheet"/>
+   <link rel="stylesheet" type="text/css" href="/hubkilo_website/static/src/css/App.css?v=23004"/>
+
+            </xpath>
+
+            <!--            javascript-->
+            <xpath expr="." position="inside">
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/global/plugins.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/scripts.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/widgets.bundle.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/widgets.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/apps/chat/chat.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/utilities/modals/upgrade-plan.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/utilities/modals/create-app.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/utilities/modals/new-target.js"></script>
+      <script type="text/javascript" src="/hubkilo_website/static/src/js/custom/utilities/modals/users-search.js"></script>
+                <script type="text/javascript" src="/hubkilo_website/static/src/js/bootstrap.min.js"></script>
+<!--                <script  src="/hubkilo_website/static/src/js/ajouter.js"></script>-->
+<!--    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpMQRmHjfXBHgqN3HmBJKe4jFEPnw0pQY&amp;libraries=places"></script>-->
+
+         </xpath>
+
+            <xpath expr="." position="inside">
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/ajouter.js?v=14199993666"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/App/App.js?v=100"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/wizard.js?v=1191"></script>
+            <script type="text/javascript" src="/hubkilo_website/static/src/js/autocomplete.js"></script>
+               <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+        </xpath>
+
+            <t t-call="website.layout">
+ <script>
+    $(document).ready(function(){
+
+
+  // $('.my-select').selectpicker();
+    // $(function () {
+      // $('select').selectpicker();
+  // });
+
+
+
+  });
+  </script>
+
+    <div class="container-xxl bg-white p-0">
+<div id="toastContainer" aria-live="polite" aria-atomic="true" style="position: absolute; top: 0; right: 0; z-index: 1;"></div>
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(/hubkilo_website/static/src/img/homepageplane.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown" style="font-weight:700">Create Travel Announcement</h1>
+
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <!-- Booking Start -->
+        <div class="container-xxl py-2">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Create Travel</h6>
+                    <h1 class="mb-5">Create your <span class="text-primary text-uppercase">Travel Announcement</span></h1>
+                </div>
+
+
+                <div class="row g-5 mb-5">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-12">
+                                        <div class="">
+                                            <label for="exampleFormControlInput1" class="required form-label">Type of Travel:</label>
+                                            <select id="type_de_voyage" onclick="controlTravelType()" class="form-control form-control-solid"  name="type_de_voyage" >
+                                                <option value=""></option>
+                                                <option value="road">ROAD</option>
+                                            </select>
+                                          </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                            <label for="exampleFormControlInput1" class="required form-label">Departure city:</label>
+     <select id="ville_depart" class="selectpicker form-control form-control-solid" style="background:white" data-live-search="true" data-container="body">
+           <t t-foreach="cities" t-as="city">
+
+<option data-tokens="ketchup mustard" t-att-value="city.id" t-esc="city.name"/>
+           </t>
+     </select>
+                                    </div>
+
+                                    <div class="col-md-6">
+   <label for="exampleFormControlInput1" class="required form-label">Arrival city:</label>
+     <select id="ville_arrivee" class="selectpicker form-control form-control-solid" style="background:white" data-live-search="true" data-container="body">
+           <t t-foreach="cities" t-as="city">
+<option data-tokens="ketchup mustard" t-att-value="city.id" t-esc="city.name"/>
+           </t>
+     </select>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="departureDate_error" class="alert alert-danger" role="alert" style="display:none">
+  Please select a future date and time
+</div>
+                                        <div class="date" id="date3" data-target-input="nearest">
+                                            <label for="exampleFormControlInput1" class="required form-label">Departure Date:</label>
+                                            <input id="date_de_depart" type="datetime-local" onchange="handleDateChange()"  class="form-control form-control-solid" placeholder=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class=" date" id="date4" data-target-input="nearest">
+                                            <label for="exampleFormControlInput1" class="required form-label">Arrival date:</label>
+                                            <input id="date_de_arrivee"  type="datetime-local" onclick="handleDateChange1()"  class="form-control form-control-solid" placeholder=""  />
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="button" onclick="add()" class="save-btn btn btn-primary w-100 py-3" style="display:flex;justify-content:center;align-item:center" >Create New Travel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking End -->
+
+
+
+    </div>
+
+            </t>
+
+        </t>
+
+    </template>
+</odoo>

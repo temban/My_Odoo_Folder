@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="portal_my_home" inherit_id="portal.portal_my_home">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+          <div class="member-portal-link">
+          <t t-call="portal.portal_docs_entry" >
+                <t t-set="url"></t>
+                <t t-set="title" >Member Portal</t>
+            </t>
+          </div>
+
+        </xpath>
+    </template>
+
+    <template id="rpn_portal" name="RPN Portal" >
+
+        <t name="RPN Portal" t-name="rpn_website.rpn_portal">
+
+                        <!--            styles-->
+            <xpath expr="." position="inside">
+  <link rel="stylesheet" href="/rpn_website/static/src/css/rpn_portal.css?v=1399909955555"/>
+  <link rel="stylesheet" href="/rpn_website/static/src/css/App.css?v=1"/>
+  <link rel="stylesheet" href="/rpn_website/static/src/css/backend.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
+
+
+            </xpath>
+
+            <!--            javascript-->
+     <xpath expr="." position="inside">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="/rpn_website/static/src/js/App.js?v=11359995"></script>
+    <script src="/rpn_website/static/src/js/rpn_portal.js?v=30199990000009977"></script>
+    <script type="text/javascript" src="/rpn_website/static/src/js/bootstrap.min.js"></script>
+    <script src="/rpn_website/static/src/js/table-treeview.js"></script>
+     </xpath>
+
+
+  <t t-call="website.layout">
+
+
+  <div class="rnp_portal">
+    <!-- Portal User Info Start -->
+    <div class="rnp_portal_user_one rnp_portal_user d-flex justify-content-between">
+
+      <div class="d-flex align-items-start px-md-2" style="gap: 20px;">
+        <div>
+
+        <img id="portal_profile_picture" src="" alt="Portal user image" style="background-color: aqua;width: 90px; height: 90px; border-radius: 50%; object-fit: cover;" />
+<!--          <div id="portal_state">-->
+
+<!--          </div>-->
+        </div>
+
+        <div>
+          <p class="mt-2" style="font-size: 14px;">Hello</p>
+
+          <h5 id="rpn_portal_user_name" class="" style="font-weight:700;"></h5>
+        </div>
+      </div>
+
+       <div id="portal_state" class="d-flex justify-content-center align-items-center">
+
+      </div>
+
+      <div class="rnp_portal_user_two">
+        <span style="text-align: center;">Your balance</span>
+        <span style="font-weight: 700;font-size: 30px;text-align: center;"><span id="rpn_currency1"></span> <span id="rpn_portal_user_balance"></span> </span>
+        <button class="px-4" style="font-size: 12px;background:#690bec;color: white;border: 1px solid #690bec ;border-radius:50px;" data-toggle="modal" data-target="#recharge">Add money</button>
+      </div>
+
+
+    </div>
+    <!-- Portal User Info End -->
+
+    <!-- Portal User details Start -->
+
+    <div class="p-md-4 p-2 rpn_portal_details">
+
+
+      <div class="tabs">
+        <div class="tabby-tab" onclick="RnpPortal.selectTab('tab-1')">
+          <input type="radio" id="tab-1" name="tabby-tabs" checked="checked"/>
+          <label class="label tabby-tab-active" style="font-size: 14px;" id="tab-11" for="tab-1">Profile</label>
+          <div class="tabby-content">
+
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class=" col-md-10 d-flex justify-content-between align-items-center">
+                 <h6>Account information</h6>
+                 <button type="button" onclick="RnpPortal.editProfileButton()" class="btn" style="width:90px;color:#690bec;background:#c1aedd;border-radius:25px;font-weight:700">Edit <i class="bi bi-pencil-square"></i></button>
+                </div>
+                <div class="row mt-2">
+                  <form class="col-md-10 bg-white rounded p-4">
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700" for="email"
+                        class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email" placeholder=""   disabled="disabled"/>
+                      </div>
+                    </div>
+                    <div id="name_div" style="display:none" class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700" for="name"
+                        class="col-sm-2 col-form-label">Name</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" id="name" style="background:white" />
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700" for="phone"
+                        class="col-sm-2 col-form-label">Phone</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="" id="phone" style="background:white"  disabled="disabled"/>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700" for="gender"
+                        class="col-sm-2 col-form-label">Gender</label>
+                      <div class="col-sm-10">
+                        <select class="form-control" id="gender" style="background:white"  disabled="disabled">
+                          <option value="male">M</option>
+                           <option value="female">F</option>
+                        </select>
+<!--                        <input type="text" class="form-control" placeholder="" id="gender" style="background:white"  disabled="disabled"/>-->
+                      </div>
+                    </div>
+                    <div id="updateButton" style="display:none" class="form-group">
+                      <div class="col-md-12 d-flex justify-content-end">
+                       <button id="portal_updateButton" type="button" onclick="RnpPortal.editAccountProfile()" class="btn" style="background:#690bec;color:white">Save Now</button>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class=" col-md-10 d-flex justify-content-between align-items-center">
+                 <h6>Your Status in Canada</h6>
+                 <button onclick="RnpPortal.editStatusButton()" class="btn" style="width:90px;color:#690bec;background:#c1aedd;border-radius:25px;font-weight:700">Edit <i class="bi bi-pencil-square"></i></button>
+                </div>
+                <div class="row mt-2">
+                  <form class="col-md-10 bg-white rounded p-4">
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700;" for="status"
+                        class="col-sm-2 col-form-label">Status</label>
+                      <div class="col-sm-10">
+                        <select class="form-control" style="background:white"  disabled="disabled" id="status">
+                          <option></option>
+                           <option value="canadian_citizen">Canadian citizenship</option>
+                           <option value="resident_permit">Permanent residence</option>
+                           <option value="student_permit">Student</option>
+                           <option value="work_permit">Foreign worker</option>
+                           <option value="tourist">Tourist</option>
+                           <option value="refugee">Refugee</option>
+                           <option value="other_status">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700;" for="phone"
+                        class="col-sm-2 col-form-label">Type</label>
+                      <div class="col-sm-10">
+                        <select class="form-control" style="background:white"  disabled="disabled" id="portal_status_type">
+                            <option></option>
+                            <option value="passport">Passport</option>
+                            <option value="cni">Identity card / residence card</option>
+                            <option value="working_license">Working license</option>
+                            <option value="student_permit">Study permit</option>
+                            <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700;" for="gsm"
+                        class="col-sm-2 col-form-label">Number</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" style="background:white" placeholder="" id="portal_status_number" disabled="disabled"/>
+                      </div>
+                    </div>
+
+                    <div id="status_image_display" class="d-flex justify-content-center">
+                      <img onclick="RnpPortal.seeImage()" id="zoom-img" src="/web/static/img/placeholder.png" class="attachment-img"
+                        alt="Your Image" style="object-fit: cover;height: 90px;" />
+                    </div>
+
+                     <div id="upload_id_document" style="display:none" class=" col-md-6">
+                      <label style="font-size: 12px;font-weight: 700" for="name" class=" col-form-label">Upload document</label>
+                         <div class="">
+                           <label for="image-input-document" style="width:150px;font-size:12px;font-weight: 600; "
+                                                class="custom-file-upload">Choose image <i class="bi bi-cloud-arrow-up-fill"
+                                                    style="color: white;font-size: 16px;"></i>
+                                            </label>
+                                            <input onchange="RnpPortal.loadProfileDocument(event,'image-input-document')"
+                                                class="input" type="file" id="image-input-document" accept="image/*" />
+                                        </div>
+                     </div>
+                     <div id="upload_id_document_view"  class="form-group d-flex justify-content-center">
+                         <img id="image-document" src="" class="no-icon" style="display:none;width: 90%;height: 210px;background-size: cover;" />
+
+                      </div>
+
+                    <div id="updateStatusButton" style="display:none" class="form-group">
+                      <div class="col-md-12 d-flex justify-content-end">
+                       <button id="portal_updateStatusButton" style="background:#690bec;color:white" type="button" onclick="RnpPortal.editStatusProfile()" class="btn btn-primary">Save Now</button>
+                      </div>
+                    </div>
+
+                    <!-- Modal for zoomed image -->
+                    <div class="modal1" id="image-modal">
+                      <div class="modal1-content">
+                        <img src="" alt="Zoomed Attachment" class="zoomed-img" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="tabby-tab" onclick="RnpPortal.selectTab('tab-2')">
+          <input type="radio" id="tab-2" name="tabby-tabs"/>
+          <label class="label" for="tab-2" style="font-size: 14px;" id="tab-22">Contribution <span id="total_contribution">(0)</span></label>
+          <div class="tabby-content">
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                    <div>
+                      <h5 class="mb-3">Latest Contributions</h5>
+                      <p class="mb-0">This is the list of the Latest contributions that you have contributed on all
+                        mourning</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="table-responsive rounded mb-3">
+                    <table class="data-table table mb-0 tbl-server-info">
+                      <thead class="bg-white text-uppercase" style="background: white;">
+                        <tr style="background: white;" class="ligth ligth-data">
+                          <th style="font-size: 12px;">Date of death</th>
+                          <th style="font-size: 12px;">Reference of death</th>
+                          <th style="font-size: 12px;">Description of death</th>
+                          <th style="font-size: 12px;">Total contribution (<span id="rpn_currency2"></span>)</th>
+                          <th style="font-size: 12px;">Personal contribution (<span id="rpn_currency3"></span>)</th>
+
+                        </tr>
+                      </thead>
+                      <tbody id="portal_contribution_table_items" class="ligth-body">
+
+
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Page end  -->
+          </div>
+        </div>
+
+        <div class="tabby-tab" onclick="RnpPortal.selectTab('tab-3')">
+          <input type="radio" id="tab-3" name="tabby-tabs"/>
+          <label class="label" for="tab-3" style="font-size: 14px;" id="tab-33">Children's members <span id="total_children_member">(0)</span></label>
+          <div class="tabby-content" style="overflow-x: hidden;overflow-y: auto;">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+                  <div>
+                    <h5 class="mb-3">Children's members</h5>
+                    <p class="mb-0">Here is the list of members you manage as a manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class=" d-flex justify-content-md-end justify-content-center">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <input type="text" class="form-control" style="border: none;" id="searchMember" placeholder="Search member ..."/>
+                    </div>
+                  </div>
+                </div>
+
+                  <!-- items members -->
+                <div id="children_members_list" class="row">
+
+                </div>
+
+
+              </div>
+            </div>
+            <!-- Page end  -->
+          </div>
+        </div>
+
+
+      </div>
+      <!-- Portal User details End -->
+
+      <!-- Modal Section Start -->
+
+      <!-- Contribution Modal Start -->
+      <div class="modal fade" id="Contribution" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Contributions of <span id="contributor_name" style="text-transform:capitalize;font-weight:600"></span></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&amp;times</span>
+              </button>
+            </div>
+            <div class="modal-body" style="background: #eff2f7;">
+              <div class="col-lg-12">
+                <div class="table-responsive rounded mb-3">
+                  <table class="data-table table mb-0 tbl-server-info">
+                    <thead class="bg-white text-uppercase" style="background: white;">
+                      <tr style="background: white;" class="ligth ligth-data">
+                        <th style="font-size: 12px;">Date of death</th>
+                        <th style="font-size: 12px;">Reference of death</th>
+                        <th style="font-size: 12px;">Description of death</th>
+                        <th style="font-size: 12px;">Total contribution (<span id="rpn_currency4"></span>)</th>
+                        <th style="font-size: 12px;">Personal contribution (<span id="rpn_currency5"></span>)</th>
+
+                      </tr>
+                    </thead>
+                    <tbody id="contribution_child_table_items" class="ligth-body">
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contribution Modal End-->
+
+            <!-- Recharge Modal Start -->
+      <div class="modal fade" id="recharge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Top-up your account balance</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&amp;times</span>
+              </button>
+            </div>
+            <div class="modal-body" style="background: #eff2f7;">
+                    <div class="form-group row">
+                      <label style="font-size: 12px;font-weight: 700" for="name"
+                        class="col-sm-2 col-form-label">Amount (<span id="rpn_currency6"></span>)</label>
+                      <div class="col-sm-10">
+                        <input type="number" class="form-control" id="amount" style="background:white" />
+                      </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button onclick="RnpPortal.rechargeAccount()" id="rechargeBalance" type="button" class="btn" style="color:white;background:#690bec">Top-Up Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Recharge Modal End-->
+
+      <!-- Modal Section End -->
+
+
+
+
+    </div>
+
+  </div>
+
+
+  </t>
+</t>
+
+    </template>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2016-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+<!-- See LICENSE file for full copyright and licensing details. -->
+<odoo>
+    <data noupdate="1">
+        <function model="ir.default" name="set"
+        eval="('res.config.settings', 'livechat_msg_content', 'Hi, thanks for contacting us and we appreciate you reaching out. How may we help you?')"/>
+    </data>
+</odoo>

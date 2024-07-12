@@ -1,0 +1,40 @@
+#m-hero {
+--mq-font-family: "Kaushan Script", cursive;
+--mq-font-size: 1.5rem;
+--mq-bg: #9eeaf9;
+--mq-hover-bg: #6edff6;
+}
+
+#m1 {
+--mq-bg: #a6e9d5;
+--mq-hover-bg: #79dfc1;
+width: 50%;
+}
+
+#m2 {
+--mq-bg: #efadce;
+--mq-hover-bg: #e685b5;
+--mq-border-radius: 3rem;
+width: 50%;
+}
+
+#m3 {
+--mq-bg: #c5b3e6;
+--mq-hover-bg: #a98eda;
+}
+
+#m4 {
+--mq-bg: #9eeaf9;
+--mq-hover-bg: #6edff6;
+}
+
+#m5 {
+--mq-bg: #fecba1;
+--mq-hover-bg: #feb272;
+}
+
+#m6 {
+--mq-border-width: 4px;
+--mq-border-style: dashed;
+--mq-border-color: #6f42c1;
+}

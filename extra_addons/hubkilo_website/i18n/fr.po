@@ -1,0 +1,3675 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hubkilo_website
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0-20230208\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-11 15:21+0000\n"
+"PO-Revision-Date: 2023-10-11 15:21+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "${table.receiver_address}"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "${table.receiver_email}"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "${table.receiver_partner_id[1]}"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "${table.receiver_phone}"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "&times;"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#, python-format
+msgid "+ Add New Shipping Offer"
+msgstr "+ Ajouter une nouvelle offre d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "+ Add New Travel"
+msgstr "+ Ajouter un nouveau voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "+ Ship again"
+msgstr "+ Expédier à nouveau"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.portal_my_home
+#, python-format
+msgid "/profile"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "/shipping/offers"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "/travels"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "0.00 EUR"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+msgid "0.00 €"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details_test
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<i class=\"fa fa-check-circle\" style=\"color:#4fbf65;margin-"
+"right:10px\"/>Alert"
+msgstr ""
+"<i class=\"fa fa-check-circle\" style=\"color:#4fbf65;margin-"
+"right:10px\"/>Alerte"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid ""
+"<i class=\"fa fa-check-circle\" style=\"font-size:28px;color:#4fbf65;margin-"
+"right:10px\"/>Alert"
+msgstr ""
+"<i class=\"fa fa-check-circle\" style=\"font-size:28px;color:#4fbf65;margin-"
+"right:10px\"/>Alerte"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "<i class=\"fa fa-cloud-upload\" style=\"color: white; \"/> Choose file"
+msgstr "<i class=\"fa fa-cloud-upload\" style=\"color: white; \"/> Choisir le fichier"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<i class=\"fa fa-cloud-upload\" style=\"color: white; \"/> Choose image"
+msgstr "<i class=\"fa fa-cloud-upload\" style=\"color: white; \"/> Choisir une image"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<i class=\"fa fa-cloud-upload\" style=\"color: white; \"/> Upload"
+msgstr "<i class=\"fa fa-cloud-upload\" style=\"color: white; \"/> Téléverser"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid ""
+"<i class=\"fa fa-envelope-open text-primary me-2\"/>Check step 1 and 2, then"
+" press the SUBMIT button."
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid ""
+"<i class=\"fa fa-envelope-open text-primary me-2\"/>Enter the information "
+"asked from the form."
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid ""
+"<i class=\"fa fa-envelope-open text-primary me-2\"/>Select a pictures of "
+"your id card."
+msgstr ""
+"<i class=\"fa fa-envelope-open text-primary me-2\"/>Sélectionnez une photo "
+"de votre carte d'identité."
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+msgid ""
+"<i class=\"fa fa-paper-plane-o\" style=\"color:#1b5fe8\"/><span class=\" "
+"ml-1\" style=\"color:#1b5fe8\">Send</span>"
+msgstr ""
+"<i class=\"fa fa-paper-plane-o\" style=\"color:#1b5fe8\"/><span class=\" "
+"ml-1\" style=\"color:#1b5fe8\">Envoyer</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+msgid "<i class=\"fa fa-paper-plane-o\"/><span class=\" ml-1\">Send</span>"
+msgstr "<i class=\"fa fa-paper-plane-o\"/><span class=\" ml-1\">Envoyer</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"<i class=\"far fa-address-card\" style=\"font-"
+"size:14px;color:#217aff;margin-right:10px;\"/>Address"
+msgstr ""
+"<i class=\"far fa-address-card\" style=\"font-"
+"size:14px;color:#217aff;margin-right:10px;\"/>Addresse"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"<i class=\"fas fa-envelope-open\" style=\"font-"
+"size:18px;color:#217aff;margin-right:10px;\"/>Email"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details_test
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<i class=\"fas fa-exclamation-triangle\" style=\"color:red;margin-"
+"right:10px\"/>Alert"
+msgstr ""
+"<i class=\"fas fa-exclamation-triangle\" style=\"color:red;margin-"
+"right:10px\"/>Alerte"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+msgid ""
+"<i class=\"fas fa-exclamation-triangle\" style=\"font-"
+"size:28px;color:red\"/>Alert"
+msgstr ""
+"<i class=\"fas fa-exclamation-triangle\" style=\"font-"
+"size:28px;color:red\"/>Alerte"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+msgid ""
+"<i class=\"fas fa-exclamation-triangle\" style=\"font-"
+"size:28px;color:red;margin-right:10px\"/>Alert"
+msgstr ""
+"<i class=\"fas fa-exclamation-triangle\" style=\"font-"
+"size:28px;color:red;margin-right:10px\"/>Alerte"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid "<i class=\"fas fa-id-card\"/> Profile"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid "<i class=\"fas fa-id-card-alt\"/> Identification"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"<i class=\"fas fa-male\" style=\"font-size:14px;color:#217aff;margin-"
+"right:10px;\"/>Full Name"
+msgstr ""
+"<i class=\"fas fa-male\" style=\"font-size:14px;color:#217aff;margin-"
+"right:10px;\"/>Nom Complet"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"<i class=\"fas fa-phone\" style=\"font-size:14px;color:#217aff;margin-"
+"right:10px;\"/>Phone"
+msgstr ""
+"<i class=\"fas fa-phone\" style=\"font-size:14px;color:#217aff;margin-"
+"right:10px;\"/>Tel"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "<i class=\"fas fa-suitcase-rolling\" style=\"color:white\"/> Luggage Info"
+msgstr "<i class=\"fas fa-suitcase-rolling\" style=\"color:white\"/> Info sur les bagages"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "<span aria-hidden=\"true\">&amp;times;</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+msgid ""
+"<span class=\" text-uppercase\" style=\"font-weight:700;color:black;font-"
+"size:18px\">AIR</span>"
+msgstr ""
+"<span class=\" text-uppercase\" style=\"font-weight:700;color:black;font-"
+"size:18px\">AERIEN</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+msgid ""
+"<span class=\" text-uppercase\" style=\"font-weight:700;color:black;font-"
+"size:18px\">Road</span>"
+msgstr ""
+"<span class=\" text-uppercase\" style=\"font-weight:700;color:black;font-"
+"size:18px\">Terrestre</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+msgid ""
+"<span class=\" text-uppercase\" style=\"font-weight:700;color:black;font-"
+"size:18px\">SHIPPING OFFERS</span>"
+msgstr ""
+"<span class=\" text-uppercase\" style=\"font-weight:700;color:black;font-"
+"size:18px\">OFFRES D'EXPÉDITION</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+msgid ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/>\n"
+"                    <span class=\"visually-hidden\">Next</span>"
+msgstr ""
+"<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"/>\n"
+"                    <span class=\"visually-hidden\">Suivant</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+msgid ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/>\n"
+"                    <span class=\"visually-hidden\">Previous</span>"
+msgstr ""
+"<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"/>\n"
+"                    <span class=\"visually-hidden\">Précédent</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">1</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">2</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">3</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">4</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">5</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">6</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_number\">7</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid "<span class=\"side_bar_item_icon_number\">8</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<span class=\"side_bar_item_icon_text activeText\" data-step1=\"1\">Luggage "
+"Type</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text activeText\" data-step1=\"1\">Type de "
+"bagage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid ""
+"<span class=\"side_bar_item_icon_text activeText\" data-step1=\"1\">Travel "
+"Type</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text activeText\" data-step1=\"1\">Type de "
+"voyage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"2\">Luggage Model</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"2\">Modèle de "
+"bagage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"2\">Travel Details</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"2\">Détails du "
+"voyage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"3\">Luggage Images</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"3\">Images de "
+"bagages</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"3\">User "
+"Verification</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"3\">Vérification de "
+"l'utilisateur</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"4\">Confirmation</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"4\">User "
+"Verification</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"4\">Vérification de "
+"l'utilisateur</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"5\">Receiver "
+"Details</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"5\">Détails du "
+"bénéficiaire</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"5\">Successful</span>"
+msgstr "<span class=\"side_bar_item_icon_text\" data-step1=\"5\">Réussi</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"5\">Travel Details</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"5\">Détails Du "
+"Voyage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"6\">Confirm "
+"Details</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"6\">Confirmer les "
+"détails</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"6\">Receiver "
+"Details</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"7\">Confirm "
+"Details</span>"
+msgstr ""
+"<span class=\"side_bar_item_icon_text\" data-step1=\"7\">Confirmer les "
+"détails</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"7\">Successful</span>"
+msgstr "<span class=\"side_bar_item_icon_text\" data-step1=\"7\">Réussi</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid "<span class=\"side_bar_item_icon_text\" data-step1=\"8\">Successful</span>"
+msgstr "<span class=\"side_bar_item_icon_text\" data-step1=\"8\">Réussi</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">Beneficiary information</span>"
+msgstr "<span class=\"side_info_header_title\">Information du bénéficiaire</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">Confirm Details</span>"
+msgstr "<span class=\"side_info_header_title\">Confirmer les détails</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">Select A Luggage Model</span>"
+msgstr ""
+"<span class=\"side_info_header_title\">Sélectionnez Un Modèle De "
+"Bagage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">Select Luggage Images</span>"
+msgstr ""
+"<span class=\"side_info_header_title\">Sélectionnez Des Images De "
+"Bagages</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">Select Luggage Type</span>"
+msgstr ""
+"<span class=\"side_info_header_title\">Sélectionnez le type de bagage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid "<span class=\"side_info_header_title\">Select travel type</span>"
+msgstr ""
+"<span class=\"side_info_header_title\">Sélectionnez le type de voyage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">Successful</span>"
+msgstr "<span class=\"side_info_header_title\">Réussi</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid "<span class=\"side_info_header_title\">Travel details</span>"
+msgstr "<span class=\"side_info_header_title\">Détails du voyage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid "<span class=\"side_info_header_title\">Travel information</span>"
+msgstr "<span class=\"side_info_header_title\">Informations sur le voyage</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "<span class=\"side_info_header_title\">User Verification</span>"
+msgstr ""
+"<span class=\"side_info_header_title\">Vérification de l'utilisateur</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid ""
+"<span class=\"text-primary text-uppercase\">Upload Your</span> INDENTITY "
+"INFORMATIONS"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+msgid "<span class=\"visually-hidden\">Loading...</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid ""
+"<span>\n"
+"                                            <i class=\"fas fa-address-book\" style=\"margin-right:5px\"/>\n"
+"                                            My Receiver List\n"
+"                                        </span>\n"
+"                                        <i class=\"fas fa-angle-down\"/>"
+msgstr ""
+"<span>\n"
+"                                            <i class=\"fas fa-address-book\" style=\"margin-right:5px\"/>\n"
+"                                            Ma liste de bénéficiaires\n"
+"                                        </span>\n"
+"                                        <i class=\"fas fa-angle-down\"/>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid ""
+"<span>\n"
+"        <i class=\"fas fa-address-book\" style=\"margin-right:5px\"/>\n"
+"        My Receiver List\n"
+"      </span>\n"
+"      <i class=\"fas fa-angle-down\"/>"
+msgstr ""
+"<span>\n"
+"        <i class=\"fas fa-address-book\" style=\"margin-right:5px\"/>\n"
+"        Ma liste de bénéficiaires\n"
+"      </span>\n"
+"      <i class=\"fas fa-angle-down\"/>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"<span><i class=\"fas fa-user-check\" style=\"font-size:14px;margin-right:5px\"/>\n"
+"Receiver Info</span>\n"
+"\n"
+"<i class=\"fas fa-angle-down\" style=\"font-size:14px;margin-left:60px\"/>"
+msgstr ""
+"<span><i class=\"fas fa-user-check\" style=\"font-size:14px;margin-right:5px\"/>\n"
+"Informations sur le bénéficiaire</span>\n"
+"\n"
+"<i class=\"fas fa-angle-down\" style=\"font-size:14px;margin-left:60px\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "A New Shipping Offer"
+msgstr "Une Nouvelle Offre D'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "A New Shipping Request"
+msgstr "Une Nouvelle Demande D'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "A New Shipping Request Or Offer"
+msgstr "Une Nouvelle Demande Ou Offre D'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "A shipment offer is a shipping waiting for a travel"
+msgstr "Une offre d'expédition est une expédition en attente d'un voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid ""
+"A shipment offer is a shipping waiting for a travel.That means that these "
+"are your shipments offer that you created so that it can be added by a "
+"traveler on his travel"
+msgstr ""
+"Une offre d'expédition est une expédition en attente d'un voyage. Cela "
+"signifie que ces Votre offre d'envois est-elle que vous avez créée pour "
+"qu'elle puisse être ajoutée par un voyageur en voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "A shipping request is a shipment on an existing travel"
+msgstr "Une demande d'expédition est un envoi sur un voyage existant"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid ""
+"A shipping request is a shipment on an existing travel.That means that these"
+" are shipments done on a travel by you"
+msgstr ""
+"Une demande d'expédition est un envoi sur un voyage existant. Cela signifie "
+"qu'il s'agit d'envois effectués lors d'un voyage par vous"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "ACCEPTED"
+msgstr "ACCEPTÉ"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "AIR"
+msgstr "AERIEN"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "ALL"
+msgstr "TOUT"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "ARRIVAL"
+msgstr "ARRIVÉE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "About Traveler"
+msgstr "À propos du voyageur"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "Action"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "Add A Travel"
+msgstr "Ajouter un voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Add New Attachment +"
+msgstr "Ajouter Une Nouvelle Pièce Jointe +"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "Add Now"
+msgstr "Ajouter"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "Add Shipping offer"
+msgstr "Ajouter une offre d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Add a new receiver"
+msgstr "Ajouter un nouveau bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Add new message"
+msgstr "Ajouter un nouveau message"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#, python-format
+msgid "Address"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "Air"
+msgstr "Aérien"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details_test.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details_test.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#, python-format
+msgid "Alert"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "All"
+msgstr "Tout"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Are you taking computers?"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Are you taking envelop?"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Arrival\n"
+"                                        city:"
+msgstr "Ville d'arrivée:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Arrival\n"
+"                                        date:"
+msgstr "Date d'arrivée:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "Arrival City"
+msgstr "ville d'arrivée"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Arrival city:"
+msgstr "Ville d'arrivée:"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+msgid "Arrival city: <span id=\"end\" style=\"color:#217aff\"> </span>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+#, python-format
+msgid "Arrival date:"
+msgstr "Date d'arrivée:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/id_page.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.id_page
+#, python-format
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/id_page.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.id_page
+#, python-format
+msgid "Attachment Type"
+msgstr "Type de pièce jointe"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model:website.menu,name:hubkilo_website.custom_menu_item_1
+#, python-format
+msgid "Available travels"
+msgstr "Voyages disponibles"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Average total weight"
+msgstr "Poids total moyen"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "BACK"
+msgstr "RETOUR"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "BRIEFCASE"
+msgstr "MALLETTE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Beneficiary information"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Beneficiary's city"
+msgstr "Ville du bénéficiaire"
+
+#. module: hubkilo_website
+#: model:ir.model,name:hubkilo_website.model_m1st_hk_roadshipping_travelbooking
+msgid "Booking of travels"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "CANCEL"
+msgstr "ANNULER"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "CODE"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#, python-format
+msgid "COMPLETE"
+msgstr "COMPLET"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "CONFIRM AND AIR"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "CONFIRM AND ROAD"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "Cancel <i class=\"fas fa-ban\"/>"
+msgstr "Annuler <i class=\"fas fa-ban\"/>"
+
+#. module: hubkilo_website
+#: model:ir.model.fields,field_description:hubkilo_website.field_res_city__capital
+msgid "Capital"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "Check step 1 and 2, then press the SUBMIT button."
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "Choose file"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Choose image"
+msgstr ""
+
+#. module: hubkilo_website
+#: model:ir.model,name:hubkilo_website.model_res_city
+#: model:ir.model.fields,field_description:hubkilo_website.field_res_city__name
+msgid "City"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details_test.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details_test
+#, python-format
+msgid "Click me"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details_test.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details_test.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details_test
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Close"
+msgstr "Fermer"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Code"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Comment"
+msgstr "Commentaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Complete Information Here"
+msgstr "Complétez vos informations ici"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Confirm Details"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Confirmation"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/id_page.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.id_page
+#, python-format
+msgid "Conformity"
+msgstr "Conformité"
+
+#. module: hubkilo_website
+#: model:ir.model,name:hubkilo_website.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: hubkilo_website
+#: model:ir.model.fields,field_description:hubkilo_website.field_res_city__country_id
+msgid "Country"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "Create A Travel"
+msgstr "Créer un voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#, python-format
+msgid "Create New Travel"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Create Offer"
+msgstr "Créer une offre"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Create Request"
+msgstr "Créer une demande"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#, python-format
+msgid "Create Shipping"
+msgstr "Créer une expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Create Travel"
+msgstr "Créer un voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#, python-format
+msgid "Create Travel Announcement"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Create your"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+msgid ""
+"Create your <span class=\"text-primary text-uppercase\">New Shipping "
+"Offer</span>"
+msgstr ""
+"Créez Votre <span class=\"text-primary text-uppercase\">Nouvelle Offre "
+"D'expédition</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid ""
+"Create your <span class=\"text-primary text-uppercase\">Travel "
+"Announcement</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "DEPARTURE"
+msgstr "DÉPART"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "Date"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Date of birth"
+msgstr "Date de naissance"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Delivery Date"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Departure\n"
+"                                        Date:"
+msgstr "Date de départ:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Departure\n"
+"                                        city:"
+msgstr "Ville de départ:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "Departure City"
+msgstr "Ville de départ"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+#, python-format
+msgid "Departure Date:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Departure city:"
+msgstr "Ville de départ:"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+msgid "Departure city: <span id=\"start\" style=\"color:#217aff\"> </span>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Departure date:"
+msgstr "Date de départ:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Description"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Discover A New Way Of Sending Your Packages"
+msgstr "Découvrez une nouvelle façon d'envoyer vos colis"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "ENVELOPE"
+msgstr "ENVELOPPE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Edit"
+msgstr "Modifier"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "Edit <i class=\"fas fa-pen\"/>"
+msgstr "Modifier <i class=\"fas fa-pen\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#, python-format
+msgid "Edit Profile"
+msgstr "Editer le profil"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+msgid "Edit Profile <i class=\"far fa-edit\" style=\"color:white\"/>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "Edit Travel"
+msgstr "Editer le voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "Edit pictures"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Email"
+msgstr "E-mail"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Enter a comment"
+msgstr "Entrer un commentaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Enter a price..."
+msgstr "Entrer un prix..."
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "Enter the information asked from the form."
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Expiring Date"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#, python-format
+msgid "Explore Our"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+msgid ""
+"Explore Our <span class=\"text-primary text-uppercase\">Shipping "
+"Offers</span>"
+msgstr ""
+"Explorez Nos <span class=\"text-primary text-uppercase\">Offres "
+"D'expédition</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+msgid "Explore Our <span class=\"text-primary text-uppercase\">Travels</span>"
+msgstr "Explorez nos <span class=\"text-primary text-uppercase\">Voyages</span>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Fees cost"
+msgstr "Coût des frais"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#, python-format
+msgid "Full Name"
+msgstr "Nom et prénom"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Gender"
+msgstr "Genre"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "General Informations"
+msgstr "Informations générales"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Geo Latitude"
+msgstr "Géo Latitude"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Geo Longitude"
+msgstr "Géolongitude"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Height"
+msgstr "Hauteur"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "HubKilo"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Hubkilo"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "I want to ship"
+msgstr "Je veux expédier"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "I want to transport"
+msgstr "Je veux transporter"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "ID-Card"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "ID-Number"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "INDENTITY INFORMATIONS"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Id-Card or Passport Upload"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#, python-format
+msgid "Identification"
+msgstr ""
+
+#. module: hubkilo_website
+#: model:ir.model.fields,field_description:hubkilo_website.field_res_partner__image_1920
+#: model:ir.model.fields,field_description:hubkilo_website.field_res_users__image_1920
+msgid "Image 1920"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Invoice simulator"
+msgstr "Simulateur de facture"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "List Of Shipping Orders"
+msgstr "Liste des demandes d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "List of travels available"
+msgstr "Liste des voyages disponibles"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "List of your travels available"
+msgstr "Liste de vos voyages disponibles"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#, python-format
+msgid "Loading..."
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Luggage Cost"
+msgstr "Coût des bagages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Luggage Images"
+msgstr "Images de bagages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "Luggage Info"
+msgstr "Informations sur les bagages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "Luggage Model"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Luggage Type"
+msgstr "Type de bagage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Luggages"
+msgstr "Bagages"
+
+#. module: hubkilo_website
+#: model:ir.model,name:hubkilo_website.model_m1st_hk_roadshipping_travelmessage
+msgid "Messaging Model"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#, python-format
+msgid "My"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+msgid "My <span class=\"text-primary text-uppercase\">Shipping Offers</span>"
+msgstr ""
+"Mes <span class=\"text-primary text-uppercase\">Offres D'expédition</span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+msgid "My <span class=\"text-primary text-uppercase\">Travels</span>"
+msgstr "Mes <span class=\"text-primary text-uppercase\">Voyages</span>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_receiver.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_receiver.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.portal_my_parcel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.receiver
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.receiver_profile
+#, python-format
+msgid "My Parcels"
+msgstr "Mes colis"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "My Receiver List"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details_test.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details_test
+#, python-format
+msgid "My Shipping Details"
+msgstr "Mes détails d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#, python-format
+msgid "My Shipping Offers"
+msgstr "Mes Offres d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "My Shipping Orders & Offers"
+msgstr "Mes Demandes et offres d'expédition"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.portal_my_shipping
+msgid "My Shipping Orders &amp; Offers"
+msgstr "Mes demandes et offres d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "My Shippings"
+msgstr "Mes expéditions"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.portal_my_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "My Travels"
+msgstr "Mes voyages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid ""
+"NEXT\n"
+"                        STEP"
+msgstr "L'ÉTAPE SUIVANTE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "NEXT STEP"
+msgstr "L'ÉTAPE SUIVANTE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Name"
+msgstr "Nom"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "Negotiate"
+msgstr "Négocier"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid ""
+"Negotiate\n"
+"                                        <i class=\"fas fa-comment-alt\" style=\"color:black\"/>"
+msgstr ""
+"Négocier\n"
+"                                        <i class=\"fas fa-comment-alt\" style=\"color:black\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Negotiated price:"
+msgstr "Prix négocié:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Net to be received:"
+msgstr "Net à recevoir:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "New Shipping Offer"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#, python-format
+msgid "Next"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_receiver.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.receiver
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.receiver_profile
+#, python-format
+msgid "No Parcels"
+msgstr "Pas de colis"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "No Shipping Offers"
+msgstr "Aucune offre d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/js/shipping_details_test.js:0
+#, python-format
+msgid "Nothing 28"
+msgstr "Rien 28"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "Notice"
+msgstr "Remarque"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "Offers"
+msgstr "Offres"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Our Travels"
+msgstr "Nos Voyages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "PAID"
+msgstr "PAYÉ"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "PENDING"
+msgstr "EN ATTENTE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "PRICE (EUR)"
+msgstr "PRIX (EUR)"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#, python-format
+msgid "PUBLISHED"
+msgstr "PUBLIÉ"
+
+#. module: hubkilo_website
+#: model:ir.model,name:hubkilo_website.model_res_partner_rating
+msgid "Partner Rating"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Passport"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Phone\n"
+"                                                    No"
+msgstr "Tel"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Phone No"
+msgstr "Téléphone No"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Place of birth"
+msgstr "Lieu de naissance"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Please select a future date and time"
+msgstr "Veuillez sélectionner une date et une heure futures"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#, python-format
+msgid "Previous"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Price / Kg:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Proceed To Pay"
+msgstr "Procéder au paiement"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "Profile"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Quantity available:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping_offers
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "RECEIVED"
+msgstr "REÇU"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#, python-format
+msgid "REJECTED"
+msgstr "REJETÉ"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+#, python-format
+msgid "ROAD"
+msgstr "TERRESTRE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.mytravels
+#, python-format
+msgid "RUNNING"
+msgstr "EN COURS"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Rate Now"
+msgstr "Évaluez Maintenant"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Rate Traveler"
+msgstr "Évaluer le voyageur"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "Rate Traveler <i class=\"fa fa-thumbs-up\" style=\"color:white\"/>"
+msgstr "Évaluez le voyageur <i class=\"fa fa-thumbs-up\" style=\"color:white\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Receiver"
+msgstr "Bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Receiver\n"
+"                                        picture"
+msgstr "Image du bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Receiver Address"
+msgstr "Adresse du bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Receiver And Cost Infos"
+msgstr "Informations sur le bénéficiaire et les coûts"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Receiver Details"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Receiver Email"
+msgstr "E-mail du bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#, python-format
+msgid "Receiver Info"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Receiver Phone"
+msgstr "Tel du Bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Receiver picture"
+msgstr "Image du bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#, python-format
+msgid "Recipient:"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+msgid "Recipient: <span id=\"recipient\" style=\"color:#217aff\"> </span>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#, python-format
+msgid "Reference:"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid ""
+"Reference:<span style=\"font-size:14px;color:#217aff;font-weight: 400;\" "
+"id=\"shipping_details_display_name2\"> </span>"
+msgstr ""
+"Référence:<span style=\"font-size:14px;color:#217aff;font-weight: 400;\" "
+"id=\"shipping_details_display_name2\"> </span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"Reference:<span style=\"font-size:14px;color:#217aff;font-weight: 400;\" "
+"id=\"shipping_details_display_name2_offer\"> </span>"
+msgstr ""
+"Référence:<span style=\"font-size:14px;color:#217aff;font-weight: 400;\" "
+"id=\"shipping_details_display_name2_offer\"> </span>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping
+#, python-format
+msgid "Request"
+msgstr "Demande"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Residential address"
+msgstr "Adresse résidentielle"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Restrictions of what you want:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "Road"
+msgstr "Terrestre"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "SHIP/2023/000000"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#, python-format
+msgid "SHIPPING OFFERS"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "SUBMIT"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "SUBMIT AND SHIP NOW"
+msgstr "SOUMETTRE ET EXPÉDIER MAINTENANT"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "SUITCASE"
+msgstr "VALISE"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Save"
+msgstr "Sauvegarder"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Search"
+msgstr "Recherche"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "See Attachment"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "See your shipping"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+msgid "See your shipping <i class=\"fas fa-arrow-right\"/>"
+msgstr "Voir vos expéditions <i class=\"fas fa-arrow-right\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#, python-format
+msgid "See your travels"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+msgid "See your travels <i class=\"fas fa-arrow-right\"/>"
+msgstr "Voir vos voyages <i class=\"fas fa-arrow-right\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Select A Luggage Model"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Select Luggage Images"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Select Luggage Type"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Select a\n"
+"                                    receiver"
+msgstr "Sélectionner le bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "Select a luggage model"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "Select a pictures of your id card."
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Select a receiver"
+msgstr "Sélectionnez un bénéficiaire"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Select travel type"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Select type"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#, python-format
+msgid "Send"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Sender"
+msgstr "Expéditeur"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Service fees:"
+msgstr "Frais de service:"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Sex"
+msgstr "Sexe"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Ship Now"
+msgstr "Expédier maintenant"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#, python-format
+msgid "Shipping"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#, python-format
+msgid "Shipping Offers"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+#, python-format
+msgid "Shipping Offers Details"
+msgstr "Détails des offres d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "Shipping Price"
+msgstr "Prix d'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Shipping created successfully"
+msgstr "Expédition créée avec succès"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Shipping creation date"
+msgstr "Date de création de l'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_offer_details.xml:0
+#, python-format
+msgid "Shipping date:"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid ""
+"Shipping date:<span style=\"font-size:14px;color:#217aff;font-weight: 400;\""
+" id=\"shipping_details_shipping_date\"> </span>"
+msgstr ""
+"Date d'expédition:<span style=\"font-size:14px;color:#217aff;font-weight: "
+"400;\" id=\"shipping_details_shipping_date\"> </span>"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offer_details
+msgid ""
+"Shipping date:<span style=\"font-size:14px;color:#217aff;font-weight: 400;\""
+" id=\"shipping_details_shipping_date_offer\"> </span>"
+msgstr ""
+"Date d'expédition:<span style=\"font-size:14px;color:#217aff;font-weight: "
+"400;\" id=\"shipping_details_shipping_date_offer\"> </span>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_shipping_offers.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model:website.menu,name:hubkilo_website.custom_menu_item_2
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_offers
+#, python-format
+msgid "Shipping offers"
+msgstr "Offres D'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_shippings.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_shipping
+#, python-format
+msgid "Shipping on my travel"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Shipping price"
+msgstr "Prix de l'expédition"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "State"
+msgstr "État"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Step 1"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Step 3"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Street"
+msgstr "Rue"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Successful"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#, python-format
+msgid "TOTAL SHIPPING PRICE"
+msgstr "PRIX TOTAL DE L'EXPÉDITION"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "TRAVEL/"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "TVA 20%:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "The Receiver exists in Hubkilo"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_negociation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_negotiation_page
+#, python-format
+msgid "Total:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Transaction Cost"
+msgstr "Coût de transaction"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "Transfer"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid "Transfer <i class=\"fas fa-caret-right\"/><i class=\"fas fa-caret-right\"/>"
+msgstr "Transfert <i class=\"fas fa-caret-right\"/><i class=\"fas fa-caret-right\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#, python-format
+msgid "Travel Announcement"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "Travel Booking"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Travel Destination"
+msgstr "Destination de voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Travel Details"
+msgstr "Détails du voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "Travel Type"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Travel booking"
+msgstr "Réservation de voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#, python-format
+msgid "Travel created successfully"
+msgstr "Voyage créé avec succès"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#, python-format
+msgid "Travel details"
+msgstr "Détails du voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#, python-format
+msgid "Travel information"
+msgstr "Informations sur le voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Travel type"
+msgstr "Type de voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "Travels"
+msgstr "Voyages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/ajouter_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.ajouter
+#, python-format
+msgid "Type of Travel:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_travels.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages
+#, python-format
+msgid "Type of travel"
+msgstr "Type de voyage"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+#, python-format
+msgid "Type of travel:"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Unverified"
+msgstr "Non vérifié"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#, python-format
+msgid "Update"
+msgstr "Mise à jour"
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+msgid "Update <span class=\"text-primary text-uppercase\">Shipping</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_my_travel_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.my_travel_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Update Now"
+msgstr "Mettez à jour maintenant"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "Update Shipping"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+#, python-format
+msgid "Update Travel"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+#, python-format
+msgid "Update Travel Announcement"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#, python-format
+msgid "Update Your Account"
+msgstr "Mettre à jour votre compte"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Update now"
+msgstr "Téléverser maintenant"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_voyage.xml:0
+#, python-format
+msgid "Update your"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier
+msgid ""
+"Update your <span class=\"text-primary text-uppercase\">Travel "
+"Announcement</span>"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "Upload"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#, python-format
+msgid "Upload Your"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "Upload file"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "User Already Exist in HubKilo click here to select him"
+msgstr "L'utilisateur existe déjà dans HubKilo"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.portal_my_home
+#, python-format
+msgid "User Portal"
+msgstr "Portail utilisateur"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#, python-format
+msgid "User Verification"
+msgstr ""
+
+#. module: hubkilo_website
+#: model:ir.model,name:hubkilo_website.model_res_users
+msgid "Users"
+msgstr "Utilisateurs"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid ""
+"Users in\n"
+"                                                                HubKilo"
+msgstr "Utilisateurs de Hubkilo"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Users in HubKilo"
+msgstr "Utilisateurs dans HubKilo"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#, python-format
+msgid "Validation Code:"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+msgid ""
+"Validation Code:\n"
+"                <b id=\"code_id\" style=\"color: red; text-align: center\"> </b>"
+msgstr ""
+"Code de validation:\n"
+"                <b id=\"code_id\" style=\"color: red; text-align: center\"> </b>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "Validation code"
+msgstr "Code de validation"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/id_page.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.id_page
+#, python-format
+msgid "Validity Days Left"
+msgstr "Jours de validité restants"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Verified"
+msgstr "Vérifié"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "View Code"
+msgstr "Voir le code"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#, python-format
+msgid "View More"
+msgstr ""
+
+#. module: hubkilo_website
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+msgid ""
+"View More <i class=\"fas fa-arrow-right\" style=\"margin-"
+"left:10px;color:#217aff\"/>"
+msgstr ""
+"Voir plus <i class=\"fas fa-arrow-right\" style=\"margin-"
+"left:10px;color:#217aff\"/>"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "View Ratings"
+msgstr "Voir les évaluations"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#, python-format
+msgid "View Travel List"
+msgstr "Afficher la liste de voyages"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "WELCOME TO HUBKILO"
+msgstr "BIENVENUE CHEZ HUBKILO"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Weight"
+msgstr "Poids"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_details
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "Width"
+msgstr "Largeur"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_home.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.hub_home
+#, python-format
+msgid "Youtube Video"
+msgstr "Vidéo Youtube"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/id_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/shipping_traveler_details.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.id_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.shipping_traveler_details
+#, python-format
+msgid "Zoomed Attachment"
+msgstr "Pièce jointe zoomée"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "check verify"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "female"
+msgstr "femelle"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/modifier_la_reservation.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.modifier_la_reservation_page
+#, python-format
+msgid "luggage models"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: code:addons/hubkilo_website/static/src/xml/updateProfile.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.updateProfile
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "male"
+msgstr "mâle"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "step 2"
+msgstr ""
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "successfully done"
+msgstr "réalisé avec succès"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "unverified"
+msgstr "Non vérifié"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/hub_booking_page.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_shipping.xml:0
+#: code:addons/hubkilo_website/static/src/xml/hub_create_travel.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_shipping
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.create_travel
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.voyages_page
+#, python-format
+msgid "verified"
+msgstr "vérifié"
+
+#. module: hubkilo_website
+#. openerp-web
+#: code:addons/hubkilo_website/static/src/xml/identification.xml:0
+#: code:addons/hubkilo_website/static/src/xml/my_portal.xml:0
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.identification_page
+#: model_terms:ir.ui.view,arch_db:hubkilo_website.profile_page
+#, python-format
+msgid "your piece"
+msgstr ""

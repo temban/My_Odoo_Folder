@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+		
+    	<record id="product_template_discount_1" model="product.product">
+            <field name="name">R&#233;duction 1EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-1</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 1EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_2" model="product.product">
+            <field name="name">R&#233;duction 2EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-2</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 2EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_3" model="product.product">
+            <field name="name">R&#233;duction 3EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-3</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 3EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_4" model="product.product">
+            <field name="name">R&#233;duction 4EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-4</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 4EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_5" model="product.product">
+            <field name="name">R&#233;duction 5EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-5</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 5EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_6" model="product.product">
+            <field name="name">R&#233;duction 6EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-6</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 6EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_7" model="product.product">
+            <field name="name">R&#233;duction 7EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-7</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 7EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_8" model="product.product">
+            <field name="name">R&#233;duction 8EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-8</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 8EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_9" model="product.product">
+            <field name="name">R&#233;duction 9EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-9</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 9EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_10" model="product.product">
+            <field name="name">R&#233;duction 10EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-10</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 10EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_11" model="product.product">
+            <field name="name">R&#233;duction 11EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-11</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 11EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_12" model="product.product">
+            <field name="name">R&#233;duction 12EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-12</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 12EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_13" model="product.product">
+            <field name="name">R&#233;duction 13EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-13</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 13EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_14" model="product.product">
+            <field name="name">R&#233;duction 14EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-14</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 14EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_15" model="product.product">
+            <field name="name">R&#233;duction 15EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-15</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 15EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_16" model="product.product">
+            <field name="name">R&#233;duction 16EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-16</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 16EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_17" model="product.product">
+            <field name="name">R&#233;duction 17EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-17</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 17EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_18" model="product.product">
+            <field name="name">R&#233;duction 18EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-18</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 18EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_19" model="product.product">
+            <field name="name">R&#233;duction 19EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-19</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 19EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		<record id="product_template_discount_20" model="product.product">
+            <field name="name">R&#233;duction 20EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-20</field>
+    		<field name="discount_management">discount</field>
+    		<field name="description_sale">Cet article est une r&#233;duction de 20EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_1.png"/>        
+        </record>
+	
+		
+		<!--BONUS-->
+		<record id="product_template_discount_bonus_10" model="product.product">
+            <field name="name">Bonus de 10EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-10</field>
+    		<field name="discount_management">bonus</field>
+    		<field name="description_sale">Cet article est un bonus de 10EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_2.png"/>        
+        </record>
+	
+		<record id="product_template_discount_bonus_13" model="product.product">
+            <field name="name">Bonus de 13EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-13</field>
+    		<field name="discount_management">bonus</field>
+    		<field name="description_sale">Cet article est un bonus de 13EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_2.png"/>        
+        </record>
+	
+		<record id="product_template_discount_bonus_15" model="product.product">
+            <field name="name">Bonus de 15EUR</field>
+    		<field name="sale_ok" eval="True"/>
+    		<field name="detailed_type">service</field>
+    		<field name="invoice_policy">order</field>
+    		<field name="list_price">-15</field>
+    		<field name="discount_management">bonus</field>
+    		<field name="description_sale">Cet article est un bonus de 15EUR</field>
+    		<field name="image_1920" type="base64" file="m1_shintheo_fc/static/img/discount_2.png"/>        
+        </record>
+	
+    </data>
+</odoo>

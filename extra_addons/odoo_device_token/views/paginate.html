@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    /* Style for the card container */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center cards horizontally */
+    }
+
+    /* Style for each card */
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        width: calc(25% - 20px); /* Adjust width for 4 columns with margins */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s ease; /* Add a smooth transition effect */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow for a lifted effect */
+        background-color: #fff;
+    }
+
+    /* Style for the card image */
+    .card-image {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    /* Style for data elements */
+
+
+     /* Style for label and data container */
+     .label-data-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Style for label and data group */
+    .label-data-group {
+        display: flex;
+        flex: 1;
+        margin: 5px;
+    }
+
+    /* Style for labels */
+    .label {
+        font-weight: bold;
+    }
+
+    /* Style for data elements */
+    .id-data,
+    .source-data,
+    .destination-data,
+    .disable-data {
+        margin-left: 5px;
+    }
+    .disable-button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+
+    /* Hover effect for cards */
+    .card:hover {
+        transform: scale(1.05); /* Scale up the card on hover */
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Increase box shadow on hover */
+    }
+</style>
+
+</head>
+<body>
+    <h1>Travel Information</h1>
+    <div class="card-container" id="card-container"></div>
+    <script>
+        const cardContainer = document.getElementById('card-container');
+        const room = "room1"; // Replace with the desired room name
+
+// Establish a WebSocket connection to the server
+const socket = new WebSocket(`ws://localhost:8000/${room}`); // Replace with your server's WebSocket URI
+
+// Event handler for when the connection is established
+socket.addEventListener("open", (event) => {
+  console.log(`Connected to WebSocket server in room ${room}`);
+});
+
+// Event handler for incoming messages from the server
+socket.addEventListener("message", (event) => {
+  const message = JSON.parse(event.data);
+  console.log(`Received message:`, message);
+});
+
+// Event handler for when the connection is closed
+socket.addEventListener("close", (event) => {
+  if (event.wasClean) {
+    console.log(`Connection closed cleanly, code=${event.code}, reason=${event.reason}`);
+  } else {
+    console.error(`Connection abruptly closed`);
+  }
+});
+
+// Event handler for connection errors
+socket.addEventListener("error", (error) => {
+  console.error(`WebSocket error:`, error);
+});
+       // Function to create a card for a travel record
+function createTravelCard(data) {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.setAttribute('data-id', data.id); // Set a unique identifier for the card
+    card.setAttribute('data-disable', data.disable); // Set a data attribute to track disable state
+
+    card.innerHTML = `
+        <img src="https://www.livemint.com/lm-img/img/2023/04/24/600x338/Fresh_bus_1682301595441_1682301595630.PNG" class="card-image">
+        
+        <div class="label-data-container">
+            <div>
+                        <button class="disable-button" data-travel-id="${data.id}" data-disable="${data.disable}">
+                            <i class="fa fa-close" style="font-size:20px;color:white"></i>
+                        </button>
+                    </div>
+            <div class="label-data-group">
+                <div class="label-data-group">
+                   <div class="label">ID:</div>
+                   <div class="id-data">${data.id}</div>
+                </div>
+                <div class="label-data-group">
+                   <div class="label">State:</div>
+                   <div class="disable-data">${data.disable}</div>
+                </div>
+            </div>
+            <div class="label-data-group">
+                <div class="label-data-group">
+                   <div class="label">Source:</div>
+                   <div class="source-data">${data.source1}</div>
+                </div>
+                <div class="label-data-group">
+                   <div class="label">Destination:</div>
+                   <div class="destination-data">${data.destination1}</div>
+                </div>
+            </div>
+            
+                    
+        </div>
+        
+    `;
+
+    // Add a click event handler to the "Disable" button
+           const disableButton = card.querySelector('.disable-button');
+            disableButton.addEventListener('click', () => {
+                const travelId = disableButton.getAttribute('data-travel-id');
+                const isDisabled = disableButton.getAttribute('data-disable') === 'true';
+
+                // Call the disable_travel controller via AJAX
+                disableTravelRecord(travelId, isDisabled);
+            });
+
+    return card;
+}
+
+// Function to send an AJAX request to disable a travel record
+        function disableTravelRecord(travelId, isDisabled) {
+            const url = `http://localhost:8090/disable/${travelId}`;
+            fetch(url, {
+                method: 'GET',
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message === "Travel record disabled successfully.") {
+                    // Update the card's "Disable" button and data attribute
+                    const disableButton = document.querySelector(`.disable-button[data-travel-id="${travelId}"]`);
+                    disableButton.setAttribute('data-disable', 'true');
+                    disableButton.textContent = 'Disabled';
+                }
+            })
+            .catch(error => {
+                console.error('Error disabling travel record:', error);
+            });
+        }
+
+        // Function to update an existing travel card with new data
+        function updateTravelCard(travel) {
+            const existingCard = document.querySelector(`[data-id="${travel.id}"]`);
+            if (existingCard) {
+                const disableData = existingCard.getAttribute('data-disable');
+
+                // Check if the travel record should be removed
+                if (travel.disable === true && disableData !== 'true') {
+                    existingCard.remove(); // Remove the card
+                } else if (travel.disable === false && disableData === 'true') {
+                    // If 'disable' is set to false but the card was removed previously, re-add it
+                    addTravelCard(travel);
+                } else {
+                    // Update the content of the existing card
+                    const idData = existingCard.querySelector('.id-data');
+                    const sourceData = existingCard.querySelector('.source-data');
+                    const destinationData = existingCard.querySelector('.destination-data');
+                    const disableDataElement = existingCard.querySelector('.disable-data');
+
+                    idData.textContent = travel.id;
+                    sourceData.textContent = travel.source1;
+                    destinationData.textContent = travel.destination1;
+                    disableDataElement.textContent = travel.disable;
+                }
+            } else {
+                // If the card doesn't exist, create and add it
+                addTravelCard(travel);
+            }
+        }
+
+        // WebSocket connection
+
+        // Listen for messages from the server
+        socket.addEventListener('message', (event) => {
+            const response = JSON.parse(event.data);
+            if (response.status === 'Received') {
+                const travelData = response.data;
+                console.log(`Received message: ${JSON.stringify(travelData)}`);
+
+                // Check if the received message contains an ID (indicating an update)
+                if (travelData.id) {
+                    // Update an existing travel card
+                    updateTravelCard(travelData);
+                } else {
+                    // Add a new travel card with the received data
+                    addTravelCard(travelData);
+                }
+            }
+        });
+
+        // Function to add a new travel card to the container
+        function addTravelCard(travel) {
+            const card = createTravelCard(travel);
+            cardContainer.appendChild(card);
+        }
+
+        
+        // Function to fetch travel data from the server and populate the cards
+        async function fetchTravelData() {
+            try {
+                const response = await fetch('http://localhost:8090/get_travel_data');
+                if (response.ok) {
+                    const travels = await response.json();
+
+                    // Clear the existing travel list
+                    cardContainer.innerHTML = '';
+
+                    // Populate the travel list with the retrieved data
+                    travels.forEach(travel => {
+                        const card = createTravelCard(travel);
+                        cardContainer.appendChild(card);
+                    });
+                }
+            } catch (error) {
+                console.error('Error fetching travel data:', error);
+            }
+        }
+
+        // Call the function to fetch and display travel data
+        fetchTravelData();
+    </script>
+</body>
+</html>
